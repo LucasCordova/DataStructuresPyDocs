@@ -1,0 +1,14 @@
+site_name: CS 152 Data Structures PyDocs Reference Implementation Documentation
+
+theme:
+  name: "material"
+
+plugins:
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [datastructures]
+
+nav:
+ - Data Structures PyDocs: index.md
+ - Array: array.md
