@@ -102,7 +102,8 @@ class Array:
         raise NotImplementedError('Array.__setitem__')
 
     def append(self, data: Any) -> None:
-        """ Append an item to the end of the Array
+        """ Append an item to the end of the Array. If the Array is full, the Array should resize it's 
+            physical size to double its current size.
 
         Examples:
             >>> array = Array.from_list(['zero', 'one', 'two', 'three', 'four'])
@@ -119,7 +120,7 @@ class Array:
         raise NotImplementedError('Array.append')
         
     def __len__(self) -> int:
-        """ Length operator for getting the logical length of the Array (number of items in the Array).
+        """ Length operator for getting the logical length (size) of the Array (number of items in the Array).
 
         Examples:
             >>> array = Array.from_list(['zero', 'one', 'two', 'three', 'four'])
@@ -219,6 +220,8 @@ class Array:
     def __delitem__(self, index: int) -> None:
         """ Delete an item in the array. Copies the array contents from index + 1 down
             to fill the gap caused by deleting the item and shrinks the array size down by one.
+            The algorithm should shrink the array physical size when the number of items in the array (logical size) is less than or 
+            equal to 1/4 of the physical size.
 
         Examples:
 
