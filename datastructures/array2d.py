@@ -70,8 +70,10 @@ class Array2D:
         raise NotImplementedError('Array2D.dimensions')
 
     def resize_columns(self, new_columns_len: int) -> None:
-        """ Resize the length of the columns.
-        
+        """ Resize the length of the columns. Must be able to handle both increasing and 
+            decreasing the size of the columns. Must not lose any data when resizing
+            the columns. If the new length is smaller, then the data will be truncated.
+
         Examples:
             >>> array2d = Array2D(rows=2, columns=3)
             >>> array2d.resize_columns(4)
@@ -84,8 +86,10 @@ class Array2D:
         raise NotImplementedError('Array2D.resize_columns')
 
     def resize_rows(self, new_rows_len: int) -> None:
-        """ Resize the length of the rows.
-
+        """ Resize the length of the rows. Must be able to handle both increasing and
+            decreasing the size of the rows. Must not lose any data when resizing the rows.
+            If the new length is smaller, then the data will be truncated.
+            
         Examples:
             >>> array2d = Array2D(rows=2, columns=3)
             >>> array2d.resize_rows(4)
