@@ -5,3 +5,4 @@ This site contains reference documentation for building the foundational data st
 ## Data Structures Table of Contents
 
 1. [Array](array.md)
+2. [Array2D](array2d.md)
