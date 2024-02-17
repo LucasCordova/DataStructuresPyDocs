@@ -303,6 +303,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#array2d.Array2D.from_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#array2d.Array2D.resize_columns" class="md-nav__link">
     <span class="md-ellipsis">
       resize_columns
@@ -632,19 +641,19 @@ Stipulations:
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__init__&#39;</span><span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">from_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Array2D&#39;</span><span class="p">:</span>
-<span class="w">            </span><span class="sd">&quot;&quot;&quot;Create an Array2D from a 2D Python list. The function</span>
-<span class="sd">                will take the dimensions of the list from the length of </span>
-<span class="sd">                of the list and the length of the first item in the list.</span>
-<span class="sd">                The function will then create an Array2D with the same</span>
+    <span class="k">def</span> <span class="nf">from_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Array2D&#39;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an Array2D from a 2D Python list. The function</span>
+<span class="sd">            will take the dimensions of the list from the length of </span>
+<span class="sd">            of the list and the length of the first item in the list.</span>
+<span class="sd">            The function will then create an Array2D with the same</span>
 
-<span class="sd">            Args:</span>
-<span class="sd">                items (list): a 2D list to create the Array2D from.</span>
+<span class="sd">        Args:</span>
+<span class="sd">            items (list): a 2D list to create the Array2D from.</span>
 
-<span class="sd">            Returns:    </span>
-<span class="sd">                Array2D: the Array2D created from the 2D list.</span>
-<span class="sd">            &quot;&quot;&quot;</span>
-            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.from_list&#39;</span><span class="p">)</span>
+<span class="sd">        Returns:    </span>
+<span class="sd">            Array2D: the Array2D created from the 2D list.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.from_list&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Bracket operator for accessing an item. This bracket operator is used to </span>
@@ -1420,21 +1429,7 @@ Stipulations:
 <span class="normal">38</span>
 <span class="normal">39</span>
 <span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">columns</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">default_item_value</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">columns</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">default_item_value</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Array2D Constructor. Initializes the Array2D with the desired size and default value.</span>
 
 <span class="sd">    Examples:</span>
@@ -1451,20 +1446,6 @@ Stipulations:
 <span class="sd">        None</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__init__&#39;</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">from_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Array2D&#39;</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an Array2D from a 2D Python list. The function</span>
-<span class="sd">            will take the dimensions of the list from the length of </span>
-<span class="sd">            of the list and the length of the first item in the list.</span>
-<span class="sd">            The function will then create an Array2D with the same</span>
-
-<span class="sd">        Args:</span>
-<span class="sd">            items (list): a 2D list to create the Array2D from.</span>
-
-<span class="sd">        Returns:    </span>
-<span class="sd">            Array2D: the Array2D created from the 2D list.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.from_list&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>
@@ -1747,6 +1728,111 @@ Stipulations:
 <span class="sd">        str: a string representation of the data and structure.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__str__&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="array2d.Array2D.from_list" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">from_list</span><span class="p">(</span><span class="n">items</span><span class="p">)</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create an Array2D from a 2D Python list. The function
+    will take the dimensions of the list from the length of 
+    of the list and the length of the first item in the list.
+    The function will then create an Array2D with the same</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>items</code></td>
+          <td>
+                <code>list</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>a 2D list to create the Array2D from.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Array2D</code></td>          <td>
+                <code><a class="autorefs autorefs-internal" title="array2d.Array2D" href="#array2d.Array2D">Array2D</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>the Array2D created from the 2D list.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>datastructures/array2d.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">from_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Array2D&#39;</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create an Array2D from a 2D Python list. The function</span>
+<span class="sd">        will take the dimensions of the list from the length of </span>
+<span class="sd">        of the list and the length of the first item in the list.</span>
+<span class="sd">        The function will then create an Array2D with the same</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        items (list): a 2D list to create the Array2D from.</span>
+
+<span class="sd">    Returns:    </span>
+<span class="sd">        Array2D: the Array2D created from the 2D list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.from_list&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>
