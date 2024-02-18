@@ -303,6 +303,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#array2d.Array2D.clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#array2d.Array2D.from_list" class="md-nav__link">
     <span class="md-ellipsis">
       from_list
@@ -625,7 +634,30 @@ Stipulations:
 <span class="normal">240</span>
 <span class="normal">241</span>
 <span class="normal">242</span>
-<span class="normal">243</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Array2D</span><span class="p">:</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Array2D</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Class Array2D - representing 2D data using a 1D Array</span>
 <span class="sd">            Stipulations:</span>
 <span class="sd">            1. Must use an Array object as the internal data </span>
@@ -649,10 +681,13 @@ Stipulations:
 
 <span class="sd">        Returns:</span>
 <span class="sd">            None</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__init__&#39;</span><span class="p">)</span>
 
-    <span class="nd">@staticmethod</span>
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: if the rows or columns are less than 0.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__init__&quot;</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>   
     <span class="k">def</span> <span class="nf">from_list</span><span class="p">(</span><span class="n">items</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Array2D&#39;</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an Array2D from a 2D Python list. The function</span>
 <span class="sd">            will take the dimensions of the list from the length of </span>
@@ -672,10 +707,10 @@ Stipulations:
 <span class="sd">            Array2D: the Array2D created from the 2D list.</span>
 
 <span class="sd">        Raises:</span>
-<span class="sd">            ValueError: if the 2D list is not rectangular.</span>
+<span class="sd">            ValueError: if the 2D list is not rectangular or two-dimensional.</span>
 <span class="sd">            ValueError: if list_items is not a list.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.from_list&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.from_list&quot;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Bracket operator for accessing an item. This bracket operator is used to </span>
@@ -692,12 +727,12 @@ Stipulations:
 <span class="sd">            row_index (int): the index of the row to access.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            Any: an object that allows the bracket operator to be used again to access the second dimension (column).</span>
+<span class="sd">            Any: the row object.</span>
 
 <span class="sd">        Raises:</span>
-<span class="sd">            IndexError: if the row_index is out of range.</span>
+<span class="sd">            IndexError: if the row_index is out of bounds.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__getitem__&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__getitem__&quot;</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">dimensions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
@@ -714,11 +749,12 @@ Stipulations:
 <span class="sd">            3</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            tuple[int, int]: a tuple of the number of rows and columns.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.dimensions&#39;</span><span class="p">)</span>
+<span class="sd">            tuple[int, int]: the dimensions of the Array2D.</span>
 
-    <span class="k">def</span> <span class="nf">resize_columns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_columns_len</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.dimensions&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">resize_columns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_columns_len</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">default_item_value</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Resize the length of the columns. Must be able to handle both increasing and </span>
 <span class="sd">            decreasing the size of the columns. Must not lose any data when resizing</span>
 <span class="sd">            the columns. If the new length is smaller, then the data will be truncated.</span>
@@ -734,17 +770,18 @@ Stipulations:
 
 <span class="sd">        Args:</span>
 <span class="sd">            new_columns_len (int): the new length of the columns.</span>
+<span class="sd">            default_item_value (Any): the default value to initialize the new items with.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            None</span>
 
-<span class="sd">        Raises: </span>
-<span class="sd">            ValueError: if the new_columns_len is less than 1.</span>
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: if the new_columns_len is less than 0.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.resize_columns&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.resize_columns&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">resize_rows</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_rows_len</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">resize_rows</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_rows_len</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">default_item_value</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Resize the length of the rows. Must be able to handle both increasing and</span>
 <span class="sd">            decreasing the size of the rows. Must not lose any data when resizing the rows.</span>
 <span class="sd">            If the new length is smaller, then the data will be truncated.</span>
@@ -760,14 +797,15 @@ Stipulations:
 
 <span class="sd">        Args:</span>
 <span class="sd">            new_rows_len (int): the new length of the rows.</span>
+<span class="sd">            default_item_value (Any): the default value to initialize the new items with.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            None</span>
 
 <span class="sd">        Raises:</span>
-<span class="sd">            ValueError: if the new_rows_len is less than 1.</span>
+<span class="sd">            ValueError: if the new_rows_len is less than 0.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.resize_rows&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.resize_rows&quot;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Equality operator ==.</span>
@@ -782,12 +820,12 @@ Stipulations:
 <span class="sd">            False</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            other (object): the other object to compare to.</span>
+<span class="sd">            other (object): the object to compare to.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            bool: True if the two objects are equal, False otherwise.</span>
+<span class="sd">            bool: True if the objects are equal, False otherwise.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__eq__&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__eq__&quot;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Non-equality operator !=.</span>
@@ -802,12 +840,12 @@ Stipulations:
 <span class="sd">            True</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            other (object): the other object to compare to.</span>
+<span class="sd">            other (object): the object to compare to.</span>
 
-<span class="sd">        Returns:    </span>
-<span class="sd">            bool: True if the two objects are not equal, False otherwise.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: True if the objects are not equal, False otherwise.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__ne__&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__ne__&quot;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Contains operator (in).</span>
@@ -820,13 +858,29 @@ Stipulations:
 <span class="sd">            &gt;&gt;&gt; print(3 in array2d)</span>
 <span class="sd">            True</span>
 
-<span class="sd">        Args:   </span>
-<span class="sd">            item (Any): the item to search for.</span>
+<span class="sd">        Args:</span>
+<span class="sd">            item (Any): the item to check for.</span>
 
 <span class="sd">        Returns:    </span>
-<span class="sd">            bool: True if the item is found, False otherwise.</span>
+<span class="sd">            bool: True if the item is in the Array2D, False otherwise.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__contains__&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__contains__&quot;</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Clear operator. Clears the Array2D.</span>
+
+<span class="sd">        Examples:</span>
+<span class="sd">            &gt;&gt;&gt; array2d = Array2D(rows=2, columns=3)</span>
+<span class="sd">            &gt;&gt;&gt; array2d.clear()</span>
+<span class="sd">            &gt;&gt;&gt; print(array2d)</span>
+<span class="sd">            [[None, None, None], [None, None, None]]</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.clear&quot;</span><span class="p">)</span>
+
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Return a string representation of the data and structure</span>
@@ -837,9 +891,10 @@ Stipulations:
 <span class="sd">            [[None, None, None], [None, None, None]]</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            str: a string representation of the data and structure.</span>
+<span class="sd">            str: the string representation of the data and structure.</span>
+
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__str__&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__str__&quot;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Return a string representation of the data and structure.</span>
@@ -850,9 +905,9 @@ Stipulations:
 <span class="sd">            [[None, None, None], [None, None, None]]</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            str: a string representation of the data and structure.</span>
+<span class="sd">            str: the string representation of the data and structure.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__repr__&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__repr__&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
 
@@ -914,7 +969,7 @@ Stipulations:
           </td>
           <td>
             <div class="doc-md-description">
-              <p>tuple[int, int]: a tuple of the number of rows and columns.</p>
+              <p>tuple[int, int]: the dimensions of the Array2D.</p>
             </div>
           </td>
         </tr>
@@ -972,7 +1027,7 @@ Stipulations:
           </td>
           <td>
             <div class="doc-md-description">
-              <p>the item to search for.</p>
+              <p>the item to check for.</p>
             </div>
           </td>
           <td>
@@ -999,7 +1054,7 @@ Stipulations:
           </td>
           <td>
             <div class="doc-md-description">
-              <p>True if the item is found, False otherwise.</p>
+              <p>True if the item is in the Array2D, False otherwise.</p>
             </div>
           </td>
         </tr>
@@ -1008,13 +1063,7 @@ Stipulations:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/array2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">200</span>
-<span class="normal">201</span>
-<span class="normal">202</span>
-<span class="normal">203</span>
-<span class="normal">204</span>
-<span class="normal">205</span>
-<span class="normal">206</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">206</span>
 <span class="normal">207</span>
 <span class="normal">208</span>
 <span class="normal">209</span>
@@ -1025,7 +1074,13 @@ Stipulations:
 <span class="normal">214</span>
 <span class="normal">215</span>
 <span class="normal">216</span>
-<span class="normal">217</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Contains operator (in).</span>
 
 <span class="sd">    Examples:</span>
@@ -1036,13 +1091,13 @@ Stipulations:
 <span class="sd">        &gt;&gt;&gt; print(3 in array2d)</span>
 <span class="sd">        True</span>
 
-<span class="sd">    Args:   </span>
-<span class="sd">        item (Any): the item to search for.</span>
+<span class="sd">    Args:</span>
+<span class="sd">        item (Any): the item to check for.</span>
 
 <span class="sd">    Returns:    </span>
-<span class="sd">        bool: True if the item is found, False otherwise.</span>
+<span class="sd">        bool: True if the item is in the Array2D, False otherwise.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__contains__&#39;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__contains__&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>
@@ -1096,7 +1151,7 @@ Stipulations:
           </td>
           <td>
             <div class="doc-md-description">
-              <p>the other object to compare to.</p>
+              <p>the object to compare to.</p>
             </div>
           </td>
           <td>
@@ -1123,7 +1178,7 @@ Stipulations:
           </td>
           <td>
             <div class="doc-md-description">
-              <p>True if the two objects are equal, False otherwise.</p>
+              <p>True if the objects are equal, False otherwise.</p>
             </div>
           </td>
         </tr>
@@ -1132,13 +1187,7 @@ Stipulations:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/array2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">166</span>
 <span class="normal">167</span>
 <span class="normal">168</span>
 <span class="normal">169</span>
@@ -1150,7 +1199,13 @@ Stipulations:
 <span class="normal">175</span>
 <span class="normal">176</span>
 <span class="normal">177</span>
-<span class="normal">178</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Equality operator ==.</span>
 
 <span class="sd">    Examples:</span>
@@ -1163,12 +1218,12 @@ Stipulations:
 <span class="sd">        False</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        other (object): the other object to compare to.</span>
+<span class="sd">        other (object): the object to compare to.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        bool: True if the two objects are equal, False otherwise.</span>
+<span class="sd">        bool: True if the objects are equal, False otherwise.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__eq__&#39;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__eq__&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>
@@ -1248,7 +1303,7 @@ Stipulations:
           </td>
           <td>
             <div class="doc-md-description">
-              <p>an object that allows the bracket operator to be used again to access the second dimension (column).</p>
+              <p>the row object.</p>
             </div>
           </td>
         </tr>
@@ -1272,7 +1327,7 @@ Stipulations:
           </td>
           <td>
             <div class="doc-md-description">
-              <p>if the row_index is out of range.</p>
+              <p>if the row_index is out of bounds.</p>
             </div>
           </td>
         </tr>
@@ -1281,10 +1336,7 @@ Stipulations:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/array2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">71</span>
 <span class="normal">72</span>
 <span class="normal">73</span>
 <span class="normal">74</span>
@@ -1301,7 +1353,10 @@ Stipulations:
 <span class="normal">85</span>
 <span class="normal">86</span>
 <span class="normal">87</span>
-<span class="normal">88</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Bracket operator for accessing an item. This bracket operator is used to </span>
 <span class="sd">        access the first dimension (row). This should return an object that allows</span>
 <span class="sd">        the bracket operator to be used again to access the second dimension (column).</span>
@@ -1316,12 +1371,12 @@ Stipulations:
 <span class="sd">        row_index (int): the index of the row to access.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        Any: an object that allows the bracket operator to be used again to access the second dimension (column).</span>
+<span class="sd">        Any: the row object.</span>
 
 <span class="sd">    Raises:</span>
-<span class="sd">        IndexError: if the row_index is out of range.</span>
+<span class="sd">        IndexError: if the row_index is out of bounds.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__getitem__&#39;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__getitem__&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>
@@ -1433,6 +1488,30 @@ Stipulations:
     </tbody>
   </table>
 
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>ValueError</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>if the rows or columns are less than 0.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
           <details class="quote">
             <summary>Source code in <code>datastructures/array2d.py</code></summary>
             <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">25</span>
@@ -1451,7 +1530,10 @@ Stipulations:
 <span class="normal">38</span>
 <span class="normal">39</span>
 <span class="normal">40</span>
-<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">columns</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">default_item_value</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">columns</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">default_item_value</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Array2D Constructor. Initializes the Array2D with the desired size and default value.</span>
 
 <span class="sd">    Examples:</span>
@@ -1466,8 +1548,11 @@ Stipulations:
 
 <span class="sd">    Returns:</span>
 <span class="sd">        None</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: if the rows or columns are less than 0.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__init__&#39;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__init__&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>
@@ -1521,7 +1606,7 @@ Stipulations:
           </td>
           <td>
             <div class="doc-md-description">
-              <p>the other object to compare to.</p>
+              <p>the object to compare to.</p>
             </div>
           </td>
           <td>
@@ -1548,7 +1633,7 @@ Stipulations:
           </td>
           <td>
             <div class="doc-md-description">
-              <p>True if the two objects are not equal, False otherwise.</p>
+              <p>True if the objects are not equal, False otherwise.</p>
             </div>
           </td>
         </tr>
@@ -1557,13 +1642,7 @@ Stipulations:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/array2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">180</span>
-<span class="normal">181</span>
-<span class="normal">182</span>
-<span class="normal">183</span>
-<span class="normal">184</span>
-<span class="normal">185</span>
-<span class="normal">186</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">186</span>
 <span class="normal">187</span>
 <span class="normal">188</span>
 <span class="normal">189</span>
@@ -1575,7 +1654,13 @@ Stipulations:
 <span class="normal">195</span>
 <span class="normal">196</span>
 <span class="normal">197</span>
-<span class="normal">198</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Non-equality operator !=.</span>
 
 <span class="sd">    Examples:</span>
@@ -1588,12 +1673,12 @@ Stipulations:
 <span class="sd">        True</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        other (object): the other object to compare to.</span>
+<span class="sd">        other (object): the object to compare to.</span>
 
-<span class="sd">    Returns:    </span>
-<span class="sd">        bool: True if the two objects are not equal, False otherwise.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: True if the objects are not equal, False otherwise.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__ne__&#39;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__ne__&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>
@@ -1640,7 +1725,7 @@ Stipulations:
           </td>
           <td>
             <div class="doc-md-description">
-              <p>a string representation of the data and structure.</p>
+              <p>the string representation of the data and structure.</p>
             </div>
           </td>
         </tr>
@@ -1649,18 +1734,18 @@ Stipulations:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/array2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">232</span>
-<span class="normal">233</span>
-<span class="normal">234</span>
-<span class="normal">235</span>
-<span class="normal">236</span>
-<span class="normal">237</span>
-<span class="normal">238</span>
-<span class="normal">239</span>
-<span class="normal">240</span>
-<span class="normal">241</span>
-<span class="normal">242</span>
-<span class="normal">243</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Return a string representation of the data and structure.</span>
 
 <span class="sd">    Examples:</span>
@@ -1669,9 +1754,9 @@ Stipulations:
 <span class="sd">        [[None, None, None], [None, None, None]]</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        str: a string representation of the data and structure.</span>
+<span class="sd">        str: the string representation of the data and structure.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__repr__&#39;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__repr__&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>
@@ -1718,7 +1803,7 @@ Stipulations:
           </td>
           <td>
             <div class="doc-md-description">
-              <p>a string representation of the data and structure.</p>
+              <p>the string representation of the data and structure.</p>
             </div>
           </td>
         </tr>
@@ -1727,18 +1812,19 @@ Stipulations:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/array2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">219</span>
-<span class="normal">220</span>
-<span class="normal">221</span>
-<span class="normal">222</span>
-<span class="normal">223</span>
-<span class="normal">224</span>
-<span class="normal">225</span>
-<span class="normal">226</span>
-<span class="normal">227</span>
-<span class="normal">228</span>
-<span class="normal">229</span>
-<span class="normal">230</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Return a string representation of the data and structure</span>
 
 <span class="sd">    Examples:</span>
@@ -1747,9 +1833,91 @@ Stipulations:
 <span class="sd">        [[None, None, None], [None, None, None]]</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        str: a string representation of the data and structure.</span>
+<span class="sd">        str: the string representation of the data and structure.</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.__str__&#39;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__str__&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="array2d.Array2D.clear" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">clear</span><span class="p">()</span></code>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Clear operator. Clears the Array2D.</p>
+
+
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">array2d</span> <span class="o">=</span> <span class="n">Array2D</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">array2d</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">array2d</span><span class="p">)</span>
+<span class="go">[[None, None, None], [None, None, None]]</span>
+</code></pre></div>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>None</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>datastructures/array2d.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Clear operator. Clears the Array2D.</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; array2d = Array2D(rows=2, columns=3)</span>
+<span class="sd">        &gt;&gt;&gt; array2d.clear()</span>
+<span class="sd">        &gt;&gt;&gt; print(array2d)</span>
+<span class="sd">        [[None, None, None], [None, None, None]]</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.clear&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>
@@ -1858,7 +2026,7 @@ Stipulations:
           </td>
           <td>
             <div class="doc-md-description">
-              <p>if the 2D list is not rectangular.</p>
+              <p>if the 2D list is not rectangular or two-dimensional.</p>
             </div>
           </td>
         </tr>
@@ -1877,10 +2045,7 @@ Stipulations:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/array2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">46</span>
 <span class="normal">47</span>
 <span class="normal">48</span>
 <span class="normal">49</span>
@@ -1900,7 +2065,10 @@ Stipulations:
 <span class="normal">63</span>
 <span class="normal">64</span>
 <span class="normal">65</span>
-<span class="normal">66</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>   
 <span class="k">def</span> <span class="nf">from_list</span><span class="p">(</span><span class="n">items</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Array2D&#39;</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create an Array2D from a 2D Python list. The function</span>
 <span class="sd">        will take the dimensions of the list from the length of </span>
@@ -1920,10 +2088,10 @@ Stipulations:
 <span class="sd">        Array2D: the Array2D created from the 2D list.</span>
 
 <span class="sd">    Raises:</span>
-<span class="sd">        ValueError: if the 2D list is not rectangular.</span>
+<span class="sd">        ValueError: if the 2D list is not rectangular or two-dimensional.</span>
 <span class="sd">        ValueError: if list_items is not a list.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.from_list&#39;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.from_list&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>
@@ -1936,7 +2104,7 @@ Stipulations:
 
 
 <h3 id="array2d.Array2D.resize_columns" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">resize_columns</span><span class="p">(</span><span class="n">new_columns_len</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">resize_columns</span><span class="p">(</span><span class="n">new_columns_len</span><span class="p">,</span> <span class="n">default_item_value</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
@@ -1986,6 +2154,20 @@ Stipulations:
               <em>required</em>
           </td>
         </tr>
+        <tr>
+          <td><code>default_item_value</code></td>
+          <td>
+                <code><span title="typing.Any">Any</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>the default value to initialize the new items with.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
     </tbody>
   </table>
 
@@ -2030,7 +2212,7 @@ Stipulations:
           </td>
           <td>
             <div class="doc-md-description">
-              <p>if the new_columns_len is less than 1.</p>
+              <p>if the new_columns_len is less than 0.</p>
             </div>
           </td>
         </tr>
@@ -2039,11 +2221,7 @@ Stipulations:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/array2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">113</span>
 <span class="normal">114</span>
 <span class="normal">115</span>
 <span class="normal">116</span>
@@ -2063,7 +2241,12 @@ Stipulations:
 <span class="normal">130</span>
 <span class="normal">131</span>
 <span class="normal">132</span>
-<span class="normal">133</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">resize_columns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_columns_len</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">resize_columns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_columns_len</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">default_item_value</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Resize the length of the columns. Must be able to handle both increasing and </span>
 <span class="sd">        decreasing the size of the columns. Must not lose any data when resizing</span>
 <span class="sd">        the columns. If the new length is smaller, then the data will be truncated.</span>
@@ -2079,15 +2262,16 @@ Stipulations:
 
 <span class="sd">    Args:</span>
 <span class="sd">        new_columns_len (int): the new length of the columns.</span>
+<span class="sd">        default_item_value (Any): the default value to initialize the new items with.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        None</span>
 
-<span class="sd">    Raises: </span>
-<span class="sd">        ValueError: if the new_columns_len is less than 1.</span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: if the new_columns_len is less than 0.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.resize_columns&#39;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.resize_columns&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>
@@ -2100,7 +2284,7 @@ Stipulations:
 
 
 <h3 id="array2d.Array2D.resize_rows" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">resize_rows</span><span class="p">(</span><span class="n">new_rows_len</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">resize_rows</span><span class="p">(</span><span class="n">new_rows_len</span><span class="p">,</span> <span class="n">default_item_value</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
@@ -2150,6 +2334,20 @@ Stipulations:
               <em>required</em>
           </td>
         </tr>
+        <tr>
+          <td><code>default_item_value</code></td>
+          <td>
+                <code><span title="typing.Any">Any</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>the default value to initialize the new items with.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
     </tbody>
   </table>
 
@@ -2194,7 +2392,7 @@ Stipulations:
           </td>
           <td>
             <div class="doc-md-description">
-              <p>if the new_rows_len is less than 1.</p>
+              <p>if the new_rows_len is less than 0.</p>
             </div>
           </td>
         </tr>
@@ -2203,12 +2401,7 @@ Stipulations:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/array2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">140</span>
 <span class="normal">141</span>
 <span class="normal">142</span>
 <span class="normal">143</span>
@@ -2226,7 +2419,13 @@ Stipulations:
 <span class="normal">155</span>
 <span class="normal">156</span>
 <span class="normal">157</span>
-<span class="normal">158</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">resize_rows</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_rows_len</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">resize_rows</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_rows_len</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">default_item_value</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Resize the length of the rows. Must be able to handle both increasing and</span>
 <span class="sd">        decreasing the size of the rows. Must not lose any data when resizing the rows.</span>
 <span class="sd">        If the new length is smaller, then the data will be truncated.</span>
@@ -2242,14 +2441,15 @@ Stipulations:
 
 <span class="sd">    Args:</span>
 <span class="sd">        new_rows_len (int): the new length of the rows.</span>
+<span class="sd">        default_item_value (Any): the default value to initialize the new items with.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        None</span>
 
 <span class="sd">    Raises:</span>
-<span class="sd">        ValueError: if the new_rows_len is less than 1.</span>
+<span class="sd">        ValueError: if the new_rows_len is less than 0.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Array2D.resize_rows&#39;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.resize_rows&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>
