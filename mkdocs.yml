@@ -12,3 +12,4 @@ plugins:
 nav:
  - Data Structures PyDocs: index.md
  - Array: array.md
+ - Array2D: array2d.md
