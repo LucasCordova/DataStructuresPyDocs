@@ -349,15 +349,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#array2d.Array2D.clear" class="md-nav__link">
-    <span class="md-ellipsis">
-      clear
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#array2d.Array2D.from_list" class="md-nav__link">
     <span class="md-ellipsis">
       from_list
@@ -527,15 +518,6 @@
   <a href="#array2d.Array2D.__str__" class="md-nav__link">
     <span class="md-ellipsis">
       __str__
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#array2d.Array2D.clear" class="md-nav__link">
-    <span class="md-ellipsis">
-      clear
     </span>
   </a>
   
@@ -878,23 +860,7 @@ Stipulations:
 <span class="normal">247</span>
 <span class="normal">248</span>
 <span class="normal">249</span>
-<span class="normal">250</span>
-<span class="normal">251</span>
-<span class="normal">252</span>
-<span class="normal">253</span>
-<span class="normal">254</span>
-<span class="normal">255</span>
-<span class="normal">256</span>
-<span class="normal">257</span>
-<span class="normal">258</span>
-<span class="normal">259</span>
-<span class="normal">260</span>
-<span class="normal">261</span>
-<span class="normal">262</span>
-<span class="normal">263</span>
-<span class="normal">264</span>
-<span class="normal">265</span>
-<span class="normal">266</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Array2D</span><span class="p">:</span>
+<span class="normal">250</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Array2D</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Class Array2D - representing 2D data using a 1D Array</span>
 <span class="sd">            Stipulations:</span>
 <span class="sd">            1. Must use an Array object as the internal data </span>
@@ -1102,22 +1068,6 @@ Stipulations:
 <span class="sd">            bool: True if the item is in the Array2D, False otherwise.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__contains__&quot;</span><span class="p">)</span>
-
-
-    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Clear operator. Clears the Array2D.</span>
-
-<span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt; array2d = Array2D(rows=2, columns=3)</span>
-<span class="sd">            &gt;&gt;&gt; array2d.clear()</span>
-<span class="sd">            &gt;&gt;&gt; print(array2d)</span>
-<span class="sd">            [[None, None, None], [None, None, None]]</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            None</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.clear&quot;</span><span class="p">)</span>
-
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Return a string representation of the data and structure</span>
@@ -1971,18 +1921,18 @@ Stipulations:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/array2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">255</span>
-<span class="normal">256</span>
-<span class="normal">257</span>
-<span class="normal">258</span>
-<span class="normal">259</span>
-<span class="normal">260</span>
-<span class="normal">261</span>
-<span class="normal">262</span>
-<span class="normal">263</span>
-<span class="normal">264</span>
-<span class="normal">265</span>
-<span class="normal">266</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Return a string representation of the data and structure.</span>
 
 <span class="sd">    Examples:</span>
@@ -2049,19 +1999,19 @@ Stipulations:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/array2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">241</span>
-<span class="normal">242</span>
-<span class="normal">243</span>
-<span class="normal">244</span>
-<span class="normal">245</span>
-<span class="normal">246</span>
-<span class="normal">247</span>
-<span class="normal">248</span>
-<span class="normal">249</span>
-<span class="normal">250</span>
-<span class="normal">251</span>
-<span class="normal">252</span>
-<span class="normal">253</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Return a string representation of the data and structure</span>
 
 <span class="sd">    Examples:</span>
@@ -2074,87 +2024,6 @@ Stipulations:
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.__str__&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-          </details>
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="array2d.Array2D.clear" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">clear</span><span class="p">()</span></code>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Clear operator. Clears the Array2D.</p>
-
-
-
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">array2d</span> <span class="o">=</span> <span class="n">Array2D</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">array2d</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">array2d</span><span class="p">)</span>
-<span class="go">[[None, None, None], [None, None, None]]</span>
-</code></pre></div>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code>None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>None</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-          <details class="quote">
-            <summary>Source code in <code>datastructures/array2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">226</span>
-<span class="normal">227</span>
-<span class="normal">228</span>
-<span class="normal">229</span>
-<span class="normal">230</span>
-<span class="normal">231</span>
-<span class="normal">232</span>
-<span class="normal">233</span>
-<span class="normal">234</span>
-<span class="normal">235</span>
-<span class="normal">236</span>
-<span class="normal">237</span>
-<span class="normal">238</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; Clear operator. Clears the Array2D.</span>
-
-<span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; array2d = Array2D(rows=2, columns=3)</span>
-<span class="sd">        &gt;&gt;&gt; array2d.clear()</span>
-<span class="sd">        &gt;&gt;&gt; print(array2d)</span>
-<span class="sd">        [[None, None, None], [None, None, None]]</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        None</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;Array2D.clear&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>
