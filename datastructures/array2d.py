@@ -221,22 +221,6 @@ class Array2D:
             bool: True if the item is in the Array2D, False otherwise.
         """
         raise NotImplementedError("Array2D.__contains__")
-    
-
-    def clear(self) -> None:
-        """ Clear operator. Clears the Array2D.
-
-        Examples:
-            >>> array2d = Array2D(rows=2, columns=3)
-            >>> array2d.clear()
-            >>> print(array2d)
-            [[None, None, None], [None, None, None]]
-        
-        Returns:
-            None
-        """
-        raise NotImplementedError("Array2D.clear")
-
 
     def __str__(self) -> str:
         """ Return a string representation of the data and structure
