@@ -13,3 +13,5 @@ nav:
  - Data Structures PyDocs: index.md
  - Array: array.md
  - Array2D: array2d.md
+ - ListNode: list_node.md
+ - LinkedList: linked_list.md
