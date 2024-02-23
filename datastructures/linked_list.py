@@ -63,14 +63,7 @@ class LinkedList:
         Returns:
             None
         """
-        self._tail = ListNode(item, previous_node=self._tail)
-        if self._head is None:
-            self._head = self._tail
-        else:
-            if self._tail.previous is not None:
-                self._tail.previous.next = self._tail
-
-        self._count += 1
+        raise NotImplementedError('LinkedList.append')
 
     def prepend(self, item: Any) -> None:
         """ Prepend an item to the beginning of the list.
@@ -149,7 +142,7 @@ class LinkedList:
             head (ListNode | None): the ListNode instance representing the head of the linked list.
             
         """
-        return self._head
+        raise NotImplementedError('LinkedList.head')
 
     @property
     def tail(self) -> ListNode | None:
@@ -202,10 +195,7 @@ class LinkedList:
         Raises:
             IndexError: if the list is empty.
         """
-        if self._tail is None:
-            raise IndexError('List is empty.')
-
-        return self._tail.item
+        raise NotImplementedError('LinkedList.back')
 
     def clear(self) -> None:
         """ Clear the linked list.
@@ -338,8 +328,8 @@ class LinkedList:
         Returns:
             bool: whether the lists are not equal (deep check).
         """
-        return not self.__eq__(other)
-
+        raise NotImplementedError('LinkedList.__ne__')
+    
     def __iter__(self) -> Any:
         """ Iterator operator.
         
