@@ -6,5 +6,4 @@ This site contains reference documentation for building the foundational data st
 
 1. [Array](array.md)
 2. [Array2D](array2d.md)
-3. [ListNode](list_node.md)
-4. [LinkedList](linked_list.md)
+3. [LinkedList](linked_list.md)
