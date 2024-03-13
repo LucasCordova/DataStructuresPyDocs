@@ -14,3 +14,4 @@ nav:
  - Array: array.md
  - Array2D: array2d.md
  - LinkedList: linked_list.md
+ - Stacks and Queues: stacks_queues.md
