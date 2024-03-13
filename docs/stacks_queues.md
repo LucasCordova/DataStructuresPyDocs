@@ -11,18 +11,26 @@
 - [array_queue.py](https://github.com/LucasCordova/DataStructuresPyDocs/raw/main/datastructures/array_queue.py)
 - [list_queue.py](https://github.com/LucasCordova/DataStructuresPyDocs/raw/main/datastructures/list_queue.py)
 
-## ArrayStack Specification
+## Specifications
+
+- [ArrayStack](#arraystack)
+- [ListStack](#liststack)
+- [ArrayQueue](#arrayqueue)
+- [ListQueue](#listqueue)
+
+
+## ArrayStack
 
 ::: array_stack
 
-## ListStack Specification
+## ListStack
 
 ::: list_stack
 
-## ArrayQueue Specification
+## ArrayQueue
 
 ::: array_queue
 
-## ListQueue Specification
+## ListQueue
 
 ::: list_queue
