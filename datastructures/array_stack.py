@@ -12,7 +12,7 @@ class ArrayStack:
     def __init__(self, max_size: int = 0) -> None:
         """ Constructor
 
-        Example:
+        Examples:
             >>> stack = ArrayStack(10)
 
         Args:
@@ -26,7 +26,7 @@ class ArrayStack:
     def push(self, item: Any) -> None:
         """ Push an item onto the stack.
         
-        Example:
+        Examples:
             >>> stack = ArrayStack(10)
             >>> stack.push('cat')
             
@@ -44,7 +44,7 @@ class ArrayStack:
     def pop(self) -> Any:
        """ Pop an item from the stack and return the item.
        
-        Example:
+        Examples:
             >>> stack = ArrayStack(10)
             >>> stack.push('cat')
             >>> item = stack.pop()
@@ -63,7 +63,7 @@ class ArrayStack:
     def clear(self) -> None:
         """Clear the stack.
         
-        Example:
+        Examples:
             >>> stack = ArrayStack(10)
             >>> stack.push('cat')
             >>> stack.clear()
@@ -79,7 +79,7 @@ class ArrayStack:
     def top(self) -> Any:
         """Get the item at the top of the stack.
             
-        Example:
+        Examples:
             >>> stack = ArrayStack(10)
             >>> stack.push('cat')
             >>> print(stack.top)
@@ -97,7 +97,7 @@ class ArrayStack:
     def max_size(self) -> int:
         """Get the maximum size of the stack.
 
-        Example:
+        Examples:
             >>> stack = ArrayStack(10)
             >>> print(stack.max_size)
             10
@@ -111,7 +111,7 @@ class ArrayStack:
     def full(self) -> bool:
         """Check whether the stack is full.
         
-        Example:
+        Examples:
             >>> stack = ArrayStack(10)
             >>> print(stack.full)
             False
@@ -125,7 +125,7 @@ class ArrayStack:
     def empty(self) -> bool:
         """Check whether the stack is empty.
         
-        Example:
+        Examples:
             >>> stack = ArrayStack(10)
             >>> print(stack.empty)
             True
@@ -135,7 +135,7 @@ class ArrayStack:
     def __eq__(self, other: object) -> bool:
         """Check if two stacks are equal.
         
-        Example:
+        Examples:
             >>> stack1 = ArrayStack(10)
             >>> stack2 = ArrayStack(10)
             >>> print(stack1 == stack2)
@@ -152,7 +152,7 @@ class ArrayStack:
     def __ne__(self, other) -> bool:
         """Check if two stacks are not equal.
         
-        Example:
+        Examples:
             >>> stack1 = ArrayStack(10)
             >>> stack2 = ArrayStack(10)
             >>> print(stack1 != stack2)
@@ -169,7 +169,7 @@ class ArrayStack:
     def __len__(self) -> int:
         """Get the number of items on the stack.
         
-        Example:
+        Examples:
             >>> stack = ArrayStack(10)
             >>> print(len(stack))
             0
@@ -182,7 +182,7 @@ class ArrayStack:
     def __str__(self) -> str:
         """Get a string representation of the stack.
         
-        Example:
+        Examples:
             >>> stack = ArrayStack(10)
             >>> print(stack)
             []
@@ -195,7 +195,7 @@ class ArrayStack:
     def __repr__(self) -> str:
         """Get a string representation of the stack.
         
-        Example:
+        Examples:
             >>> stack = ArrayStack(10)
             >>> print(stack)
             []

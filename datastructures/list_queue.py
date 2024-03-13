@@ -14,7 +14,7 @@ class ListQueue:
     def __init__(self) -> None:
         """ Constructor.
         
-        Example:
+        Examples:
             >>> stack = ListStack()
             
         Returns:
@@ -25,7 +25,7 @@ class ListQueue:
     def enqueue(self, item: Any) -> None:
         """ Enqueue an item onto the queue.
         
-        Example:
+        Examples:
             >>> queue = ListQueue()
             >>> queue.enqueue('cat')
             
@@ -40,7 +40,7 @@ class ListQueue:
     def dequeue(self) -> Any:
         """ Dequeue an item from the queue and return the item.
         
-        Example:
+        Examples:
             >>> queue = ListQueue()
             >>> queue.enqueue('cat')
             >>> item = queue.dequeue()
@@ -58,7 +58,7 @@ class ListQueue:
     def clear(self) -> None:
         """ Clear the queue.
         
-        Example:
+        Examples:
             >>> queue = ListQueue()
             >>> queue.enqueue('cat')
             >>> queue.clear()
@@ -74,7 +74,7 @@ class ListQueue:
     def front(self) -> Any:
         """ Get the item at the front of the queue.
         
-        Example:
+        Examples:
             >>> queue = ListQueue()
             >>> queue.enqueue('cat')
             >>> print(queue.front)
@@ -92,7 +92,7 @@ class ListQueue:
     def empty(self) -> bool:
         """ Check if the queue is empty.
         
-        Example:
+        Examples:
             >>> queue = ListQueue()
             >>> print(queue.empty)
             True
@@ -105,7 +105,7 @@ class ListQueue:
     def __eq__(self, other: object) -> bool:
         """ Check if the queue is equal to another queue.
         
-        Example:
+        Examples:
             >>> queue1 = ListQueue()
             >>> queue2 = ListQueue()
             >>> print(queue1 == queue2)
@@ -122,7 +122,7 @@ class ListQueue:
     def __ne__(self, other: object) -> bool:
         """ Check if the queue is not equal to another queue.
         
-        Example:
+        Examples:
             >>> queue1 = ListQueue()
             >>> queue2 = ListQueue()
             >>> print(queue1 != queue2)
@@ -139,7 +139,7 @@ class ListQueue:
     def __len__(self) -> int:
         """ Get the number of items in the queue.
             
-        Example:
+        Examples:
             >>> queue = ListQueue()
             >>> queue.enqueue('cat')
             >>> print(len(queue))
@@ -153,7 +153,7 @@ class ListQueue:
     def __str__(self) -> str:
         """ Get the string representation of the queue.
         
-        Example:
+        Examples:
             >>> queue = ListQueue()
             >>> queue.enqueue('cat')
             >>> print(queue)
@@ -167,7 +167,7 @@ class ListQueue:
     def __repr__(self) -> str:
         """ Get the string representation of the queue.
         
-        Example:
+        Examples:
             >>> queue = ListQueue()
             >>> print(queue)
             ListQueue()

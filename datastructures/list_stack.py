@@ -10,7 +10,7 @@ class ListStack:
     def __init__(self) -> None:
         """ Constructor.
         
-        Example:
+        Examples:
             >>> stack = ListStack()
             
         Returns:
@@ -22,7 +22,7 @@ class ListStack:
     def push(self, item: Any) -> None:
         """ Push an item onto the stack.
         
-        Example:
+        Examples:
             >>> stack = ListStack()
             >>> stack.push('cat')
             
@@ -38,7 +38,7 @@ class ListStack:
     def pop(self) -> Any:
         """ Pop an item from the stack and return the item.
         
-        Example:
+        Examples:
             >>> stack = ListStack()
             >>> stack.push('cat')
             >>> item = stack.pop()
@@ -56,7 +56,7 @@ class ListStack:
     def clear(self) -> None:
         """ Clear the stack.
         
-        Example:
+        Examples:
             >>> stack = ListStack()
             >>> stack.push('cat')
             >>> stack.clear()
@@ -72,7 +72,7 @@ class ListStack:
     def top(self) -> Any:
         """ Get the item at the top of the stack.
         
-        Example:
+        Examples:
             >>> stack = ListStack()
             >>> stack.push('cat')
             >>> print(stack.top)
@@ -90,7 +90,7 @@ class ListStack:
     def empty(self) -> bool:
         """ Check if the stack is empty.
         
-        Example:
+        Examples:
             >>> stack = ListStack()
             >>> print(stack.empty)
             True
@@ -103,7 +103,7 @@ class ListStack:
     def __eq__(self, other: object) -> bool:
        """ Equality operator ==
        
-       Example:
+       Examples:
            >>> stack1 = ListStack()
            >>> stack2 = ListStack()
            >>> print(stack1 == stack2)
@@ -117,7 +117,7 @@ class ListStack:
     def __ne__(self, other: object) -> bool:
         """ Inequality operator !=
         
-        Example:
+        Examples:
             >>> stack1 = ListStack()
             >>> stack2 = ListStack()
             >>> print(stack1 != stack2)
@@ -134,7 +134,7 @@ class ListStack:
     def __len__(self) -> int:
         """ Get the number of items on the stack.
         
-        Example:
+        Examples:
             >>> stack = ListStack()
             >>> stack.push('cat')
             >>> print(len(stack))
@@ -148,7 +148,7 @@ class ListStack:
     def __str__(self) -> str:
         """ Get the string representation of the stack.
         
-        Example:
+        Examples:
             >>> stack = ListStack()
             >>> stack.push('cat')
             >>> print(stack)
@@ -162,7 +162,7 @@ class ListStack:
     def __repr__(self) -> str:
         """ Get the string representation of the stack.
         
-        Example:
+        Examples:
             >>> stack = ListStack()
             >>> stack.push('cat')
             >>> print(stack)

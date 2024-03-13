@@ -12,7 +12,7 @@ class ArrayQueue:
     def __init__(self, max_size: int = 0) -> None:
         """ Constructor
         
-        Example:
+        Examples:
             >>> queue = ArrayQueue(10)
 
             Args:
@@ -26,7 +26,7 @@ class ArrayQueue:
     def enqueue(self, item: Any) -> None:
         """ Enqueue an item onto the queue.
         
-        Example:
+        Examples:
             >>> queue = ArrayQueue(10)
             >>> queue.enqueue('cat')
             
@@ -42,7 +42,7 @@ class ArrayQueue:
     def dequeue(self) -> Any:
         """ Dequeue an item from the queue and return the item.
         
-        Example:
+        Examples:
             >>> queue = ArrayQueue(10)
             >>> queue.enqueue('cat')
             >>> item = queue.dequeue()
@@ -60,7 +60,7 @@ class ArrayQueue:
     def clear(self) -> None:
         """ Clear the queue.
         
-        Example:
+        Examples:
             >>> queue = ArrayQueue(10)
             >>> queue.enqueue('cat')
             >>> queue.clear()
@@ -74,7 +74,7 @@ class ArrayQueue:
     def front(self) -> Any:
         """ Get the item at the front of the queue.
         
-        Example:
+        Examples:
             >>> queue = ArrayQueue(10)
             >>> queue.enqueue('cat')
             >>> print(queue.front)
@@ -92,7 +92,7 @@ class ArrayQueue:
     def full(self) -> bool:
         """ Check whether the queue is full.
         
-        Example:
+        Examples:
             >>> queue = ArrayQueue(10)
             >>> print(queue.full)
             False
@@ -106,7 +106,7 @@ class ArrayQueue:
     def empty(self) -> bool:
         """ Check whether the queue is empty.
         
-        Example:
+        Examples:
             >>> queue = ArrayQueue(10)
             >>> print(queue.empty)
             True
@@ -119,7 +119,7 @@ class ArrayQueue:
     def __eq__(self, other: object) -> bool:
         """ Equality operator ==
         
-        Example:
+        Examples:
             >>> queue1 = ArrayQueue(10)
             >>> queue2 = ArrayQueue(10)
             >>> print(queue1 == queue2)
@@ -136,7 +136,7 @@ class ArrayQueue:
     def __ne__(self, other: object) -> bool:
         """ Inequality operator !=
         
-        Example:
+        Examples:
             >>> queue1 = ArrayQueue(10)
             >>> queue2 = ArrayQueue(10)
             >>> print(queue1 != queue2)
@@ -153,7 +153,7 @@ class ArrayQueue:
     def __len__(self) -> int:
         """ Get the number of items on the queue.
         
-        Example:
+        Examples:
             >>> queue = ArrayQueue(10)
             >>> queue.enqueue('cat')
             >>> print(len(queue))
@@ -167,7 +167,7 @@ class ArrayQueue:
     def __str__(self) -> str:
         """ Get the string representation of the queue.
         
-        Example:
+        Examples:
             >>> queue = ArrayQueue(10)
             >>> queue.enqueue('cat')
             >>> print(queue)
@@ -181,7 +181,7 @@ class ArrayQueue:
     def __repr__(self) -> str:
         """ Get the string representation of the queue.
         
-        Example:
+        Examples:
             >>> queue = ArrayQueue(10)
             >>> queue.enqueue('cat')
             >>> print(queue)
