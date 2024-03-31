@@ -8,3 +8,4 @@ This site contains reference documentation for building the foundational data st
 2. [Array2D](array2d.md)
 3. [LinkedList](linked_list.md)
 4. [Stacks and Queues](stacks_queues.md)
+5. [HashMap](hash_map.md)
