@@ -1,8 +1,8 @@
-# Stacks and Queues
+# HashMap
 
 ## Related Lectures
 
-- TBD
+- To be linked...
 
 ## Download Python Files
 

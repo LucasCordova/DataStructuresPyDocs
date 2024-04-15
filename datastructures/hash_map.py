@@ -23,7 +23,7 @@ class HashMap:
         buckets are based on an Array and the chains are based on LinkedLists
             Stipulations:
             1. Must use an Array<LinkedList<Pair>> as the internal data structure from the
-                Array, LinkedList and Tuple assignments.
+                Array and LinkedList assignments.
             2. Must adhere to the docstring requirements per method, including raising
                 raising appropriate exceptions where indicated.
             3. If the percentage of filled buckets passes a given or default threshold, resize the hash map
@@ -379,7 +379,7 @@ class HashMap:
             Examples:
                 >>> hashmap = HashMap(23)
                 >>> print(hashmap)
-                HashMap count: 0, Items: Array(
+                {}
         """
         raise NotImplementedError
     
@@ -389,6 +389,6 @@ class HashMap:
             Examples:
                 >>> hashmap = HashMap(23)
                 >>> print(hashmap)
-                HashMap count: 0, Items: Array(
+                {}
         """
         raise NotImplementedError
