@@ -16,3 +16,4 @@ nav:
  - LinkedList: linked_list.md
  - Stacks and Queues: stacks_queues.md
  - HashMap: hash_map.md
+ - Graph: graph.md
