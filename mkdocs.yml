@@ -12,8 +12,8 @@ plugins:
 nav:
  - Data Structures PyDocs: index.md
  - Array: array.md
- - Array2D: array2d.md
- - LinkedList: linked_list.md
- - Stacks and Queues: stacks_queues.md
- - HashMap: hash_map.md
- - Graph: graph.md
+#  - Array2D: array2d.md
+#  - LinkedList: linked_list.md
+#  - Stacks and Queues: stacks_queues.md
+#  - HashMap: hash_map.md
+#  - Graph: graph.md
