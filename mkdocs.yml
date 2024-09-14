@@ -9,6 +9,9 @@ plugins:
       python:
         paths: [datastructures]
 
+markdown_extensions:
+  - attr_list
+
 nav:
  - Data Structures PyDocs: index.md
  - Array: array.md

@@ -6,10 +6,10 @@
 - [Implementation Part 1](https://slides.com/lucascordova/arrays-a2c2f0/fullscreen?token=OH-4PDzz)
 - [Implementation Part 2](https://slides.com/lucascordova/arrays-part-three/fullscreen?token=H3geHFWx )
 
-## Download
+## Download Source Files
 
-- [IArray Interface Python file](../datastructures/iarray.py)
-- [Array Class Python file](../datastructures/array.py)
+- [IArray Interface Python file](../static/iarray.py){:download}
+- [Array Class Python file](../static/array.py){:download}
 
 ## Specification
 
