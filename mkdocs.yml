@@ -8,6 +8,10 @@ plugins:
     handlers:
       python:
         paths: [datastructures]
+        
+- mkdocs-simple-hooks:
+    hooks:
+      on_post_build: "docs.hooks:copy_get"
 
 markdown_extensions:
   - attr_list

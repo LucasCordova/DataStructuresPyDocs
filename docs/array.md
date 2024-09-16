@@ -8,8 +8,8 @@
 
 ## Download Source Files
 
-- [IArray Interface Python file](../static/iarray.py){:download}
-- [Array Class Python file](../static/array.py){:download}
+- [IArray Interface Python file](../iarray.py)
+- [Array Class Python file](../array.py)
 
 ## Specification
 
