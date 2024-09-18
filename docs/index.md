@@ -10,3 +10,7 @@ This site contains reference documentation for building the foundational data st
 4. [Stacks and Queues](stacks_queues.md)
 5. [HashMap](hash_map.md)
 6. [Graph](graph.md) -->
+
+## Algorithms Table of Contents
+
+1. [Binary Search Tree](bst.md)
