@@ -1,4 +1,4 @@
-# datastructures.ibst.IBinarySearchTree
+# datastructures.ibinarysearchtree.IBinarySearchTree
 
 """
 This module defines a BinarySearchTree interface that represents a binary search tree. 
@@ -10,50 +10,64 @@ Implement the BinarySearchTree class in the bst.py file.
 from abc import ABC, abstractmethod
 from typing import TypeVar, Generic, Optional, List
 
-T = TypeVar('T')
+K = TypeVar('K')  # Key type for ordering in the tree
+V = TypeVar('V')  # Value type for storing associated data
 
 
-class IBinarySearchTree(Generic[T], ABC):
-    """BinarySearchTree is a binary tree data structure where nodes are ordered such that:
-    - The left subtree contains only nodes with values less than the node's value.
-    - The right subtree contains only nodes with values greater than or equal to the node's value.
+class IBinarySearchTree(Generic[K, V], ABC):
+    """BinarySearchTree is a binary tree data structure where nodes are ordered based on keys, and each node stores
+    an associated value. The left subtree contains only nodes with keys less than the node's key, 
+    and the right subtree contains only nodes with keys greater than or equal to the node's key.
     """
 
     @abstractmethod
-    def insert(self, value: T) -> None:
-        """Inserts a value into the binary search tree.
+    def insert(self, key: K, value: V) -> None:
+        """Inserts a key-value pair into the binary search tree.
 
         Args:
-            value (T): The value to insert.
+            key (K): The key used to order the nodes in the tree.
+            value (V): The value associated with the key.
         """
         pass
 
     @abstractmethod
-    def search(self, value: T) -> bool:
-        """Searches for a value in the binary search tree.
+    def search(self, key: K) -> Optional[V]:
+        """Searches for a key in the binary search tree and returns the associated value if found.
 
         Args:
-            value (T): The value to search for.
+            key (K): The key to search for.
 
         Returns:
-            bool: True if the value is found, False otherwise.
+            Optional[V]: The value associated with the key if found, or None if the key is not present.
         """
         pass
 
     @abstractmethod
-    def delete(self, value: T) -> None:
-        """Deletes a value from the binary search tree.
+    def delete(self, key: K) -> None:
+        """Deletes a key and its associated value from the binary search tree.
 
         Args:
-            value (T): The value to delete.
+            key (K): The key to delete.
+
+        Raises:
+            KeyError: If the key is not present in the tree.
         """
         pass
 
     @abstractmethod
-    def inorder(self) -> List[T]:
-        """Returns the inorder traversal of the binary search tree.
+    def inorder(self) -> List[K]:
+        """Returns the inorder traversal of the binary search tree, containing the keys in sorted order.
 
         Returns:
-            List[T]: The list of values in inorder traversal.
+            List[K]: The list of keys in inorder traversal.
+        """
+        pass
+
+    @abstractmethod
+    def size(self) -> int:
+        """Returns the number of nodes in the binary search tree.
+
+        Returns:
+            int: The number of nodes in the tree.
         """
         pass

@@ -1,4 +1,4 @@
-site_name: CS 152 Data Structures PyDocs Reference Implementation Documentation
+site_name: PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University
 
 theme:
   name: "material"
