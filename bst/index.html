@@ -293,6 +293,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ibst.IBinarySearchTree.size" class="md-nav__link">
+    <span class="md-ellipsis">
+      size
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -361,17 +370,16 @@ Implement the BinarySearchTree class in the bst.py file.</p>
 
   <div class="doc doc-contents ">
           <p class="doc doc-class-bases">
-            Bases: <code><span title="typing.Generic">Generic</span>[<span title="ibst.T">T</span>]</code>, <code><span title="abc.ABC">ABC</span></code></p>
+            Bases: <code><span title="typing.Generic">Generic</span>[<span title="ibst.K">K</span>, <span title="ibst.V">V</span>]</code>, <code><span title="abc.ABC">ABC</span></code></p>
 
   
-      <p>BinarySearchTree is a binary tree data structure where nodes are ordered such that:
-- The left subtree contains only nodes with values less than the node's value.
-- The right subtree contains only nodes with values greater than or equal to the node's value.</p>
+      <p>BinarySearchTree is a binary tree data structure where nodes are ordered based on keys, and each node stores
+an associated value. The left subtree contains only nodes with keys less than the node's key, 
+and the right subtree contains only nodes with keys greater than or equal to the node's key.</p>
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ibst.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span>
-<span class="normal">17</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
 <span class="normal">20</span>
@@ -413,48 +421,75 @@ Implement the BinarySearchTree class in the bst.py file.</p>
 <span class="normal">56</span>
 <span class="normal">57</span>
 <span class="normal">58</span>
-<span class="normal">59</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">IBinarySearchTree</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">ABC</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;BinarySearchTree is a binary tree data structure where nodes are ordered such that:</span>
-<span class="sd">    - The left subtree contains only nodes with values less than the node&#39;s value.</span>
-<span class="sd">    - The right subtree contains only nodes with values greater than or equal to the node&#39;s value.</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">IBinarySearchTree</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">K</span><span class="p">,</span> <span class="n">V</span><span class="p">],</span> <span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;BinarySearchTree is a binary tree data structure where nodes are ordered based on keys, and each node stores</span>
+<span class="sd">    an associated value. The left subtree contains only nodes with keys less than the node&#39;s key, </span>
+<span class="sd">    and the right subtree contains only nodes with keys greater than or equal to the node&#39;s key.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Inserts a value into the binary search tree.</span>
+    <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="n">K</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">V</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Inserts a key-value pair into the binary search tree.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            value (T): The value to insert.</span>
+<span class="sd">            key (K): The key used to order the nodes in the tree.</span>
+<span class="sd">            value (V): The value associated with the key.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Searches for a value in the binary search tree.</span>
+    <span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="n">K</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">V</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Searches for a key in the binary search tree and returns the associated value if found.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            value (T): The value to search for.</span>
+<span class="sd">            key (K): The key to search for.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            bool: True if the value is found, False otherwise.</span>
+<span class="sd">            Optional[V]: The value associated with the key if found, or None if the key is not present.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Deletes a value from the binary search tree.</span>
+    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="n">K</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Deletes a key and its associated value from the binary search tree.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            value (T): The value to delete.</span>
+<span class="sd">            key (K): The key to delete.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            KeyError: If the key is not present in the tree.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">inorder</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the inorder traversal of the binary search tree.</span>
+    <span class="k">def</span> <span class="nf">inorder</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">K</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the inorder traversal of the binary search tree, containing the keys in sorted order.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            List[T]: The list of values in inorder traversal.</span>
+<span class="sd">            List[K]: The list of keys in inorder traversal.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the number of nodes in the binary search tree.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            int: The number of nodes in the tree.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
@@ -478,7 +513,7 @@ Implement the BinarySearchTree class in the bst.py file.</p>
 
 
 <h3 id="ibst.IBinarySearchTree.delete" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">delete</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">delete</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
@@ -489,7 +524,7 @@ Implement the BinarySearchTree class in the bst.py file.</p>
 
   <div class="doc doc-contents ">
   
-      <p>Deletes a value from the binary search tree.</p>
+      <p>Deletes a key and its associated value from the binary search tree.</p>
 
 
 
@@ -505,13 +540,13 @@ Implement the BinarySearchTree class in the bst.py file.</p>
     </thead>
     <tbody>
         <tr>
-          <td><code>value</code></td>
+          <td><code>key</code></td>
           <td>
-                <code><span title="ibst.T">T</span></code>
+                <code><span title="ibst.K">K</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The value to delete.</p>
+              <p>The key to delete.</p>
             </div>
           </td>
           <td>
@@ -521,21 +556,51 @@ Implement the BinarySearchTree class in the bst.py file.</p>
     </tbody>
   </table>
 
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>KeyError</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If the key is not present in the tree.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
           <details class="quote">
             <summary>Source code in <code>datastructures/ibst.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">45</span>
 <span class="normal">46</span>
 <span class="normal">47</span>
 <span class="normal">48</span>
 <span class="normal">49</span>
-<span class="normal">50</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Deletes a value from the binary search tree.</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="n">K</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Deletes a key and its associated value from the binary search tree.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        value (T): The value to delete.</span>
+<span class="sd">        key (K): The key to delete.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        KeyError: If the key is not present in the tree.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
@@ -561,7 +626,7 @@ Implement the BinarySearchTree class in the bst.py file.</p>
 
   <div class="doc doc-contents ">
   
-      <p>Returns the inorder traversal of the binary search tree.</p>
+      <p>Returns the inorder traversal of the binary search tree, containing the keys in sorted order.</p>
 
 
 
@@ -576,11 +641,11 @@ Implement the BinarySearchTree class in the bst.py file.</p>
     <tbody>
         <tr>
           <td>
-                <code><span title="typing.List">List</span>[<span title="ibst.T">T</span>]</code>
+                <code><span title="typing.List">List</span>[<span title="ibst.K">K</span>]</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>List[T]: The list of values in inorder traversal.</p>
+              <p>List[K]: The list of keys in inorder traversal.</p>
             </div>
           </td>
         </tr>
@@ -589,19 +654,19 @@ Implement the BinarySearchTree class in the bst.py file.</p>
 
           <details class="quote">
             <summary>Source code in <code>datastructures/ibst.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">57</span>
 <span class="normal">58</span>
-<span class="normal">59</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">inorder</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the inorder traversal of the binary search tree.</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="k">def</span> <span class="nf">inorder</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">K</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the inorder traversal of the binary search tree, containing the keys in sorted order.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        List[T]: The list of values in inorder traversal.</span>
+<span class="sd">        List[K]: The list of keys in inorder traversal.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
@@ -616,7 +681,7 @@ Implement the BinarySearchTree class in the bst.py file.</p>
 
 
 <h3 id="ibst.IBinarySearchTree.insert" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">insert</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">insert</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
@@ -627,7 +692,7 @@ Implement the BinarySearchTree class in the bst.py file.</p>
 
   <div class="doc doc-contents ">
   
-      <p>Inserts a value into the binary search tree.</p>
+      <p>Inserts a key-value pair into the binary search tree.</p>
 
 
 
@@ -643,13 +708,27 @@ Implement the BinarySearchTree class in the bst.py file.</p>
     </thead>
     <tbody>
         <tr>
-          <td><code>value</code></td>
+          <td><code>key</code></td>
           <td>
-                <code><span title="ibst.T">T</span></code>
+                <code><span title="ibst.K">K</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The value to insert.</p>
+              <p>The key used to order the nodes in the tree.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>value</code></td>
+          <td>
+                <code><span title="ibst.V">V</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The value associated with the key.</p>
             </div>
           </td>
           <td>
@@ -661,19 +740,21 @@ Implement the BinarySearchTree class in the bst.py file.</p>
 
           <details class="quote">
             <summary>Source code in <code>datastructures/ibst.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">22</span>
-<span class="normal">23</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Inserts a value into the binary search tree.</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="n">K</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">V</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Inserts a key-value pair into the binary search tree.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        value (T): The value to insert.</span>
+<span class="sd">        key (K): The key used to order the nodes in the tree.</span>
+<span class="sd">        value (V): The value associated with the key.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
@@ -688,7 +769,7 @@ Implement the BinarySearchTree class in the bst.py file.</p>
 
 
 <h3 id="ibst.IBinarySearchTree.search" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">search</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">search</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
@@ -699,7 +780,7 @@ Implement the BinarySearchTree class in the bst.py file.</p>
 
   <div class="doc doc-contents ">
   
-      <p>Searches for a value in the binary search tree.</p>
+      <p>Searches for a key in the binary search tree and returns the associated value if found.</p>
 
 
 
@@ -715,13 +796,13 @@ Implement the BinarySearchTree class in the bst.py file.</p>
     </thead>
     <tbody>
         <tr>
-          <td><code>value</code></td>
+          <td><code>key</code></td>
           <td>
-                <code><span title="ibst.T">T</span></code>
+                <code><span title="ibst.K">K</span></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The value to search for.</p>
+              <p>The key to search for.</p>
             </div>
           </td>
           <td>
@@ -737,18 +818,18 @@ Implement the BinarySearchTree class in the bst.py file.</p>
   <table>
     <thead>
       <tr>
-<th>Name</th>        <th>Type</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
         <tr>
-<td><code>bool</code></td>          <td>
-                <code>bool</code>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="ibst.V">V</span>]</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>True if the value is found, False otherwise.</p>
+              <p>Optional[V]: The value associated with the key if found, or None if the key is not present.</p>
             </div>
           </td>
         </tr>
@@ -757,9 +838,7 @@ Implement the BinarySearchTree class in the bst.py file.</p>
 
           <details class="quote">
             <summary>Source code in <code>datastructures/ibst.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">33</span>
 <span class="normal">34</span>
 <span class="normal">35</span>
 <span class="normal">36</span>
@@ -767,15 +846,83 @@ Implement the BinarySearchTree class in the bst.py file.</p>
 <span class="normal">38</span>
 <span class="normal">39</span>
 <span class="normal">40</span>
-<span class="normal">41</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Searches for a value in the binary search tree.</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="n">K</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">V</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Searches for a key in the binary search tree and returns the associated value if found.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        value (T): The value to search for.</span>
+<span class="sd">        key (K): The key to search for.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        bool: True if the value is found, False otherwise.</span>
+<span class="sd">        Optional[V]: The value associated with the key if found, or None if the key is not present.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="ibst.IBinarySearchTree.size" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">size</span><span class="p">()</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+  </span>
+
+</h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Returns the number of nodes in the binary search tree.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>int</code></td>          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The number of nodes in the tree.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>datastructures/ibst.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the number of nodes in the binary search tree.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: The number of nodes in the tree.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
