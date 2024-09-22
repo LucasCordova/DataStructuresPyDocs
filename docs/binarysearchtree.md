@@ -6,8 +6,8 @@
 
 ## Download Source Files
 
-- [IBST Interface Python file](../ibst.py)
+- [IBST Interface Python file](../ibinarysearchtree.py)
 
 ## Specification
 
-::: ibst
+::: ibinarysearchtree

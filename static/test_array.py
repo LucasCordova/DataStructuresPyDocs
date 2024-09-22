@@ -8,7 +8,7 @@ from tests.car import Car, Color, Make, Model
 class TestArray:
     car1 = Car('123', Color.RED, Make.TOYOTA, Model.CAMRY)
     car2 = Car('456', Color.BLUE, Make.TOYOTA, Model.CIVIC)
-    car3 = Car('789', Color.BLACK, Make.FORD, Model.FUSION)
+    car3 = Car('789', Color.BLACK, Make.FORD, Model.FOCUS)
 
     @pytest.fixture
     def setup_complex_object_array(self) -> Array[Car]:

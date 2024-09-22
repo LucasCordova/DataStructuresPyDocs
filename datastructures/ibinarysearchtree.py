@@ -1,23 +1,24 @@
 # datastructures.ibinarysearchtree.IBinarySearchTree
 
 """
-This module defines a BinarySearchTree interface that represents a binary search tree. 
+This module defines a Binary Search Tree interface. 
 This file lists the stipulations and more information on the methods and their expected behavior.
 YOU SHOULD NOT MODIFY THIS FILE.
-Implement the BinarySearchTree class in the bst.py file.
 """
 
 from abc import ABC, abstractmethod
-from typing import TypeVar, Generic, Optional, List
+from typing import Callable, TypeVar, Generic, Optional, List
 
 K = TypeVar('K')  # Key type for ordering in the tree
 V = TypeVar('V')  # Value type for storing associated data
 
 
 class IBinarySearchTree(Generic[K, V], ABC):
-    """BinarySearchTree is a binary tree data structure where nodes are ordered based on keys, and each node stores
-    an associated value. The left subtree contains only nodes with keys less than the node's key, 
-    and the right subtree contains only nodes with keys greater than or equal to the node's key.
+    """ A binary search tree is a binary tree data structure where nodes are ordered based on keys, 
+    and each node stores an associated value. The left subtree contains only nodes with keys less 
+    than the node's key, and the right subtree contains only nodes with keys greater than or equal
+    to the node's key. Implementations of this interface should maintain the binary search tree 
+    properties. Examples of binary search trees include AVL trees, red-black trees, and splay trees.
     """
 
     @abstractmethod
@@ -55,11 +56,35 @@ class IBinarySearchTree(Generic[K, V], ABC):
         pass
 
     @abstractmethod
-    def inorder(self) -> List[K]:
+    def inorder(self, visit: Optional[Callable[[V], None]]=None) -> List[K]:
         """Returns the inorder traversal of the binary search tree, containing the keys in sorted order.
 
+        Args:
+            visit (Optional[Callable[[V], None]]): A function to call on each value during the traversal.        
+        
         Returns:
             List[K]: The list of keys in inorder traversal.
+        """
+        pass
+
+    @abstractmethod
+    def preorder(self, visit: Optional[Callable[[V], None]]=None) -> List[K]:
+        """Returns the preorder traversal of the binary search tree.
+
+        Args:
+            visit (Optional[Callable[[V], None]]): A function to call on each value during the traversal.        
+        
+        Returns:
+            List[K]: The list of keys in preorder traversal.
+        """
+        pass
+
+    @abstractmethod
+    def postorder(self, visit: Optional[Callable[[V], None]]=None) -> List[K]:
+        """Returns the postorder traversal of the binary search tree.
+
+        Returns:
+            List[K]: The list of keys in postorder traversal.
         """
         pass
 
@@ -67,6 +92,9 @@ class IBinarySearchTree(Generic[K, V], ABC):
     def size(self) -> int:
         """Returns the number of nodes in the binary search tree.
 
+        Args:
+            visit (Optional[Callable[[V], None]]): A function to call on each value during the traversal.        
+        
         Returns:
             int: The number of nodes in the tree.
         """

@@ -13,4 +13,4 @@ This site contains reference documentation for building the foundational data st
 
 ## Algorithms Table of Contents
 
-1. [Binary Search Tree](bst.md)
+1. [Binary Search Tree](binarysearchtree.md)
