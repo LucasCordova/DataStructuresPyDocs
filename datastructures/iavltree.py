@@ -6,14 +6,21 @@ This file lists the stipulations and more information on the methods and their e
 YOU SHOULD NOT MODIFY THIS FILE.
 """
 
-from abc import ABC, abstractmethod
-from typing import Callable, TypeVar, Generic, Optional, List
+from abc import abstractmethod
+from functools import total_ordering
+from typing import Any, Callable, Protocol, TypeVar, Generic, Optional, List
 
-K = TypeVar('K')  # Key type for ordering in the tree
+
+@total_ordering
+class Comparable(Protocol):
+    @abstractmethod
+    def __lt__(self, other: Any) -> bool: ...
+        
+K = TypeVar('K', bound=Comparable)  # Key type for ordering the nodes
 V = TypeVar('V')  # Value type for storing associated data
 
 
-class IBinarySearchTree(Generic[K, V], ABC):
+class IAVLTree(Protocol, Generic[K, V]):
     """ A binary search tree is a binary tree data structure where nodes are ordered based on keys, 
     and each node stores an associated value. The left subtree contains only nodes with keys less 
     than the node's key, and the right subtree contains only nodes with keys greater than or equal
@@ -25,12 +32,12 @@ class IBinarySearchTree(Generic[K, V], ABC):
     def insert(self, key: K, value: V) -> None:
         """Inserts a key-value pair into the binary search tree.
 
-        Args:
-            key (K): The key used to order the nodes in the tree.
-            value (V): The value associated with the key.
+            Args:
+                key (K): The key used to order the nodes in the tree.
+                value (V): The value associated with the key.
         """
         pass
-
+    
     @abstractmethod
     def search(self, key: K) -> Optional[V]:
         """Searches for a key in the binary search tree and returns the associated value if found.
@@ -85,6 +92,18 @@ class IBinarySearchTree(Generic[K, V], ABC):
 
         Returns:
             List[K]: The list of keys in postorder traversal.
+        """
+        pass
+
+    @abstractmethod
+    def bforder(self, visit: Optional[Callable[[V], None]]=None) -> List[K]:
+        """Returns the keys in the binary search tree in breadth-first order.
+
+        Args:
+            visit (Optional[Callable[[V], None]]): A function to call on each value during the traversal.        
+        
+        Returns:
+            List[K]: The list of keys in breadth-first order.
         """
         pass
 

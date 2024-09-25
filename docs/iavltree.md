@@ -6,8 +6,9 @@
 
 ## Download Source Files
 
-- [IBST Interface Python file](../ibinarysearchtree.py)
+- [IBST Interface Python file](../ibst.py)
+- [AVL Insert Tests file](../test_avltree_inserts.py)
 
 ## Specification
 
-::: ibinarysearchtree
+::: iavltree

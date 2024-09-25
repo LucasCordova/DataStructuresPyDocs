@@ -19,6 +19,7 @@ markdown_extensions:
 nav:
  - Data Structures PyDocs: index.md
  - Array: array.md
+ - AVL Tree: iavltree.md
 #  - Array2D: array2d.md
 #  - LinkedList: linked_list.md
 #  - Stacks and Queues: stacks_queues.md
