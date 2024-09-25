@@ -6,4 +6,5 @@ def copy_get(config, **kwargs):
     shutil.copy('datastructures/iarray.py', os.path.join(site_dir, 'iarray.py'))
     shutil.copy('datastructures/array.py', os.path.join(site_dir, 'array.py'))
     shutil.copy('static/test_array.py', os.path.join(site_dir, 'test_array.py'))
-    shutil.copy('static/ibinarysearchtree.py', os.path.join(site_dir, 'ibinarysearchtree.py'))
+    shutil.copy('static/iavltree.py', os.path.join(site_dir, 'iavltree.py'))
+    shutil.copy('static/test_avltree_inserts.py', os.path.join(site_dir, 'test_avltree_inserts.py'))
