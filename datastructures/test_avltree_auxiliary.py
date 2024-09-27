@@ -2,7 +2,7 @@ import pytest
 
 from datastructures.avltree import AVLTree
 
-class TestAVLTreeAuxilary():
+class TestAVLTreeAuxiliary():
     @pytest.fixture
     def avltree(self) -> AVLTree: return AVLTree[int, int]([(8, 8), (9, 9), (10, 10), (2, 2), (1, 1), (5, 5), (3, 3), (6, 6), (4, 4), (7, 7)])
 
