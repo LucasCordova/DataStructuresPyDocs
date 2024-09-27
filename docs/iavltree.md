@@ -9,7 +9,7 @@
 - [IAVLTree Interface Python file](../iavltree.py)
 - [AVL Insert Tests file](../test_avltree_inserts.py)
 - [AVL Delete Tests file](../test_avltree_deletes.py)
-- [AVL Auxilary Tests](../test_avltree_auxiliary.py)
+- [AVL Auxiliary Tests](../test_avltree_auxiliary.py)
 
 ## Specification
 
