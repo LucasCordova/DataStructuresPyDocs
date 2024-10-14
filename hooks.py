@@ -10,3 +10,7 @@ def copy_get(config, **kwargs):
     shutil.copy('datastructures/test_avltree_inserts.py', os.path.join(site_dir, 'test_avltree_inserts.py'))
     shutil.copy('datastructures/test_avltree_deletes.py', os.path.join(site_dir, 'test_avltree_deletes.py'))
     shutil.copy('datastructures/test_avltree_auxiliary.py', os.path.join(site_dir, 'test_avltree_auxiliary.py'))
+    shutil.copy('datastructures/iarray2d.py', os.path.join(site_dir, 'iarray2d.py'))
+    shutil.copy('datastructures/array2d.py', os.path.join(site_dir, 'array2d.py'))
+    shutil.copy('datastructures/test_array2d.py', os.path.join(site_dir, 'test_array2d.py'))
+    shutil.copy('datastructures/car.py', os.path.join(site_dir, 'car.py'))
