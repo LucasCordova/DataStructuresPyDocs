@@ -6,10 +6,11 @@
     Implement the Array class in the array.py file.
 """
 
+from __future__ import annotations
 from abc import ABC, abstractmethod
 from collections.abc import Iterator, Sequence
 import os
-from typing import Any, Generic, TypeVar, overload
+from typing import Any, Generic, Optional, TypeVar, overload
 
 T = TypeVar('T', bound=Any)
 
@@ -21,7 +22,7 @@ class IArray(Sequence[T], Generic[T], ABC):
     """   
 
     @abstractmethod
-    def __init__(self, starting_sequence: Sequence[T], data_type: type) -> None:
+    def __init__(self, starting_sequence: Sequence[T], data_type: Optional[type]=None) -> None:
         """ Array Constructor. Initializes the Array with a default capacity (default: 0) and default value (default: None).
             The Array should manage a physical size (the size of the internal numpy array) and a logical size (the number of items in the Array).
 
@@ -37,8 +38,8 @@ class IArray(Sequence[T], Generic[T], ABC):
             Array(logical size: 15, items: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], physical size: 15, data type: <class 'int'>)
         
         Args:
-            starting_sequence (Sequence[T]): the desired sequence type to initialize the Array with.
-            data_type (type): the desired data type to initialize the Array with.
+            sequence (MutableSequence[T]): the desired sequence type to initialize the Array with.
+            data_type (type): the desired data type to initialize the Array with (optional). Used if not inferred from the data.
 
         Returns:
             None
@@ -52,9 +53,9 @@ class IArray(Sequence[T], Generic[T], ABC):
     @overload
     def __getitem__(self, index: int) -> T: ...
     @overload
-    def __getitem__(self, index: slice) -> Sequence[T]: ...
+    def __getitem__(self, index: slice) -> IArray[T]: ...
     @abstractmethod
-    def __getitem__(self, index: int | slice) -> T | Sequence[T]:
+    def __getitem__(self, index: int | slice) -> T | IArray[T]:
         """ Bracket operator for getting an item (via int) or items (via slice) in an Array. If index is an integer,
             return the item at the index. If index is a slice, return the items at the slice.
 
@@ -76,7 +77,8 @@ class IArray(Sequence[T], Generic[T], ABC):
             TypeError: if the index is not an integer or slice.
         """
         pass
-    
+
+    @abstractmethod
     def __setitem__(self, index: int, item: T) -> None:
         """ Bracket operator for setting an item in an Array.
 
@@ -101,6 +103,7 @@ class IArray(Sequence[T], Generic[T], ABC):
         """
         pass
 
+    @abstractmethod
     def append(self, data: T) -> None:
         """ Append an item to the end of the Array. Internally, the Array should manage a physical size (the size of the internal numpy array) 
             and a logical size (the number of items in the Array). The algorithm should double the array physical size when the number of items in the array (logical size) 
@@ -283,27 +286,6 @@ class IArray(Sequence[T], Generic[T], ABC):
         pass
 
     @abstractmethod
-    def __ne__(self, other: object) -> bool:
-        """ Non-Equality operator !=.
-        
-        Examples:
-            >>> array1 = Array[int](starting_sequence=[0, 1, 2, 3, 4], data_type=int)
-            >>> array2 = Array[int](starting_sequence=[0, 1, 2, 3, 4], data_type=int)
-            >>> print(array1 != array2)
-            False
-            array3 = Array[int](starting_sequence=[0, 1, 2, 3, 5], data_type=int)
-            >>> print(array1 != array3)
-            True
-        
-        Args:
-            other (object): the instance to compare self to.
-            
-        Returns:
-            is_not_equal (bool): true if the arrays are NOT equal (deep check).
-        """
-        pass
-
-    @abstractmethod
     def __iter__(self) -> Iterator[T]:
         """ Iterator operator. Allows for iteration over the Array.
         Examples:
@@ -372,25 +354,6 @@ class IArray(Sequence[T], Generic[T], ABC):
             contains_item (bool): true if the array contains the item.
         """
         pass
-    
-    @abstractmethod
-    def __does_not_contain__(self, item: Any) -> bool:
-        """ Does not contain operator (not in)
-
-        Examples:
-            >>> array = Array[str](starting_sequence=['zero', 'one', 'two', 'three', 'four'], data_type=str)
-            >>> print('three' not in array)
-            False   
-            >>> print('five' not in array)
-            True
-
-        Args:
-            item (Any): the desired item to check whether it's in the array.
-
-        Returns:
-            does_not_contains_item (bool): true if the array does not contain the item.
-        """ 
-        pass 
 
     @abstractmethod
     def clear(self) -> None:
@@ -420,7 +383,7 @@ class IArray(Sequence[T], Generic[T], ABC):
             >>> array = Array[str](starting_sequence=['zero', 'one', 'two', 'three', 'four'], data_type=str)
             >>> print(str(array)))
             [zero, one, two, three, four]
-           
+        
         Returns:
             string (str): the string representation of the data and structure.
         """
@@ -442,7 +405,7 @@ class IArray(Sequence[T], Generic[T], ABC):
             string (str): the programmer's representation of the data and structure.
         """
         pass
-    
+
 
 if __name__ == '__main__':
     filename = os.path.basename(__file__)
