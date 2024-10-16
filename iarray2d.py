@@ -18,7 +18,8 @@ T = TypeVar('T', bound=Any)
 class IArray2D(IArray[T], Generic[T], ABC):
     """ An interface that represents the minimal functions needed to make an Array object
         into a two-dimensional array. Other typical functions like str, len, repr, etc. are not
-        included in this interface because they are provided by the IArray
+        included in this interface because they are provided by the IArray. The Array2D
+        supports jagged edges, meaning that each row can have a different number of columns.
     """
     @abstractmethod
     def __init__(self, starting_sequence: Sequence[Sequence[T]]=[[]]) -> None: 

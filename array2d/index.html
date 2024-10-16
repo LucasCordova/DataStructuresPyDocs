@@ -529,6 +529,7 @@
 <ul>
 <li><a href="../iarray2d.py">IArray2D Interface Python file</a></li>
 <li><a href="../array2d.py">Array2D Class Python file</a></li>
+<li><a href="../iarray.py">IArray Class Python file</a></li>
 <li><a href="../test_array2d.py">Array2D Test Python file</a></li>
 <li><a href="../car.py">Updated Car Python file</a></li>
 </ul>
@@ -576,7 +577,8 @@ Implement the Array2D class in the array2d.py file.</p>
   
       <p>An interface that represents the minimal functions needed to make an Array object
 into a two-dimensional array. Other typical functions like str, len, repr, etc. are not
-included in this interface because they are provided by the IArray</p>
+included in this interface because they are provided by the IArray. The Array2D
+supports jagged edges, meaning that each row can have a different number of columns.</p>
 
             <details class="quote">
               <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
@@ -674,10 +676,12 @@ included in this interface because they are provided by the IArray</p>
 <span class="normal">109</span>
 <span class="normal">110</span>
 <span class="normal">111</span>
-<span class="normal">112</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">IArray2D</span><span class="p">(</span><span class="n">IArray</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">ABC</span><span class="p">):</span>
+<span class="normal">112</span>
+<span class="normal">113</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">IArray2D</span><span class="p">(</span><span class="n">IArray</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">ABC</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; An interface that represents the minimal functions needed to make an Array object</span>
 <span class="sd">        into a two-dimensional array. Other typical functions like str, len, repr, etc. are not</span>
-<span class="sd">        included in this interface because they are provided by the IArray</span>
+<span class="sd">        included in this interface because they are provided by the IArray. The Array2D</span>
+<span class="sd">        supports jagged edges, meaning that each row can have a different number of columns.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="nd">@abstractmethod</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">starting_sequence</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">]]</span><span class="o">=</span><span class="p">[[]])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> 
@@ -858,8 +862,7 @@ Args:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">66</span>
-<span class="normal">67</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">67</span>
 <span class="normal">68</span>
 <span class="normal">69</span>
 <span class="normal">70</span>
@@ -874,7 +877,8 @@ Args:
 <span class="normal">79</span>
 <span class="normal">80</span>
 <span class="normal">81</span>
-<span class="normal">82</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">82</span>
+<span class="normal">83</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">slice</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IArray</span><span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="o">|</span> <span class="n">IArray2D</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span> 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Gets the item at the specified index or a slice of the two-dimensional array. If the index is a slice,</span>
 <span class="sd">        the method should return a two-dimensional array with the specified slice of the two-dimensional array. </span>
@@ -1025,8 +1029,7 @@ Args:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">23</span>
-<span class="normal">24</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
 <span class="normal">27</span>
@@ -1046,7 +1049,8 @@ Args:
 <span class="normal">41</span>
 <span class="normal">42</span>
 <span class="normal">43</span>
-<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">starting_sequence</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">]]</span><span class="o">=</span><span class="p">[[]])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Initializes the Array2D object with a starting sequence of sequences.</span>
 
@@ -1120,15 +1124,15 @@ Args:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">84</span>
-<span class="normal">85</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">85</span>
 <span class="normal">86</span>
 <span class="normal">87</span>
 <span class="normal">88</span>
 <span class="normal">89</span>
 <span class="normal">90</span>
 <span class="normal">91</span>
-<span class="normal">92</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">92</span>
+<span class="normal">93</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">IArray</span><span class="p">[</span><span class="n">T</span><span class="p">]]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns an iterator of the two-dimensional array. Because the two-dimensional array is</span>
 <span class="sd">        made up of arrays, the iterator should return an iterator to an array.</span>
@@ -1189,15 +1193,15 @@ Args:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">104</span>
-<span class="normal">105</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">105</span>
 <span class="normal">106</span>
 <span class="normal">107</span>
 <span class="normal">108</span>
 <span class="normal">109</span>
 <span class="normal">110</span>
 <span class="normal">111</span>
-<span class="normal">112</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">112</span>
+<span class="normal">113</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns a string representation of the two-dimensional array. The string representation</span>
 <span class="sd">        should include the string representation of each array in the two-dimensional array.</span>
@@ -1258,15 +1262,15 @@ Args:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 94</span>
-<span class="normal"> 95</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 95</span>
 <span class="normal"> 96</span>
 <span class="normal"> 97</span>
 <span class="normal"> 98</span>
 <span class="normal"> 99</span>
 <span class="normal">100</span>
 <span class="normal">101</span>
-<span class="normal">102</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">102</span>
+<span class="normal">103</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns a string representation of the two-dimensional array. The string representation</span>
 <span class="sd">        should include the string representation of each array in the two-dimensional array.</span>
@@ -1385,8 +1389,7 @@ Args:
 
           <details class="quote">
             <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">46</span>
-<span class="normal">47</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">47</span>
 <span class="normal">48</span>
 <span class="normal">49</span>
 <span class="normal">50</span>
@@ -1398,7 +1401,8 @@ Args:
 <span class="normal">56</span>
 <span class="normal">57</span>
 <span class="normal">58</span>
-<span class="normal">59</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="normal">59</span>
+<span class="normal">60</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
 <span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="nf">empty</span><span class="p">(</span><span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IArray</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span> 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Creates an empty two-dimensional array with the specified number of rows and columns.</span>
