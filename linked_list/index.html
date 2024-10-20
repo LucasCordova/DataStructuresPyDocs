@@ -9,18 +9,22 @@
       
       
       
+        <link rel="prev" href="../array2d/">
+      
+      
+        <link rel="next" href="../iavltree/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
-        <title>Linked List - PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University</title>
+        <title>LinkedList - PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
       
 
@@ -41,7 +45,7 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -79,12 +83,12 @@
     <a href=".." title="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" class="md-header__button md-logo" aria-label="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -96,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Linked List
+              LinkedList
             
           </span>
         </div>
@@ -104,7 +108,7 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -137,7 +141,7 @@
     <a href=".." title="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" class="md-nav__button md-logo" aria-label="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University
@@ -209,6 +213,315 @@
       
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    LinkedList
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    LinkedList
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download-python-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download Python Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      linked_list
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked_list.LinkedList" class="md-nav__link">
+    <span class="md-ellipsis">
+      LinkedList
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LinkedList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.back" class="md-nav__link">
+    <span class="md-ellipsis">
+      back
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.empty" class="md-nav__link">
+    <span class="md-ellipsis">
+      empty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.front" class="md-nav__link">
+    <span class="md-ellipsis">
+      front
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.head" class="md-nav__link">
+    <span class="md-ellipsis">
+      head
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.tail" class="md-nav__link">
+    <span class="md-ellipsis">
+      tail
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.__contains__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __contains__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.__eq__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __eq__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.__iter__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __iter__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.__len__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __len__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.__ne__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __ne__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.__repr__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __repr__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.__reversed__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __reversed__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.__str__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __str__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.append" class="md-nav__link">
+    <span class="md-ellipsis">
+      append
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      clear
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.extract" class="md-nav__link">
+    <span class="md-ellipsis">
+      extract
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.from_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      from_list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.insert_after" class="md-nav__link">
+    <span class="md-ellipsis">
+      insert_after
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.insert_before" class="md-nav__link">
+    <span class="md-ellipsis">
+      insert_before
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.pop_back" class="md-nav__link">
+    <span class="md-ellipsis">
+      pop_back
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.pop_front" class="md-nav__link">
+    <span class="md-ellipsis">
+      pop_front
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linked_list.LinkedList.prepend" class="md-nav__link">
+    <span class="md-ellipsis">
+      prepend
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     <li class="md-nav__item">
@@ -252,15 +565,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#related-lectures" class="md-nav__link">
-    <span class="md-ellipsis">
-      Related Lectures
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#download-python-files" class="md-nav__link">
     <span class="md-ellipsis">
       Download Python Files
@@ -275,93 +579,6 @@
       Specification
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#list_node" class="md-nav__link">
-    <span class="md-ellipsis">
-      list_node
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#list_node.ListNode" class="md-nav__link">
-    <span class="md-ellipsis">
-      ListNode
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ListNode">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#list_node.ListNode.item" class="md-nav__link">
-    <span class="md-ellipsis">
-      item
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list_node.ListNode.next" class="md-nav__link">
-    <span class="md-ellipsis">
-      next
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list_node.ListNode.previous" class="md-nav__link">
-    <span class="md-ellipsis">
-      previous
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list_node.ListNode.__eq__" class="md-nav__link">
-    <span class="md-ellipsis">
-      __eq__
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list_node.ListNode.__init__" class="md-nav__link">
-    <span class="md-ellipsis">
-      __init__
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list_node.ListNode.__repr__" class="md-nav__link">
-    <span class="md-ellipsis">
-      __repr__
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list_node.ListNode.__str__" class="md-nav__link">
-    <span class="md-ellipsis">
-      __str__
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -612,10 +829,6 @@
 
 
 <h1 id="linked-list">Linked List</h1>
-<h2 id="related-lectures">Related Lectures</h2>
-<ul>
-<li><a href="https://slides.com/lucascordova/linked-lists-motivation-design/fullscreen?token=I-Z3rZvV">Motivation and Design</a></li>
-</ul>
 <h2 id="download-python-files">Download Python Files</h2>
 <ul>
 <li><a href="https://github.com/LucasCordova/DataStructuresPyDocs/raw/main/datastructures/list_node.py">list_node.py</a></li>
@@ -628,979 +841,15 @@
 
 
 
-<a id="list_node"></a>
-  <div class="doc doc-contents first">
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="list_node.ListNode" class="doc doc-heading">
-          <code>ListNode</code>
-
-
-</h2>
-
-
-  <div class="doc doc-contents ">
-
-  
-      <p>ListNode - represents a node in a linked list
-Stipulations:
-1. Must adhere to the docstring requirements per method, including raising
-   raising appropriate exceptions where indicated.</p>
-
-            <details class="quote">
-              <summary>Source code in <code>datastructures/list_node.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  4</span>
-<span class="normal">  5</span>
-<span class="normal">  6</span>
-<span class="normal">  7</span>
-<span class="normal">  8</span>
-<span class="normal">  9</span>
-<span class="normal"> 10</span>
-<span class="normal"> 11</span>
-<span class="normal"> 12</span>
-<span class="normal"> 13</span>
-<span class="normal"> 14</span>
-<span class="normal"> 15</span>
-<span class="normal"> 16</span>
-<span class="normal"> 17</span>
-<span class="normal"> 18</span>
-<span class="normal"> 19</span>
-<span class="normal"> 20</span>
-<span class="normal"> 21</span>
-<span class="normal"> 22</span>
-<span class="normal"> 23</span>
-<span class="normal"> 24</span>
-<span class="normal"> 25</span>
-<span class="normal"> 26</span>
-<span class="normal"> 27</span>
-<span class="normal"> 28</span>
-<span class="normal"> 29</span>
-<span class="normal"> 30</span>
-<span class="normal"> 31</span>
-<span class="normal"> 32</span>
-<span class="normal"> 33</span>
-<span class="normal"> 34</span>
-<span class="normal"> 35</span>
-<span class="normal"> 36</span>
-<span class="normal"> 37</span>
-<span class="normal"> 38</span>
-<span class="normal"> 39</span>
-<span class="normal"> 40</span>
-<span class="normal"> 41</span>
-<span class="normal"> 42</span>
-<span class="normal"> 43</span>
-<span class="normal"> 44</span>
-<span class="normal"> 45</span>
-<span class="normal"> 46</span>
-<span class="normal"> 47</span>
-<span class="normal"> 48</span>
-<span class="normal"> 49</span>
-<span class="normal"> 50</span>
-<span class="normal"> 51</span>
-<span class="normal"> 52</span>
-<span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span>
-<span class="normal">157</span>
-<span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">ListNode</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; ListNode - represents a node in a linked list</span>
-<span class="sd">            Stipulations:</span>
-<span class="sd">            1. Must adhere to the docstring requirements per method, including raising</span>
-<span class="sd">               raising appropriate exceptions where indicated.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">previous_node</span><span class="p">:</span> <span class="n">ListNode</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">next_node</span><span class="p">:</span> <span class="n">ListNode</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Constructor - represents a node in a linked list.</span>
-
-<span class="sd">            Examples:</span>
-<span class="sd">                &gt;&gt;&gt;node = ListNode(&#39;cat&#39;)  # Create a new node with 5 and no previous or next node.</span>
-<span class="sd">                &gt;&gt;&gt;node = ListNode(&#39;cat&#39;, None, None)  # Create a new node with &#39;cat&#39; and no previous or next node.</span>
-<span class="sd">                &gt;&gt;&gt;print(node)</span>
-<span class="sd">                cat</span>
-
-<span class="sd">            Args:</span>
-<span class="sd">                item (Any): the item (data) to store in the node</span>
-<span class="sd">                previous_node (ListNode | None): the corresponding previous node of this node in the linked list</span>
-<span class="sd">                next_node (ListNode | None): the corresponding next node of this node in the linked list</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;ListNode.__init__&quot;</span><span class="p">)</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">item</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Property getter for the item.</span>
-
-<span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt;node = ListNode(&#39;cat&#39;)</span>
-<span class="sd">            &gt;&gt;&gt;item = node.item</span>
-<span class="sd">            &gt;&gt;&gt;print(item)</span>
-<span class="sd">            cat</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            Any: the item stored in the node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;ListNode.item&quot;</span><span class="p">)</span>
-
-    <span class="nd">@item</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Property setter for the item.</span>
-
-<span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt;node = ListNode(&#39;cat&#39;)</span>
-<span class="sd">            &gt;&gt;&gt;node.item = &#39;dog&#39;</span>
-<span class="sd">            &gt;&gt;&gt;print(node)</span>
-<span class="sd">            dog</span>
-
-<span class="sd">        Args:</span>
-<span class="sd">            item (Any): the item to store in the node.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            None</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;ListNode.item&quot;</span><span class="p">)</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">previous</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Property getter for the previous node.</span>
-
-<span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt;node1 = ListNode(&#39;cat&#39;)</span>
-<span class="sd">            &gt;&gt;&gt;node2 = ListNode(&#39;dog&#39;, previous_node=node1)</span>
-<span class="sd">            &gt;&gt;&gt;print(node2.previous)</span>
-<span class="sd">            cat</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            ListNode | None: the previous node of the node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>      
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;ListNode.previous&quot;</span><span class="p">)</span>
-
-    <span class="nd">@previous</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">previous</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">previous_node</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Property setter for the previous node.</span>
-
-<span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt;node1 = ListNode(&#39;cat&#39;)</span>
-<span class="sd">            &gt;&gt;&gt;node2 = ListNode(&#39;dog&#39;)</span>
-<span class="sd">            &gt;&gt;&gt;node2.previous = node1</span>
-<span class="sd">            &gt;&gt;&gt;print(node2.previous)</span>
-<span class="sd">            cat</span>
-
-<span class="sd">        Args:</span>
-<span class="sd">            previous_node (ListNode): the node&#39;s previous_node instance.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;ListNode.previous&quot;</span><span class="p">)</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Property getter for the next node.</span>
-
-<span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt;node1 = ListNode(&#39;cat&#39;)</span>
-<span class="sd">            &gt;&gt;&gt;node2 = ListNode(&#39;dog&#39;, next_node=node1)</span>
-<span class="sd">            &gt;&gt;&gt;print(node2.next)</span>
-<span class="sd">            cat</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            ListNode | None: the next node of the node.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;ListNode.next&quot;</span><span class="p">)</span>
-
-    <span class="nd">@next</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">next_node</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Property setter for the next node.</span>
-
-<span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt;node1 = ListNode(&#39;cat&#39;)</span>
-<span class="sd">            &gt;&gt;&gt;node2 = ListNode(&#39;dog&#39;)</span>
-<span class="sd">            &gt;&gt;&gt;node2.next = node1</span>
-<span class="sd">            &gt;&gt;&gt;print(node2.next)</span>
-<span class="sd">            cat</span>
-
-<span class="sd">        Args:</span>
-<span class="sd">            next_node (ListNode): the node&#39;s next_node instance.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            None</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;ListNode.next&quot;</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Equality operator ==.</span>
-
-<span class="sd">            Examples:</span>
-<span class="sd">                &gt;&gt;&gt;node1 = ListNode(&#39;cat&#39;)</span>
-<span class="sd">                &gt;&gt;&gt;node2 = ListNode(&#39;cat&#39;)</span>
-<span class="sd">                &gt;&gt;&gt;node3 = ListNode(&#39;dog&#39;)</span>
-<span class="sd">                &gt;&gt;&gt;print(node1 == node2)</span>
-<span class="sd">                True</span>
-<span class="sd">                &gt;&gt;&gt;print(node1 == node3)</span>
-<span class="sd">                False</span>
-
-<span class="sd">            Args:</span>
-<span class="sd">                other (object): the instance to compare self to.</span>
-
-<span class="sd">            Returns:</span>
-<span class="sd">                bool: true if the nodes are equal (deep check). false if other is not a ListNode or they are not equal.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;ListNode.__eq__&quot;</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Return a string representation of the data and structure.</span>
-
-<span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt;node = ListNode(&#39;cat&#39;)</span>
-<span class="sd">            &gt;&gt;&gt;print(node)</span>
-<span class="sd">            cat</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            str: the string representation of the data and structure.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;ListNode.__str__&quot;</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Return a string representation of the data and structure.</span>
-
-<span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt;node = ListNode(&#39;cat&#39;)</span>
-<span class="sd">            &gt;&gt;&gt;print(node)</span>
-<span class="sd">            cat</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            str: the string representation of the data and structure.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;ListNode.__repr__&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-            </details>
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="list_node.ListNode.item" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">item</span><span class="p">:</span> <span class="n">Any</span></code>
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
-  </span>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Property getter for the item.</p>
-
-
-
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="go">&gt;&gt;&gt;node = ListNode(&#39;cat&#39;)</span>
-<span class="go">&gt;&gt;&gt;item = node.item</span>
-<span class="go">&gt;&gt;&gt;print(item)</span>
-<span class="go">cat</span>
-</code></pre></div>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>Any</code></td>          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the item stored in the node.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="list_node.ListNode.next" class="doc doc-heading">
-          <code class="highlight language-python"><span class="nb">next</span><span class="p">:</span> <span class="n">ListNode</span> <span class="o">|</span> <span class="kc">None</span></code>
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
-  </span>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Property getter for the next node.</p>
-
-
-
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="go">&gt;&gt;&gt;node1 = ListNode(&#39;cat&#39;)</span>
-<span class="go">&gt;&gt;&gt;node2 = ListNode(&#39;dog&#39;, next_node=node1)</span>
-<span class="go">&gt;&gt;&gt;print(node2.next)</span>
-<span class="go">cat</span>
-</code></pre></div>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="list_node.ListNode" href="#list_node.ListNode">ListNode</a> | None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>ListNode | None: the next node of the node.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="list_node.ListNode.previous" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">previous</span><span class="p">:</span> <span class="n">ListNode</span> <span class="o">|</span> <span class="kc">None</span></code>
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-property"><code>property</code></small>
-      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
-  </span>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Property getter for the previous node.</p>
-
-
-
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="go">&gt;&gt;&gt;node1 = ListNode(&#39;cat&#39;)</span>
-<span class="go">&gt;&gt;&gt;node2 = ListNode(&#39;dog&#39;, previous_node=node1)</span>
-<span class="go">&gt;&gt;&gt;print(node2.previous)</span>
-<span class="go">cat</span>
-</code></pre></div>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="list_node.ListNode" href="#list_node.ListNode">ListNode</a> | None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>ListNode | None: the previous node of the node.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-  </div>
-
-</div>
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="list_node.ListNode.__eq__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span></code>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Equality operator ==.</p>
-
-
-
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="go">&gt;&gt;&gt;node1 = ListNode(&#39;cat&#39;)</span>
-<span class="go">&gt;&gt;&gt;node2 = ListNode(&#39;cat&#39;)</span>
-<span class="go">&gt;&gt;&gt;node3 = ListNode(&#39;dog&#39;)</span>
-<span class="go">&gt;&gt;&gt;print(node1 == node2)</span>
-<span class="go">True</span>
-<span class="go">&gt;&gt;&gt;print(node1 == node3)</span>
-<span class="go">False</span>
-</code></pre></div>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>other</code></td>
-          <td>
-                <code>object</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the instance to compare self to.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>bool</code></td>          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>true if the nodes are equal (deep check). false if other is not a ListNode or they are not equal.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-          <details class="quote">
-            <summary>Source code in <code>datastructures/list_node.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; Equality operator ==.</span>
-
-<span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt;node1 = ListNode(&#39;cat&#39;)</span>
-<span class="sd">            &gt;&gt;&gt;node2 = ListNode(&#39;cat&#39;)</span>
-<span class="sd">            &gt;&gt;&gt;node3 = ListNode(&#39;dog&#39;)</span>
-<span class="sd">            &gt;&gt;&gt;print(node1 == node2)</span>
-<span class="sd">            True</span>
-<span class="sd">            &gt;&gt;&gt;print(node1 == node3)</span>
-<span class="sd">            False</span>
-
-<span class="sd">        Args:</span>
-<span class="sd">            other (object): the instance to compare self to.</span>
-
-<span class="sd">        Returns:</span>
-<span class="sd">            bool: true if the nodes are equal (deep check). false if other is not a ListNode or they are not equal.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;ListNode.__eq__&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-          </details>
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="list_node.ListNode.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">previous_node</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">next_node</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Constructor - represents a node in a linked list.</p>
-
-
-
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="go">&gt;&gt;&gt;node = ListNode(&#39;cat&#39;)  # Create a new node with 5 and no previous or next node.</span>
-<span class="go">&gt;&gt;&gt;node = ListNode(&#39;cat&#39;, None, None)  # Create a new node with &#39;cat&#39; and no previous or next node.</span>
-<span class="go">&gt;&gt;&gt;print(node)</span>
-<span class="go">cat</span>
-</code></pre></div>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>item</code></td>
-          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the item (data) to store in the node</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>previous_node</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="list_node.ListNode" href="#list_node.ListNode">ListNode</a> | None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the corresponding previous node of this node in the linked list</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>next_node</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="list_node.ListNode" href="#list_node.ListNode">ListNode</a> | None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the corresponding next node of this node in the linked list</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-          <details class="quote">
-            <summary>Source code in <code>datastructures/list_node.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">previous_node</span><span class="p">:</span> <span class="n">ListNode</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">next_node</span><span class="p">:</span> <span class="n">ListNode</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; Constructor - represents a node in a linked list.</span>
-
-<span class="sd">        Examples:</span>
-<span class="sd">            &gt;&gt;&gt;node = ListNode(&#39;cat&#39;)  # Create a new node with 5 and no previous or next node.</span>
-<span class="sd">            &gt;&gt;&gt;node = ListNode(&#39;cat&#39;, None, None)  # Create a new node with &#39;cat&#39; and no previous or next node.</span>
-<span class="sd">            &gt;&gt;&gt;print(node)</span>
-<span class="sd">            cat</span>
-
-<span class="sd">        Args:</span>
-<span class="sd">            item (Any): the item (data) to store in the node</span>
-<span class="sd">            previous_node (ListNode | None): the corresponding previous node of this node in the linked list</span>
-<span class="sd">            next_node (ListNode | None): the corresponding next node of this node in the linked list</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;ListNode.__init__&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-          </details>
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="list_node.ListNode.__repr__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__repr__</span><span class="p">()</span></code>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Return a string representation of the data and structure.</p>
-
-
-
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="go">&gt;&gt;&gt;node = ListNode(&#39;cat&#39;)</span>
-<span class="go">&gt;&gt;&gt;print(node)</span>
-<span class="go">cat</span>
-</code></pre></div>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>str</code></td>          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the string representation of the data and structure.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-          <details class="quote">
-            <summary>Source code in <code>datastructures/list_node.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; Return a string representation of the data and structure.</span>
-
-<span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt;node = ListNode(&#39;cat&#39;)</span>
-<span class="sd">        &gt;&gt;&gt;print(node)</span>
-<span class="sd">        cat</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        str: the string representation of the data and structure.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;ListNode.__repr__&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-          </details>
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-<h3 id="list_node.ListNode.__str__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
-
-</h3>
-
-
-  <div class="doc doc-contents ">
-  
-      <p>Return a string representation of the data and structure.</p>
-
-
-
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="go">&gt;&gt;&gt;node = ListNode(&#39;cat&#39;)</span>
-<span class="go">&gt;&gt;&gt;print(node)</span>
-<span class="go">cat</span>
-</code></pre></div>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>str</code></td>          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the string representation of the data and structure.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-          <details class="quote">
-            <summary>Source code in <code>datastructures/list_node.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; Return a string representation of the data and structure.</span>
-
-<span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt;node = ListNode(&#39;cat&#39;)</span>
-<span class="sd">        &gt;&gt;&gt;print(node)</span>
-<span class="sd">        cat</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        str: the string representation of the data and structure.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;ListNode.__str__&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-          </details>
-  </div>
-
-</div>
-
-
-
-  </div>
-
-  </div>
-
-
-</div>
-
-
-
-
-  </div>
-
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-module">
-
-
-
 <a id="linked_list"></a>
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
+
+
+
+
+
 
   <div class="doc doc-children">
 
@@ -1616,25 +865,30 @@ Stipulations:
 
 
 <h2 id="linked_list.LinkedList" class="doc doc-heading">
-          <code>LinkedList</code>
+            <code>LinkedList</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
-      <p>Class LinkedList - representing an unordered linked list
+
+        <p>Class LinkedList - representing an unordered linked list
 Depends on ListNode class to store the data, previous, and next nodes.
     Stipulations:
     1. Must manage the linked list using two ListNode objects (_head and _tail)
     2. Must adhere to the docstring requirements per method, including raising
        raising appropriate exceptions where indicated.</p>
 
-            <details class="quote">
-              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  7</span>
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  7</span>
 <span class="normal">  8</span>
 <span class="normal">  9</span>
 <span class="normal"> 10</span>
@@ -2432,9 +1686,9 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.__repr__&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2449,8 +1703,8 @@ Depends on ListNode class to store the data, previous, and next nodes.
 
 
 <h3 id="linked_list.LinkedList.back" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">back</span><span class="p">:</span> <span class="n">Any</span></code>
-  
+            <code class="highlight language-python"><span class="n">back</span><span class="p">:</span> <span class="n">Any</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -2458,13 +1712,12 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Return the item at the back of the linked list.</p>
+    <div class="doc doc-contents ">
+
+        <p>Return the item at the back of the linked list.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">last_item</span> <span class="o">=</span> <span class="n">linked_list</span><span class="o">.</span><span class="n">back</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">last_item</span><span class="p">)</span>    
@@ -2472,53 +1725,51 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>last</code></td>          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the item stored in the tail of the list.</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>last</code></td>            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the item stored in the tail of the list.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>IndexError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>if the list is empty.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-  </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>IndexError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>if the list is empty.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
 
 </div>
 
@@ -2527,8 +1778,8 @@ Depends on ListNode class to store the data, previous, and next nodes.
 
 
 <h3 id="linked_list.LinkedList.empty" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">empty</span><span class="p">:</span> <span class="nb">bool</span></code>
-  
+            <code class="highlight language-python"><span class="n">empty</span><span class="p">:</span> <span class="nb">bool</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -2536,42 +1787,40 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Property to determine whether the list is empty.</p>
+    <div class="doc doc-contents ">
+
+        <p>Property to determine whether the list is empty.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">linked_list</span><span class="o">.</span><span class="n">empty</span><span class="p">)</span>
 <span class="go">True</span>
 </code></pre></div>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>bool</code></td>          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>whether the list is empty.</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-  </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>bool</code></td>            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>whether the list is empty.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
 
 </div>
 
@@ -2580,8 +1829,8 @@ Depends on ListNode class to store the data, previous, and next nodes.
 
 
 <h3 id="linked_list.LinkedList.front" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">front</span><span class="p">:</span> <span class="n">Any</span></code>
-  
+            <code class="highlight language-python"><span class="n">front</span><span class="p">:</span> <span class="n">Any</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -2589,13 +1838,12 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Return the item at the front of the linked list.</p>
+    <div class="doc doc-contents ">
+
+        <p>Return the item at the front of the linked list.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">first_item</span> <span class="o">=</span> <span class="n">linked_list</span><span class="o">.</span><span class="n">front</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">first_item</span><span class="p">)</span>
@@ -2603,53 +1851,51 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>front</code></td>          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the item stored in the head of the list</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>front</code></td>            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the item stored in the head of the list</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>IndexError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>if the list is empty.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-  </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>IndexError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>if the list is empty.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
 
 </div>
 
@@ -2658,8 +1904,8 @@ Depends on ListNode class to store the data, previous, and next nodes.
 
 
 <h3 id="linked_list.LinkedList.head" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">head</span><span class="p">:</span> <span class="n">ListNode</span> <span class="o">|</span> <span class="kc">None</span></code>
-  
+            <code class="highlight language-python"><span class="n">head</span><span class="p">:</span> <span class="n">ListNode</span> <span class="o">|</span> <span class="kc">None</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -2667,9 +1913,9 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Return the ListNode instance pointing at the head of the linked list.
+    <div class="doc doc-contents ">
+
+        <p>Return the ListNode instance pointing at the head of the linked list.
     Note: this method should be used for debug and test purposes only.</p>
 <p>Examples
     &gt;&gt;&gt; linked_list = LinkedList.from_list(['cat', 'dog', 'bird'])
@@ -2678,29 +1924,28 @@ Depends on ListNode class to store the data, previous, and next nodes.
     cat</p>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>head</code></td>          <td>
-                <code><span title="datastructures.list_node.ListNode">ListNode</span> | None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the ListNode instance representing the head of the linked list.</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-  </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>head</code></td>            <td>
+                  <code><span title="datastructures.list_node.ListNode">ListNode</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the ListNode instance representing the head of the linked list.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
 
 </div>
 
@@ -2709,8 +1954,8 @@ Depends on ListNode class to store the data, previous, and next nodes.
 
 
 <h3 id="linked_list.LinkedList.tail" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">tail</span><span class="p">:</span> <span class="n">ListNode</span> <span class="o">|</span> <span class="kc">None</span></code>
-  
+            <code class="highlight language-python"><span class="n">tail</span><span class="p">:</span> <span class="n">ListNode</span> <span class="o">|</span> <span class="kc">None</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -2718,14 +1963,13 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Return the ListNode instance pointing at the tail of the linked list.
+    <div class="doc doc-contents ">
+
+        <p>Return the ListNode instance pointing at the tail of the linked list.
     Note: this method should be used for debug and test purposes only.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">tail</span> <span class="o">=</span> <span class="n">linked_list</span><span class="o">.</span><span class="n">tail</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">tail</span><span class="o">.</span><span class="n">item</span><span class="p">)</span>
@@ -2733,114 +1977,110 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>tail</code></td>          <td>
-                <code><span title="datastructures.list_node.ListNode">ListNode</span> | None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the ListNode instance representing the tail of the linked list.</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
-  </div>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>tail</code></td>            <td>
+                  <code><span title="datastructures.list_node.ListNode">ListNode</span> | None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the ListNode instance representing the tail of the linked list.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </div>
 
 </div>
-
 
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.__contains__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__contains__</span><span class="p">(</span><span class="n">item</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__contains__</span><span class="p">(</span><span class="n">item</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Membership operator in.</p>
+    <div class="doc doc-contents ">
+
+        <p>Membership operator in.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dog&#39;</span> <span class="ow">in</span> <span class="n">linked_list</span><span class="p">)</span>
 <span class="go">True</span>
 </code></pre></div>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>item</code></td>
-          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the item to search for.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>item</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the item to search for.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>bool</code></td>          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>whether the linked list contains the item.</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>bool</code></td>            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>whether the linked list contains the item.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">283</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">283</span>
 <span class="normal">284</span>
 <span class="normal">285</span>
 <span class="normal">286</span>
@@ -2870,29 +2110,26 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.__contains__&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.__eq__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Equality operator ==.</p>
+    <div class="doc doc-contents ">
+
+        <p>Equality operator ==.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list1</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list2</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">linked_list1</span> <span class="o">==</span> <span class="n">linked_list2</span><span class="p">)</span>
@@ -2900,62 +2137,62 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>other</code></td>
-          <td>
-                <code>object</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the instance to compare self to.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>other</code>
+            </td>
+            <td>
+                  <code>object</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the instance to compare self to.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>bool</code></td>          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>whether the lists are equal (deep check).</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>bool</code></td>            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>whether the lists are equal (deep check).</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">299</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">299</span>
 <span class="normal">300</span>
 <span class="normal">301</span>
 <span class="normal">302</span>
@@ -2987,61 +2224,57 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.__eq__&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Constructor for the LinkedList constructs an empty linked list.</p>
+    <div class="doc doc-contents ">
+
+        <p>Constructor for the LinkedList constructs an empty linked list.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">linked_list</span><span class="p">)</span>
 <span class="go">[]</span>
 </code></pre></div>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>None</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
@@ -3067,29 +2300,26 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.__init__&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.__iter__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__iter__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__iter__</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Iterator operator.</p>
+    <div class="doc doc-contents ">
+
+        <p>Iterator operator.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">linked_list</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
@@ -3099,32 +2329,31 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>Any</code></td>          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>yields the item at ListNode.</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>Any</code></td>            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>yields the item at ListNode.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">333</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">333</span>
 <span class="normal">334</span>
 <span class="normal">335</span>
 <span class="normal">336</span>
@@ -3154,29 +2383,26 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.__iter__&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.__len__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__len__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__len__</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>len operator for getting length of the linked list.</p>
+    <div class="doc doc-contents ">
+
+        <p>len operator for getting length of the linked list.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">linked_list</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
@@ -3184,32 +2410,31 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>int</code></td>          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the length of the LinkedList.</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>int</code></td>            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the length of the LinkedList.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">365</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">365</span>
 <span class="normal">366</span>
 <span class="normal">367</span>
 <span class="normal">368</span>
@@ -3235,29 +2460,26 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.__len__&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.__ne__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__ne__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__ne__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Non-Equality operator !=.</p>
+    <div class="doc doc-contents ">
+
+        <p>Non-Equality operator !=.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list1</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list2</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">linked_list1</span> <span class="o">!=</span> <span class="n">linked_list2</span><span class="p">)</span>
@@ -3265,62 +2487,62 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>other</code></td>
-          <td>
-                <code>object</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the instance to compare self to.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>other</code>
+            </td>
+            <td>
+                  <code>object</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the instance to compare self to.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>bool</code></td>          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>whether the lists are not equal (deep check).</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>bool</code></td>            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>whether the lists are not equal (deep check).</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">316</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">316</span>
 <span class="normal">317</span>
 <span class="normal">318</span>
 <span class="normal">319</span>
@@ -3352,61 +2574,57 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.__ne__&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.__repr__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__repr__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__repr__</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Return a string representation of the data and structure.</p>
+    <div class="doc doc-contents ">
+
+        <p>Return a string representation of the data and structure.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">linked_list</span><span class="p">)</span>
 <span class="go">[&#39;cat&#39;, &#39;dog&#39;, &#39;bird&#39;]</span>
 </code></pre></div>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>str</code></td>          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the string representation of the data and structure.</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>str</code></td>            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the string representation of the data and structure.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">393</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">393</span>
 <span class="normal">394</span>
 <span class="normal">395</span>
 <span class="normal">396</span>
@@ -3432,29 +2650,26 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.__repr__&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.__reversed__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__reversed__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__reversed__</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Reversed iterator operator.</p>
+    <div class="doc doc-contents ">
+
+        <p>Reversed iterator operator.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">linked_list</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
@@ -3464,32 +2679,31 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>Any</code></td>          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>yields the item at ListNode.</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>Any</code></td>            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>yields the item at ListNode.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">349</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">349</span>
 <span class="normal">350</span>
 <span class="normal">351</span>
 <span class="normal">352</span>
@@ -3519,61 +2733,57 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.__reversed__&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.__str__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Return a string representation of the data and structure.</p>
+    <div class="doc doc-contents ">
+
+        <p>Return a string representation of the data and structure.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">linked_list</span><span class="p">)</span>
 <span class="go">[&#39;cat&#39;, &#39;dog&#39;, &#39;bird&#39;]</span>
 </code></pre></div>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>str</code></td>          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the string representation of the data and structure.</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>str</code></td>            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the string representation of the data and structure.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">379</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">379</span>
 <span class="normal">380</span>
 <span class="normal">381</span>
 <span class="normal">382</span>
@@ -3599,29 +2809,26 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.__str__&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.append" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Append an item to the end of the list.</p>
+    <div class="doc doc-contents ">
+
+        <p>Append an item to the end of the list.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;dog&#39;</span><span class="p">)</span>
@@ -3630,62 +2837,62 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>item</code></td>
-          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the desired data to append to the linked list.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>item</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the desired data to append to the linked list.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>None</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">50</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">50</span>
 <span class="normal">51</span>
 <span class="normal">52</span>
 <span class="normal">53</span>
@@ -3719,29 +2926,26 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.append&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.clear" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">clear</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">clear</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Clear the linked list.</p>
+    <div class="doc doc-contents ">
+
+        <p>Clear the linked list.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">linked_list</span><span class="p">)</span>
@@ -3749,32 +2953,31 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>None</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">200</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">200</span>
 <span class="normal">201</span>
 <span class="normal">202</span>
 <span class="normal">203</span>
@@ -3800,29 +3003,26 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.clear&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.extract" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">extract</span><span class="p">(</span><span class="n">item</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">extract</span><span class="p">(</span><span class="n">item</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Extract an item from the Linked List.</p>
+    <div class="doc doc-contents ">
+
+        <p>Extract an item from the Linked List.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s1">&#39;dog&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">linked_list</span><span class="p">)</span>
@@ -3830,86 +3030,85 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>item</code></td>
-          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the item to remove from the linked list.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>item</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the item to remove from the linked list.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>None</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>KeyError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>if the item is not found.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>KeyError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>if the item is not found.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">214</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">214</span>
 <span class="normal">215</span>
 <span class="normal">216</span>
 <span class="normal">217</span>
@@ -3947,19 +3146,17 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.extract&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.from_list" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">from_list</span><span class="p">(</span><span class="n">py_list</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">from_list</span><span class="p">(</span><span class="n">py_list</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
   </span>
@@ -3967,99 +3164,97 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Create a new LinkedList from a Python list.</p>
+    <div class="doc doc-contents ">
+
+        <p>Create a new LinkedList from a Python list.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">linked_list</span><span class="p">)</span>
 <span class="go">[&#39;cat&#39;, &#39;dog&#39;, &#39;bird&#39;]</span>
 </code></pre></div>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>py_list</code></td>
-          <td>
-                <code>list</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>list to convert to a linked list.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>py_list</code>
+            </td>
+            <td>
+                  <code>list</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>list to convert to a linked list.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="linked_list.LinkedList" href="#linked_list.LinkedList">LinkedList</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A new LinkedList instance.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="linked_list.LinkedList" href="#linked_list.LinkedList">LinkedList</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A new LinkedList instance.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>TypeError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>if py_list is not a list.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>TypeError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>if py_list is not a list.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">30</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">30</span>
 <span class="normal">31</span>
 <span class="normal">32</span>
 <span class="normal">33</span>
@@ -4097,29 +3292,26 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.from_list&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.insert_after" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">insert_after</span><span class="p">(</span><span class="n">after_item</span><span class="p">,</span> <span class="n">new_item</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">insert_after</span><span class="p">(</span><span class="n">after_item</span><span class="p">,</span> <span class="n">new_item</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Insert a new item after a specified item.</p>
+    <div class="doc doc-contents ">
+
+        <p>Insert a new item after a specified item.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span><span class="o">.</span><span class="n">insert_after</span><span class="p">(</span><span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;fish&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">linked_list</span><span class="p">)</span>
@@ -4127,100 +3319,101 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>after_item</code></td>
-          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the item that the user wishes to insert after.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>after_item</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the item that the user wishes to insert after.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>new_item</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the desired item to insert.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>new_item</code></td>
-          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the desired item to insert.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>None</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>KeyError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>if after_item is not found.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code>KeyError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>if after_item is not found.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">108</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">108</span>
 <span class="normal">109</span>
 <span class="normal">110</span>
 <span class="normal">111</span>
@@ -4262,29 +3455,26 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.insert_after&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.insert_before" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">insert_before</span><span class="p">(</span><span class="n">before_item</span><span class="p">,</span> <span class="n">new_item</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">insert_before</span><span class="p">(</span><span class="n">before_item</span><span class="p">,</span> <span class="n">new_item</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Insert a new item before a specified item.</p>
+    <div class="doc doc-contents ">
+
+        <p>Insert a new item before a specified item.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span><span class="o">.</span><span class="n">insert_before</span><span class="p">(</span><span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;fish&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">linked_list</span><span class="p">)</span>
@@ -4292,100 +3482,101 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>before_item</code></td>
-          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the item that the user wishes to insert before.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>before_item</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the item that the user wishes to insert before.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>new_item</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the desired item to insert.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>new_item</code></td>
-          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the desired item to insert.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>None</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>KeyError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>if before_item is not found.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code>KeyError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>if before_item is not found.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 87</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 87</span>
 <span class="normal"> 88</span>
 <span class="normal"> 89</span>
 <span class="normal"> 90</span>
@@ -4425,29 +3616,26 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.insert_before&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.pop_back" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">pop_back</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">pop_back</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Remove the last item in the linked list.</p>
+    <div class="doc doc-contents ">
+
+        <p>Remove the last item in the linked list.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span><span class="o">.</span><span class="n">pop_back</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">linked_list</span><span class="p">)</span>
@@ -4455,56 +3643,54 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>None</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>IndexError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>if the list is empty.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>IndexError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>if the list is empty.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">266</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">266</span>
 <span class="normal">267</span>
 <span class="normal">268</span>
 <span class="normal">269</span>
@@ -4536,29 +3722,26 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.pop_back&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.pop_front" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">pop_front</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">pop_front</span><span class="p">()</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Remove the first item in the linked list.</p>
+    <div class="doc doc-contents ">
+
+        <p>Remove the first item in the linked list.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="o">.</span><span class="n">from_list</span><span class="p">([</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;bird&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span><span class="o">.</span><span class="n">pop_front</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">linked_list</span><span class="p">)</span>
@@ -4566,56 +3749,54 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>None</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>IndexError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>if the list is empty.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>IndexError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>if the list is empty.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">248</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">248</span>
 <span class="normal">249</span>
 <span class="normal">250</span>
 <span class="normal">251</span>
@@ -4649,29 +3830,26 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.pop_front&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="linked_list.LinkedList.prepend" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">prepend</span><span class="p">(</span><span class="n">item</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">prepend</span><span class="p">(</span><span class="n">item</span><span class="p">)</span></code>
 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Prepend an item to the beginning of the list.</p>
+    <div class="doc doc-contents ">
+
+        <p>Prepend an item to the beginning of the list.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span> <span class="o">=</span> <span class="n">LinkedList</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span><span class="o">.</span><span class="n">prepend</span><span class="p">(</span><span class="s1">&#39;cat&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">linked_list</span><span class="o">.</span><span class="n">prepend</span><span class="p">(</span><span class="s1">&#39;dog&#39;</span><span class="p">)</span>
@@ -4680,62 +3858,62 @@ Depends on ListNode class to store the data, previous, and next nodes.
 </code></pre></div>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>item</code></td>
-          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the desired data to prepend to the linked list.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>item</code>
+            </td>
+            <td>
+                  <code><span title="typing.Any">Any</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the desired data to prepend to the linked list.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>None</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/linked_list.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">68</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/linked_list.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">68</span>
 <span class="normal">69</span>
 <span class="normal">70</span>
 <span class="normal">71</span>
@@ -4771,8 +3949,8 @@ Depends on ListNode class to store the data, previous, and next nodes.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;LinkedList.prepend&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -4780,8 +3958,7 @@ Depends on ListNode class to store the data, previous, and next nodes.
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -4790,7 +3967,7 @@ Depends on ListNode class to store the data, previous, and next nodes.
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -4839,10 +4016,10 @@ Depends on ListNode class to store the data, previous, and next nodes.
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.caa56a14.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

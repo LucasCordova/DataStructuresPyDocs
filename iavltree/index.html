@@ -9,12 +9,12 @@
       
       
       
-        <link rel="prev" href="../array2d/">
+        <link rel="prev" href="../linked_list/">
       
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
       
 
@@ -43,7 +43,7 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -81,12 +81,12 @@
     <a href=".." title="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" class="md-header__button md-logo" aria-label="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -106,7 +106,7 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -139,7 +139,7 @@
     <a href=".." title="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" class="md-nav__button md-logo" aria-label="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University
@@ -199,6 +199,26 @@
   
   <span class="md-ellipsis">
     Array2D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linked_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LinkedList
   </span>
   
 
@@ -574,13 +594,18 @@
 
 
 <a id="iavltree"></a>
-  <div class="doc doc-contents first">
-  
-      <p>This module defines a Binary Search Tree interface. 
+    <div class="doc doc-contents first">
+
+        <p>This module defines a Binary Search Tree interface. 
 This file lists the stipulations and more information on the methods and their expected behavior.
 YOU SHOULD NOT MODIFY THIS FILE.</p>
 
-  
+
+
+
+
+
+
 
   <div class="doc doc-children">
 
@@ -596,26 +621,31 @@ YOU SHOULD NOT MODIFY THIS FILE.</p>
 
 
 <h2 id="iavltree.IAVLTree" class="doc doc-heading">
-          <code>IAVLTree</code>
+            <code>IAVLTree</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="typing.Protocol">Protocol</span></code>, <code><span title="typing.Generic">Generic</span>[<span title="iavltree.K">K</span>, <span title="iavltree.V">V</span>]</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="typing.Protocol">Protocol</span></code>, <code><span title="typing.Generic">Generic</span>[<span title="iavltree.K">K</span>, <span title="iavltree.V">V</span>]</code></p>
 
-  
-      <p>A binary search tree is a binary tree data structure where nodes are ordered based on keys, 
+
+        <p>A binary search tree is a binary tree data structure where nodes are ordered based on keys, 
 and each node stores an associated value. The left subtree contains only nodes with keys less 
 than the node's key, and the right subtree contains only nodes with keys greater than or equal
 to the node's key. Implementations of this interface should maintain the binary search tree 
 properties. Examples of binary search trees include AVL trees, red-black trees, and splay trees.</p>
 
-            <details class="quote">
-              <summary>Source code in <code>datastructures/iavltree.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 23</span>
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>datastructures/iavltree.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 23</span>
 <span class="normal"> 24</span>
 <span class="normal"> 25</span>
 <span class="normal"> 26</span>
@@ -811,12 +841,11 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -829,10 +858,9 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="iavltree.IAVLTree.bforder" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">bforder</span><span class="p">(</span><span class="n">visit</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">bforder</span><span class="p">(</span><span class="n">visit</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -840,67 +868,67 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Returns the keys in the binary search tree in breadth-first order.</p>
+    <div class="doc doc-contents ">
+
+        <p>Returns the keys in the binary search tree in breadth-first order.</p>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>visit</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Callable">Callable</span>[[<span title="iavltree.V">V</span>], None]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A function to call on each value during the traversal.        </p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>visit</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.Callable">Callable</span>[[<span title="iavltree.V">V</span>], None]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A function to call on each value during the traversal.        </p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code><span title="typing.List">List</span>[<span title="iavltree.K">K</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>List[K]: The list of keys in breadth-first order.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="iavltree.K">K</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List[K]: The list of keys in breadth-first order.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/iavltree.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 98</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/iavltree.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 98</span>
 <span class="normal"> 99</span>
 <span class="normal">100</span>
 <span class="normal">101</span>
@@ -922,19 +950,17 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="iavltree.IAVLTree.delete" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">delete</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">delete</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -942,67 +968,67 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Deletes a key and its associated value from the binary search tree.</p>
+    <div class="doc doc-contents ">
+
+        <p>Deletes a key and its associated value from the binary search tree.</p>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>key</code></td>
-          <td>
-                <code><span title="iavltree.K">K</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The key to delete.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>key</code>
+            </td>
+            <td>
+                  <code><span title="iavltree.K">K</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The key to delete.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>KeyError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If the key is not present in the tree.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>KeyError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If the key is not present in the tree.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/iavltree.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">53</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/iavltree.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">53</span>
 <span class="normal">54</span>
 <span class="normal">55</span>
 <span class="normal">56</span>
@@ -1024,19 +1050,17 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="iavltree.IAVLTree.inorder" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">inorder</span><span class="p">(</span><span class="n">visit</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">inorder</span><span class="p">(</span><span class="n">visit</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -1044,67 +1068,67 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Returns the inorder traversal of the binary search tree, containing the keys in sorted order.</p>
+    <div class="doc doc-contents ">
+
+        <p>Returns the inorder traversal of the binary search tree, containing the keys in sorted order.</p>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>visit</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Callable">Callable</span>[[<span title="iavltree.V">V</span>], None]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A function to call on each value during the traversal.        </p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>visit</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.Callable">Callable</span>[[<span title="iavltree.V">V</span>], None]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A function to call on each value during the traversal.        </p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code><span title="typing.List">List</span>[<span title="iavltree.K">K</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>List[K]: The list of keys in inorder traversal.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="iavltree.K">K</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List[K]: The list of keys in inorder traversal.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/iavltree.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">65</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/iavltree.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">65</span>
 <span class="normal">66</span>
 <span class="normal">67</span>
 <span class="normal">68</span>
@@ -1126,19 +1150,17 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="iavltree.IAVLTree.insert" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">insert</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">insert</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -1146,57 +1168,60 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Inserts a key-value pair into the binary search tree.</p>
+    <div class="doc doc-contents ">
+
+        <p>Inserts a key-value pair into the binary search tree.</p>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>key</code></td>
-          <td>
-                <code><span title="iavltree.K">K</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The key used to order the nodes in the tree.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr>
-          <td><code>value</code></td>
-          <td>
-                <code><span title="iavltree.V">V</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The value associated with the key.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>key</code>
+            </td>
+            <td>
+                  <code><span title="iavltree.K">K</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The key used to order the nodes in the tree.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>value</code>
+            </td>
+            <td>
+                  <code><span title="iavltree.V">V</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The value associated with the key.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/iavltree.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">31</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/iavltree.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">31</span>
 <span class="normal">32</span>
 <span class="normal">33</span>
 <span class="normal">34</span>
@@ -1214,19 +1239,17 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="iavltree.IAVLTree.postorder" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">postorder</span><span class="p">(</span><span class="n">visit</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">postorder</span><span class="p">(</span><span class="n">visit</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -1234,37 +1257,36 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Returns the postorder traversal of the binary search tree.</p>
+    <div class="doc doc-contents ">
+
+        <p>Returns the postorder traversal of the binary search tree.</p>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code><span title="typing.List">List</span>[<span title="iavltree.K">K</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>List[K]: The list of keys in postorder traversal.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="iavltree.K">K</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List[K]: The list of keys in postorder traversal.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/iavltree.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">89</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/iavltree.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">89</span>
 <span class="normal">90</span>
 <span class="normal">91</span>
 <span class="normal">92</span>
@@ -1280,19 +1302,17 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="iavltree.IAVLTree.preorder" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">preorder</span><span class="p">(</span><span class="n">visit</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">preorder</span><span class="p">(</span><span class="n">visit</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -1300,67 +1320,67 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Returns the preorder traversal of the binary search tree.</p>
+    <div class="doc doc-contents ">
+
+        <p>Returns the preorder traversal of the binary search tree.</p>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>visit</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Callable">Callable</span>[[<span title="iavltree.V">V</span>], None]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A function to call on each value during the traversal.        </p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>visit</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.Callable">Callable</span>[[<span title="iavltree.V">V</span>], None]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A function to call on each value during the traversal.        </p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code><span title="typing.List">List</span>[<span title="iavltree.K">K</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>List[K]: The list of keys in preorder traversal.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="iavltree.K">K</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List[K]: The list of keys in preorder traversal.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/iavltree.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">77</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/iavltree.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">77</span>
 <span class="normal">78</span>
 <span class="normal">79</span>
 <span class="normal">80</span>
@@ -1382,19 +1402,17 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="iavltree.IAVLTree.search" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">search</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">search</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -1402,67 +1420,67 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Searches for a key in the binary search tree and returns the associated value if found.</p>
+    <div class="doc doc-contents ">
+
+        <p>Searches for a key in the binary search tree and returns the associated value if found.</p>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>key</code></td>
-          <td>
-                <code><span title="iavltree.K">K</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The key to search for.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>key</code>
+            </td>
+            <td>
+                  <code><span title="iavltree.K">K</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The key to search for.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="iavltree.V">V</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Optional[V]: The value associated with the key if found, or None if the key is not present.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="iavltree.V">V</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Optional[V]: The value associated with the key if found, or None if the key is not present.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/iavltree.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">41</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/iavltree.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">41</span>
 <span class="normal">42</span>
 <span class="normal">43</span>
 <span class="normal">44</span>
@@ -1484,19 +1502,17 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="iavltree.IAVLTree.size" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">size</span><span class="p">()</span></code>
-  
+            <code class="highlight language-python"><span class="n">size</span><span class="p">()</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -1504,67 +1520,67 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Returns the number of nodes in the binary search tree.</p>
+    <div class="doc doc-contents ">
+
+        <p>Returns the number of nodes in the binary search tree.</p>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>visit</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Callable">Callable</span>[[<span title="iavltree.V">V</span>], None]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A function to call on each value during the traversal.        </p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>visit</code>
+            </td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.Callable">Callable</span>[[<span title="iavltree.V">V</span>], None]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A function to call on each value during the traversal.        </p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>int</code></td>          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of nodes in the tree.</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>int</code></td>            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of nodes in the tree.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/iavltree.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">110</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/iavltree.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">110</span>
 <span class="normal">111</span>
 <span class="normal">112</span>
 <span class="normal">113</span>
@@ -1586,8 +1602,8 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -1595,8 +1611,7 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -1605,7 +1620,7 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -1654,10 +1669,10 @@ properties. Examples of binary search trees include AVL trees, red-black trees, 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.caa56a14.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

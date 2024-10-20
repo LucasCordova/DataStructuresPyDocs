@@ -14,3 +14,5 @@ def copy_get(config, **kwargs):
     shutil.copy('datastructures/array2d.py', os.path.join(site_dir, 'array2d.py'))
     shutil.copy('datastructures/test_array2d.py', os.path.join(site_dir, 'test_array2d.py'))
     shutil.copy('datastructures/car.py', os.path.join(site_dir, 'car.py'))
+    shutil.copy('datastructures/ilinkedlist.py', os.path.join(site_dir, 'ilinkedlist.py'))
+    shutil.copy('datastructures/linkedlist.py', os.path.join(site_dir, 'linkedlist.py'))

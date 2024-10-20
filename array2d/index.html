@@ -12,11 +12,11 @@
         <link rel="prev" href="../array/">
       
       
-        <link rel="next" href="../iavltree/">
+        <link rel="next" href="../linked_list/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
       
 
@@ -45,7 +45,7 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -83,12 +83,12 @@
     <a href=".." title="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" class="md-header__button md-logo" aria-label="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -108,7 +108,7 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -141,7 +141,7 @@
     <a href=".." title="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" class="md-nav__button md-logo" aria-label="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University
@@ -361,6 +361,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../linked_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LinkedList
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../iavltree/" class="md-nav__link">
         
   
@@ -542,14 +562,19 @@
 
 
 <a id="iarray2d"></a>
-  <div class="doc doc-contents first">
-  
-      <p>This module defines an Array2D interface that represents a two-dimensional array. 
+    <div class="doc doc-contents first">
+
+        <p>This module defines an Array2D interface that represents a two-dimensional array. 
 This file lists the stipulations and more information on the methods and their expected behavior.
 YOU SHOULD NOT MODIFY THIS FILE.
 Implement the Array2D class in the array2d.py file.</p>
 
-  
+
+
+
+
+
+
 
   <div class="doc doc-children">
 
@@ -565,25 +590,30 @@ Implement the Array2D class in the array2d.py file.</p>
 
 
 <h2 id="iarray2d.IArray2D" class="doc doc-heading">
-          <code>IArray2D</code>
+            <code>IArray2D</code>
 
 
 </h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="datastructures.iarray.IArray">IArray</span>[<span title="iarray2d.T">T</span>]</code>, <code><span title="typing.Generic">Generic</span>[<span title="iarray2d.T">T</span>]</code>, <code><span title="abc.ABC">ABC</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="datastructures.iarray.IArray">IArray</span>[<span title="iarray2d.T">T</span>]</code>, <code><span title="typing.Generic">Generic</span>[<span title="iarray2d.T">T</span>]</code>, <code><span title="abc.ABC">ABC</span></code></p>
 
-  
-      <p>An interface that represents the minimal functions needed to make an Array object
+
+        <p>An interface that represents the minimal functions needed to make an Array object
 into a two-dimensional array. Other typical functions like str, len, repr, etc. are not
 included in this interface because they are provided by the IArray. The Array2D
 supports jagged edges, meaning that each row can have a different number of columns.</p>
 
-            <details class="quote">
-              <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 18</span>
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 18</span>
 <span class="normal"> 19</span>
 <span class="normal"> 20</span>
 <span class="normal"> 21</span>
@@ -775,12 +805,11 @@ supports jagged edges, meaning that each row can have a different number of colu
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-            </details>
+              </details>
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -793,20 +822,23 @@ supports jagged edges, meaning that each row can have a different number of colu
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="iarray2d.IArray2D.__getitem__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__getitem__</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="fm">__getitem__</span><span class="p">(</span><span class="n">index</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
 
 </h3>
+          <div class="doc-overloads">
+<div class="doc-signature highlight"><pre><span></span><code><span class="fm">__getitem__</span><span class="p">(</span><span class="nf">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IArray</span><span class="p">[</span><span class="n">T</span><span class="p">]</span>
+</code></pre></div><div class="doc-signature highlight"><pre><span></span><code><span class="fm">__getitem__</span><span class="p">(</span><span class="nf">index</span><span class="p">:</span> <span class="nb">slice</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IArray2D</span><span class="p">[</span><span class="n">T</span><span class="p">]</span>
+</code></pre></div>          </div>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Gets the item at the specified index or a slice of the two-dimensional array. If the index is a slice,
+    <div class="doc doc-contents ">
+
+        <p>Gets the item at the specified index or a slice of the two-dimensional array. If the index is a slice,
     the method should return a two-dimensional array with the specified slice of the two-dimensional array. 
     Otherwise, it should return an array at the specified index since the elements of the two-dimensional array
     are arrays.
@@ -814,56 +846,54 @@ Args:
     index (int | slice): The index or slice of the two-dimensional array.</p>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code><span title="datastructures.iarray.IArray">IArray</span>[<span title="iarray2d.T">T</span>] | <a class="autorefs autorefs-internal" title="iarray2d.IArray2D" href="#iarray2d.IArray2D">IArray2D</a>[<span title="iarray2d.T">T</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>IArray[T] | IArray2D[T]: The item at the specified index or a slice of the two-dimensional array.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="datastructures.iarray.IArray">IArray</span>[<span title="iarray2d.T">T</span>] | <a class="autorefs autorefs-internal" title="iarray2d.IArray2D" href="#iarray2d.IArray2D">IArray2D</a>[<span title="iarray2d.T">T</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>IArray[T] | IArray2D[T]: The item at the specified index or a slice of the two-dimensional array.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>IndexError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If the index is out of bounds.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>IndexError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If the index is out of bounds.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">67</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">67</span>
 <span class="normal">68</span>
 <span class="normal">69</span>
 <span class="normal">70</span>
@@ -897,19 +927,17 @@ Args:
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="iarray2d.IArray2D.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">starting_sequence</span><span class="o">=</span><span class="p">[[]])</span></code>
-  
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">starting_sequence</span><span class="o">=</span><span class="p">[[]])</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -917,13 +945,12 @@ Args:
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Initializes the Array2D object with a starting sequence of sequences.</p>
+    <div class="doc doc-contents ">
+
+        <p>Initializes the Array2D object with a starting sequence of sequences.</p>
 
 
-
-<p><strong>Examples:</strong></p>
+<p><span class="doc-section-title">Examples:</span></p>
     <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">array2d</span> <span class="o">=</span> <span class="n">Array2D</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">repr</span><span class="p">(</span><span class="n">array2d</span><span class="p">)</span>
 <span class="go">Array2D [[1, 2, 3], [4, 5, 6], [7, 8, 9]]</span>
@@ -931,106 +958,105 @@ Args:
 </code></pre></div>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>starting_sequence</code></td>
-          <td>
-                <code><span title="collections.abc.Sequence">Sequence</span>[<span title="collections.abc.Sequence">Sequence</span>[<span title="iarray2d.T">T</span>]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The starting sequence of sequences.</p>
-            </div>
-          </td>
-          <td>
-                <code>[[]]</code>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>starting_sequence</code>
+            </td>
+            <td>
+                  <code><span title="collections.abc.Sequence">Sequence</span>[<span title="collections.abc.Sequence">Sequence</span>[<span title="iarray2d.T">T</span>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The starting sequence of sequences.</p>
+              </div>
+            </td>
+            <td>
+                  <code>[[]]</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>ValueError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If the starting sequence is not a valid sequence.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>ValueError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If the starting sequence is not a valid sequence.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code>ValueError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If the starting sequence is not a list of lists.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                  <code>ValueError</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If all items are not of the same type.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code>ValueError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If the starting sequence is not a list of lists.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-        <tr>
-          <td>
-                <code>ValueError</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>If all items are not of the same type.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>None</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>None</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code>None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>None</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-          <details class="quote">
-            <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">24</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
 <span class="normal">27</span>
@@ -1074,19 +1100,17 @@ Args:
 <span class="sd">        &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="iarray2d.IArray2D.__iter__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__iter__</span><span class="p">()</span></code>
-  
+            <code class="highlight language-python"><span class="fm">__iter__</span><span class="p">()</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -1094,38 +1118,37 @@ Args:
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Returns an iterator of the two-dimensional array. Because the two-dimensional array is
+    <div class="doc doc-contents ">
+
+        <p>Returns an iterator of the two-dimensional array. Because the two-dimensional array is
     made up of arrays, the iterator should return an iterator to an array.</p>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td>
-                <code><span title="typing.Iterator">Iterator</span>[<span title="datastructures.iarray.IArray">IArray</span>[<span title="iarray2d.T">T</span>]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Iterator[IArray[T]]: An iterator of the two-dimensional array.</p>
-            </div>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="typing.Iterator">Iterator</span>[<span title="datastructures.iarray.IArray">IArray</span>[<span title="iarray2d.T">T</span>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Iterator[IArray[T]]: An iterator of the two-dimensional array.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">85</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">85</span>
 <span class="normal">86</span>
 <span class="normal">87</span>
 <span class="normal">88</span>
@@ -1143,19 +1166,17 @@ Args:
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="iarray2d.IArray2D.__repr__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__repr__</span><span class="p">()</span></code>
-  
+            <code class="highlight language-python"><span class="fm">__repr__</span><span class="p">()</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -1163,38 +1184,37 @@ Args:
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Returns a string representation of the two-dimensional array. The string representation
+    <div class="doc doc-contents ">
+
+        <p>Returns a string representation of the two-dimensional array. The string representation
     should include the string representation of each array in the two-dimensional array.</p>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>str</code></td>          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A string representation of the two-dimensional array.</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>str</code></td>            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string representation of the two-dimensional array.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">105</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">105</span>
 <span class="normal">106</span>
 <span class="normal">107</span>
 <span class="normal">108</span>
@@ -1212,19 +1232,17 @@ Args:
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="iarray2d.IArray2D.__str__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
-  
+            <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -1232,38 +1250,37 @@ Args:
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Returns a string representation of the two-dimensional array. The string representation
+    <div class="doc doc-contents ">
+
+        <p>Returns a string representation of the two-dimensional array. The string representation
     should include the string representation of each array in the two-dimensional array.</p>
 
 
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>str</code></td>          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A string representation of the two-dimensional array.</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>str</code></td>            <td>
+                  <code>str</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A string representation of the two-dimensional array.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-          <details class="quote">
-            <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 95</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 95</span>
 <span class="normal"> 96</span>
 <span class="normal"> 97</span>
 <span class="normal"> 98</span>
@@ -1281,19 +1298,17 @@ Args:
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="iarray2d.IArray2D.empty" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">empty</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data_type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">empty</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data_type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
@@ -1302,95 +1317,99 @@ Args:
 </h3>
 
 
-  <div class="doc doc-contents ">
-  
-      <p>Creates an empty two-dimensional array with the specified number of rows and columns.</p>
+    <div class="doc doc-contents ">
+
+        <p>Creates an empty two-dimensional array with the specified number of rows and columns.</p>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>rows</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of rows in the two-dimensional array.</p>
-            </div>
-          </td>
-          <td>
-                <code>0</code>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>rows</code>
+            </td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of rows in the two-dimensional array.</p>
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>cols</code>
+            </td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of columns in the two-dimensional array.</p>
+              </div>
+            </td>
+            <td>
+                  <code>0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>data_type</code>
+            </td>
+            <td>
+                  <code>type</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The type of data that the array will hold.</p>
+              </div>
+            </td>
+            <td>
+                  <code>object</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>cols</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of columns in the two-dimensional array.</p>
-            </div>
-          </td>
-          <td>
-                <code>0</code>
-          </td>
+          <th>Type</th>
+          <th>Description</th>
         </tr>
-        <tr>
-          <td><code>data_type</code></td>
-          <td>
-                <code>type</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The type of data that the array will hold.</p>
-            </div>
-          </td>
-          <td>
-                <code>object</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="datastructures.iarray.IArray">IArray</span>[<span title="iarray2d.T">T</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>IArray2D[T]: An empty two-dimensional array of the specified size and data type.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><span title="datastructures.iarray.IArray">IArray</span>[<span title="iarray2d.T">T</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>IArray2D[T]: An empty two-dimensional array of the specified size and data type.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-          <details class="quote">
-            <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">47</span>
+            <details class="quote">
+              <summary>Source code in <code>datastructures/iarray2d.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">47</span>
 <span class="normal">48</span>
 <span class="normal">49</span>
 <span class="normal">50</span>
@@ -1418,8 +1437,8 @@ Args:
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
-          </details>
-  </div>
+            </details>
+    </div>
 
 </div>
 
@@ -1427,8 +1446,7 @@ Args:
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -1437,7 +1455,7 @@ Args:
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -1486,10 +1504,10 @@ Args:
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.caa56a14.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
