@@ -17,3 +17,6 @@ def copy_get(config, **kwargs):
     shutil.copy('datastructures/ilinkedlist.py', os.path.join(site_dir, 'ilinkedlist.py'))
     shutil.copy('datastructures/linkedlist.py', os.path.join(site_dir, 'linkedlist.py'))
     shutil.copy('datastructures/test_linkedlist.py', os.path.join(site_dir, 'test_linkedlist.py'))
+
+
+    shutil.copytree('static', os.path.join(site_dir, 'static'))
