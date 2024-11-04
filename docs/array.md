@@ -8,8 +8,8 @@
 
 ## Download Source Files
 
-- [IArray Interface Python file](../iarray.py)
-- [Array Class Python file](../array.py)
+- [IArray Class Python file (Instructor's Solution)](../iarray.py)
+- [Array Class Python file (Instructor's Solution)](../array.py)
 - [Array Test Python file](../test_array.py)
 
 ## Specification
