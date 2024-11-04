@@ -1248,12 +1248,6 @@ bol end`,
       );
   }
   Be();
-  console.info(
-    "I'm happy to answer questions about a* pathfinding or how this page works. --redblobgames@gmail.com"
-  );
-  console.info(
-    "If you want to make your own interactive pages, I have a tutorial for that https://www.redblobgames.com/making-of/circle-drawing/"
-  );
   function ke(r, e) {
     return Array.from({ length: e - r }, (t, i) => r + i);
   }
@@ -2950,21 +2944,3 @@ bol end`,
         ])));
   });
 })();
-/*
- * From https://www.redblobgames.com/pathfinding/
- * Copyright 2013, 2022 Red Blob Games <redblobgames@gmail.com>
- * @license: Apache-2.0 <http://www.apache.org/licenses/LICENSE-2.0.html>
- */
-/*!
- * From https://www.redblobgames.com/pathfinding-canvas/a-star/
- * Copyright 2014, 2020 Red Blob Games <redblobgames@gmail.com>
- * License: Apache-2.0 <http://www.apache.org/licenses/LICENSE-2.0.html>
- *
- * Please feel free to read the source code for graph search:
- * https://www.redblobgames.com/pathfinding-canvas/search.js
- * https://www.redblobgames.com/pathfinding-canvas/grid.js
- * and for the diagrams:
- * https://www.redblobgames.com/pathfinding-canvas/a-star/introduction.js
- * https://www.redblobgames.com/pathfinding-canvas/diagram.js
- */
-//# sourceMappingURL=_introduction.js.map

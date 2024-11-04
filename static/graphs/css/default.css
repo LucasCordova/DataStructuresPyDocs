@@ -1,0 +1,1205 @@
+:root {
+         --hue: 0;
+         --bgurl: url("/img/transparent-blob.png")
+      }
+
+      /*! CSS Copyright 2007-2023 by amitp@cs.stanford.edu (Amit J. Patel)  */
+      /*! I don't mind if you copy my stylesheet.  However, I'd appreciate it if you gave me credit. */
+      body {
+         --serif: "Iowan Old Style", Cambria, Georgia, serif;
+         --sans-serif: "Avenir Next", Candara, Ubuntu, "Fira Sans", system-ui, "Segoe UI", sans-serif;
+         --monospace: "Roboto Mono", "Cascadia Code", Consolas, monospace, "Segoe UI Symbol", Symbol;
+         --body-width: calc(100vw - 2.25rem);
+         --font-size: calc(0.625rem + 1vw);
+         --line-height: calc(1.5 * var(--font-size));
+         font-family: var(--sans-serif);
+         font-size: var(--font-size);
+         line-height: 1.5em;
+         min-height: 95%
+      }
+
+      @media (min-width: 34.375em) {
+         body {
+            --body-width: min(20.6rem + 33vw, 41.25rem);
+            --font-size: calc(var(--body-width) / 33)
+         }
+      }
+
+      main {
+         font-family: var(--serif)
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      figcaption,
+      .sans-serif {
+         font-family: var(--sans-serif);
+         text-wrap: balance
+      }
+
+      tt,
+      code,
+      kbd,
+      samp,
+      pre {
+         font-family: var(--monospace);
+         font-size: 0.8em
+      }
+
+      pre :is(tt, code, kbd, samp) {
+         font-size: unset
+      }
+
+      #table-of-contents {
+         background-color: #fff;
+         padding-left: 1em;
+         width: 18em;
+         float: right
+      }
+
+      #table-of-contents:after {
+         clear: right
+      }
+
+      nav,
+      #table-of-contents {
+         font-family: var(--sans-serif);
+         font-size: calc(var(--font-size) / 1.25)
+      }
+
+      nav a,
+      #table-of-contents a {
+         text-decoration-color: hsl(var(--hue), 20%, 90%)
+      }
+
+      @media screen {
+
+         header,
+         section>h2 {
+            text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
+            text-rendering: optimizeLegibility
+         }
+      }
+
+      h1 {
+         font-size: 2.0em;
+         margin: 0;
+         line-height: calc(1.5 * var(--line-height))
+      }
+
+      h1 .subheading {
+         font-size: 0.5em;
+         line-height: var(--line-height)
+      }
+
+      sup,
+      sub {
+         position: relative;
+         vertical-align: baseline;
+         font-size: 0.75em;
+         line-height: 0;
+         padding-left: 0.125em
+      }
+
+      sup {
+         top: -0.5em
+      }
+
+      sub {
+         bottom: -0.25em
+      }
+
+      details summary {
+         cursor: pointer
+      }
+
+      * {
+         box-sizing: border-box
+      }
+
+      html,
+      body {
+         margin: 0;
+         padding: 0
+      }
+
+      html {
+         background-color: #e4e4e0;
+         color: #000
+      }
+
+      body {
+         background-color: #fff;
+         color: #333
+      }
+
+      header {
+         display: block;
+         text-align: center
+      }
+
+      header>h1 {
+         padding-top: var(--line-height)
+      }
+
+      @media screen {
+
+         header,
+         footer,
+         .divider,
+         section>h2 {
+            color: #fff;
+            background-color: hsl(var(--hue), 50%, 45%);
+            background-image: var(--bgurl), var(--bgurl);
+            background-position: 0 0, 16px 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+         }
+
+         header a,
+         footer a,
+         .divider a,
+         section>h2 a {
+            color: hsl(var(--hue), 40%, 90%);
+            background: unset;
+            text-decoration: none
+         }
+
+         header a:hover,
+         footer a:hover,
+         .divider a:hover,
+         section>h2 a:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            text-decoration: underline
+         }
+      }
+
+      footer a,
+      .divider a {
+         text-decoration: underline
+      }
+
+      main {
+         margin-inline: 0;
+         padding-inline: 0
+      }
+
+      section {
+         margin: var(--line-height) 0
+      }
+
+      section>* {
+         width: var(--body-width);
+         max-width: 100%
+      }
+
+      .comments {
+         width: calc(1.5 * var(--body-width));
+         max-width: 100%
+      }
+
+      @media screen {
+
+         .comments,
+         .below-divider {
+            background-color: #e6e6e5
+         }
+      }
+
+      .comments {
+         padding-bottom: 1.25em;
+         font-size: 1.0em
+      }
+
+      .comments .comment-author {
+         text-shadow: 1px 1px 3px #fff
+      }
+
+      section>h2 {
+         --h2-margin: 3em;
+         margin: var(--line-height) auto;
+         padding: calc(var(--line-height) / 2 - 1px) 0;
+         font-size: 1.25em;
+         width: calc(2 * var(--h2-margin) + var(--body-width));
+         max-width: 100%
+      }
+
+      section>h2>span {
+         display: inline-block;
+         margin-left: var(--h2-margin)
+      }
+
+      section>h2 a.anchor {
+         float: right;
+         width: calc(var(--h2-margin));
+         text-align: center;
+         color: hsl(var(--hue), 50%, 45%)
+      }
+
+      section>h2:hover a.anchor {
+         color: hsl(var(--hue), 20%, 80%)
+      }
+
+      h3 {
+         --h2-margin: 3em;
+         margin: var(--line-height) auto;
+         font-size: 1.125em
+      }
+
+      h3 a.anchor {
+         float: right;
+         width: calc(var(--h2-margin));
+         text-align: center;
+         color: hsl(var(--hue), 20%, 80%)
+      }
+
+      @media (min-width: 34.375em) {
+         h3 a.anchor {
+            margin-right: calc(0em - var(--h2-margin))
+         }
+      }
+
+      h4 a.anchor,
+      h5 a.anchor,
+      h6 a.anchor {
+         padding-left: 1em;
+         color: hsl(var(--hue), 20%, 80%)
+      }
+
+      h3:hover a.anchor,
+      h4:hover a.anchor,
+      h5:hover a.anchor,
+      h6:hover a.anchor {
+         color: hsl(var(--hue), 50%, 40%)
+      }
+
+      header nav {
+         display: block
+      }
+
+      header nav ul {
+         display: flex;
+         flex-flow: row wrap;
+         justify-content: center;
+         line-height: 1.0;
+         margin: 0
+      }
+
+      header nav ul li {
+         display: inline-block;
+         padding: 0.1em 0.3em;
+         text-align: center;
+         flex: 0 0 4em;
+         align-self: center;
+         white-space: nowrap
+      }
+
+      header nav ul li a {
+         display: block;
+         font-weight: bold;
+         text-decoration: none
+      }
+
+      header,
+      .divider,
+      section>h2 {
+         border-bottom: 1px solid #000
+      }
+
+      .divider,
+      section>h2 {
+         border-top: 1px solid #000
+      }
+
+      .divider {
+         min-height: calc(2 * var(--line-height));
+         text-align: center
+      }
+
+      .below-divider {
+         padding-top: var(--line-height);
+         border-bottom: 1px solid black
+      }
+
+      .below-divider>p:first-child {
+         font-size: 1.25em;
+         text-align: center;
+         margin-top: 0
+      }
+
+      footer {
+         --footer-padding-y: calc(var(--line-height) / 2);
+         --footer-padding-x: var(--font-size);
+         padding: var(--footer-padding-y) var(--footer-padding-x);
+         border-top: 1px solid #000
+      }
+
+      footer>div>address {
+         display: block
+      }
+
+      footer>div>* {
+         text-align: center
+      }
+
+      @media (min-width: 50em) {
+         footer>div {
+            margin: 0 auto;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            max-width: calc(2 * var(--body-width));
+            width: calc(100vw - 2 * var(--footer-padding-x))
+         }
+
+         footer>div>address {
+            flex: 0 1 20em;
+            align-self: center;
+            text-align: left
+         }
+
+         footer>div>div {
+            flex: 1 1 20em;
+            align-self: center;
+            text-align: right
+         }
+
+         footer>div>div>p,
+         footer>div>div>div {
+            margin-top: 0
+         }
+      }
+
+      h2:target {
+         animation: target-attention 0.4s 1;
+         font-size: 2.0em
+      }
+
+      @keyframes target-attention {
+         0% {
+            transform: scale(1.1)
+         }
+
+         100% {
+            transform: scale(1.1)
+         }
+      }
+
+      div:target {
+         border: 1px dashed #888
+      }
+
+      kbd kbd {
+         padding: 0.1em 0.4em;
+         margin: 0 0.1em 0.2em 0.1em;
+         font-size: 0.75em;
+         white-space: nowrap;
+         background-color: #ddd;
+         color: #242;
+         border: 1px solid rgba(0, 0, 0, 0.2);
+         border-radius: 0.2em;
+         box-shadow: inset 0 0 1px 1px #fff, 0 2px 0 rgba(0, 0, 0, 0.3)
+      }
+
+      samp,
+      kbd {
+         background-color: #f3f3f2
+      }
+
+      code,
+      samp {
+         color: #442
+      }
+
+      kbd {
+         margin: 0 0.4em;
+         color: #252
+      }
+
+      section li::marker {
+         font-family: var(--sans-serif);
+         color: hsl(var(--hue), 50%, 40%)
+      }
+
+      img {
+         max-width: 100%;
+         height: auto;
+         -ms-interpolation-mode: bicubic
+      }
+
+      section figcaption {
+         font-size: 0.75em;
+         line-height: 1.1;
+         text-align: center
+      }
+
+      a {
+         color: hsl(var(--hue), 50%, 45%);
+         text-decoration-color: hsl(var(--hue), 20%, 80%);
+         text-underline-offset: 0.25em
+      }
+
+      a:hover {
+         text-decoration: underline;
+         text-decoration-color: hsl(var(--hue), 50%, 45%);
+         background: hsla(var(--hue), 50%, 50%, 0.1)
+      }
+
+      :focus-visible {
+         outline-color: hsl(var(--hue), 50%, 45%)
+      }
+
+      .draft {
+         font-family: var(--serif);
+         font-size: calc(4 * var(--font-size));
+         letter-spacing: -0.1em;
+         color: #eee;
+         opacity: 0.5;
+         text-align: center;
+         transform: rotate(-5deg);
+         line-height: 1.0;
+         position: absolute;
+         top: 0;
+         height: 0;
+         left: 25%;
+         width: 50%;
+         pointer-events: none
+      }
+
+      @media (min-width: 34.375em) {
+
+         section p,
+         section li {
+            hanging-punctuation: first last
+         }
+
+         p,
+         nav,
+         figure,
+         td,
+         th,
+         abbr,
+         acronym,
+         code,
+         kbd,
+         samp,
+         tt,
+         var,
+         pre {
+            hyphens: auto
+         }
+      }
+
+      .w-auto,
+      section>.w-auto {
+         width: auto
+      }
+
+      .w-full,
+      section>.w-full {
+         width: 100%
+      }
+
+      .select-none {
+         user-select: none;
+         -webkit-user-select: none
+      }
+
+      .text-left {
+         text-align: left
+      }
+
+      .text-center {
+         text-align: center
+      }
+
+      .text-right {
+         text-align: right
+      }
+
+      .text-sm {
+         font-size: 0.875em
+      }
+
+      .font-sans {
+         font-family: var(--sans-serif)
+      }
+
+      .font-serif {
+         font-family: var(--serif)
+      }
+
+      .font-mono {
+         font-family: var(--monospace)
+      }
+
+      p,
+      figure,
+      ul,
+      ol {
+         margin: var(--line-height) 0
+      }
+
+      header>*,
+      section>*,
+      footer>*,
+      main>address,
+      .comments {
+         margin-inline: auto
+      }
+
+      figure {
+         text-align: center
+      }
+
+      figure pre {
+         text-align: left
+      }
+
+      li>ul,
+      li>ol {
+         margin-top: 0;
+         margin-bottom: 0
+      }
+
+      figure img,
+      figure svg,
+      figure canvas {
+         max-width: 100%
+      }
+
+      dt {
+         font-weight: bold
+      }
+
+      pre {
+         width: var(--body-width);
+         max-width: 100%;
+         line-height: 1.4;
+         overflow: auto;
+         border-block: 1px solid #ccc;
+         border-inline-width: 0
+      }
+
+      pre.simple,
+      .comments pre {
+         overflow: auto;
+         width: calc(var(--body-width) * 1.2);
+         border: none;
+         background: transparent;
+         background-color: transparent;
+         box-shadow: none
+      }
+
+      pre.snippet,
+      pre.src {
+         border-top-style: dashed;
+         border-bottom-style: dashed
+      }
+
+      section>pre:only-child {
+         padding-bottom: var(--font-size);
+         border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+      }
+
+      blockquote {
+         font-style: italic;
+         text-wrap: balance
+      }
+
+      table.standard {
+         font-family: var(--sans-serif);
+         font-size: 0.875em;
+         border: 2px solid white;
+         border-collapse: collapse;
+         overflow-x: auto
+      }
+
+      table.standard th {
+         background-color: #e8e8e3;
+         border: 2px solid white;
+         padding: 0 0.5em
+      }
+
+      table.standard td {
+         background-color: #fff;
+         border: 1px solid #f3f3f2;
+         border-right-color: #babaab;
+         padding: 0 0.5em
+      }
+
+      table.standard thead {
+         border-bottom: 2px solid #babaab
+      }
+
+      table.standard thead th {
+         background: linear-gradient(to top, #e8e8e3, #f4f4f1, #fafaf9)
+      }
+
+      aside,
+      p.note,
+      div.note>p {
+         width: calc(--body-width - 2em);
+         padding: 1em;
+         background: #eee;
+         border: 1px solid #ddd;
+         box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4)
+      }
+
+      tt,
+      code {
+         padding: 0 2px
+      }
+
+      pre :is(tt, code) {
+         padding: unset
+      }
+
+      main>address,
+      section>address,
+      section>time {
+         display: block;
+         width: var(--body-width);
+         max-width: 100%;
+         font-family: var(--sans-serif);
+         text-align: right
+      }
+
+      form {
+         margin: 0
+      }
+
+      input {
+         accent-color: hsl(var(--hue), 50%, 50%)
+      }
+
+      input[type="text"] {
+         max-width: 100%;
+         border: 1px solid rgba(0, 0, 0, 0.7);
+         background-color: #f8f8f4;
+         color: #000;
+         text-align: center;
+         font-weight: bold
+      }
+
+      input[type="text"]:focus {
+         background-color: #fffff4
+      }
+
+      input::-webkit-input-placeholder {
+         color: #aaa
+      }
+
+      input::-moz-placeholder {
+         color: #aaa
+      }
+
+      input[type="search"][name="q"] {
+         box-shadow: inset 0 0.1em 0.3em 0 rgba(0, 0, 0, 0.5);
+         border-radius: 0.6em;
+         padding: 0.3em 0.6em;
+         border-width: 0
+      }
+
+      button {
+         touch-action: manipulation;
+         cursor: pointer;
+         user-select: none
+      }
+
+      .TODO {
+         color: #bf4040;
+         background: #e8e3e3;
+         border: 1px solid #bf4040;
+         margin-left: 0.5ex
+      }
+
+      .DONE {
+         color: #4040bf;
+         background: #e3e3e8;
+         border: 1px solid #4040bf
+      }
+
+      .src .constant {
+         font-style: oblique
+      }
+
+      .src .comment-delimiter,
+      .src .nxml-comment-delimiter {
+         color: #4488ff
+      }
+
+      .src .comment,
+      .src .nxml-comment-content {
+         color: #006699
+      }
+
+      .src .builtin {
+         color: #508b20
+      }
+
+      .src .warning {
+         color: #cc0000
+      }
+
+      .src .function-name {
+         color: #268bd2;
+         font-weight: bold
+      }
+
+      .src .variable-name {
+         font-weight: bold;
+         color: #5c3d5c
+      }
+
+      .src .type {
+         color: #6c71c4
+      }
+
+      .src .constant-face {
+         color: #d33682
+      }
+
+      .src .doc {
+         color: #666666;
+         background-color: #e2e6e8
+      }
+
+      .src .string {
+         color: #888888
+      }
+
+      .src .preprocessor {
+         color: #859900
+      }
+
+      .src .negation-char,
+      .src .sh-escaped-newline {
+         color: #ff0000
+      }
+
+      .src .todo {
+         color: #ffffff;
+         background: #dc322f
+      }
+
+      .src .note {
+         color: #ffffff;
+         background: #2aa198
+      }
+
+      .src .hack {
+         color: #ffffff;
+         background: #859900
+      }
+
+      .src .paren {
+         color: #a0a090;
+         font-weight: bold
+      }
+
+      .src .keyword {
+         color: #679;
+         font-weight: bold
+      }
+
+      .src .minor-control-construct {
+         color: #406abf;
+         font-weight: bold
+      }
+
+      .src .major-control-construct {
+         color: #bf4040
+      }
+
+      .src-cpp .constant {
+         color: #999999
+      }
+
+      .src-emacs-lisp .paren {
+         color: #c9c9c4
+      }
+
+      .src-sh .string,
+      .src-sh .comment {
+         color: inherit
+      }
+
+      .src-python .highlight-indentation {
+         border-right: 2px solid #eeeeee
+      }
+
+      .src-css .css-selector {
+         color: #478547
+      }
+
+      .src-css .css-property {
+         color: #406abf
+      }
+
+      .src-xml .nxml-element-prefix {
+         color: #bf40bf
+      }
+
+      .src-xml .nxml-element-local-name {
+         color: #406abf;
+         font-weight: normal
+      }
+
+      .src-xml .nxml-attribute-local-name {
+         color: #478547
+      }
+
+      .src-xml .nxml-element-colon {
+         color: #a3adc2
+      }
+
+      .src-xml .nxml-tag-delimiter,
+      .src-xml .nxml-tag-slash {
+         color: #9cabc9;
+         font-weight: bold
+      }
+
+      table.standard td.left,
+      table.standard th.left {
+         text-align: left
+      }
+
+      table.standard td.center,
+      table.standard th.center {
+         text-align: center
+      }
+
+      table.standard td.right,
+      table.standard th.right {
+         text-align: right
+      }
+
+      @media screen {
+         *[class^="section-number"] {
+            color: hsl(var(--hue), 20%, 50%)
+         }
+
+         h2 .section-number {
+            display: inline-block;
+            margin-left: 0;
+            padding-left: 0.5em;
+            text-align: center;
+            width: var(--h2-margin);
+            color: hsl(var(--hue), 50%, 80%)
+         }
+
+         h2 .section-number+span {
+            margin-left: 0
+         }
+
+         h3>.section-number {
+            float: left;
+            text-align: center;
+            width: 2.7em;
+            margin-right: 0.3em;
+            color: hsl(var(--hue), 25%, 90%);
+            background: hsl(var(--hue), 50%, 50%);
+            background-image: var(--bgurl), var(--bgurl);
+            background-position: 0 0, 16px 16px;
+            border-radius: 0.25em;
+            text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8)
+         }
+      }
+
+      @media screen and (min-width: 34.375em) {
+         h3>.section-number {
+            height: 2em;
+            margin-left: -3em;
+            margin-top: -0.3em;
+            padding-top: 0.3em;
+            border-block: 1px solid black
+         }
+
+         h3>a.anchor {
+            background: url(https://www.redblobgames.com/img/svg-blob-mini.svg) no-repeat center center;
+            background-size: 2cap 2cap
+         }
+
+         h3:hover>a.anchor {
+            background: none
+         }
+      }
+
+      .print-endnote {
+         display: none
+      }
+
+      @media print {
+         @page {
+            margin: 1in
+         }
+
+         body {
+            --font-size: 13pt;
+            --body-width: 100vw;
+            --serif: "Book Antiqua", "Times New Roman", serif;
+            --sans-serif: "Helvetica", sans-serif;
+            --monospace: "Courier", "Courier New", monospace
+         }
+
+         h2,
+         h3 {
+            page-break-after: avoid
+         }
+
+         figure {
+            page-break-inside: avoid
+         }
+
+         p,
+         li {
+            orphans: 5;
+            widows: 5
+         }
+
+         section p a,
+         section li a {
+            text-decoration: underline;
+            text-decoration-color: #ddd
+         }
+
+         header nav,
+         .comments {
+            display: none
+         }
+
+         .print-endnote {
+            display: unset
+         }
+
+         .print-endnote li {
+            list-style-type: none;
+            word-break: break-all
+         }
+
+         .print-endnote img {
+            width: 2.5em;
+            vertical-align: bottom
+         }
+      }
+
+      @media print {
+         header::before {
+            position: absolute;
+            right: 0;
+            top: 0;
+            content: url(https://chart.apis.google.com/chart?chs=120x120&cht=qr&chl=https%3A%2F%2Fwww.redblobgames.com%2Fpathfinding%2Fa-star%2Fintroduction.html);
+         }
+      }
+
+      svg.icon {
+         width: 1em;
+         height: 1em;
+         overflow: visible;
+      }
+
+      figure img,
+      figure canvas {
+         width: auto;
+         height: auto;
+      }
+
+      .side-by-side {
+         display: flex;
+         justify-content: center;
+      }
+
+      .side-by-side>figure {
+         flex: 0 1 16rem;
+         flex-basis: calc(var(--body-width)/2);
+         margin: 0;
+      }
+
+      .side-by-side>figure>canvas {
+         padding: 0 0.7rem;
+      }
+
+      section>.width-150percent {
+         max-width: 100vw;
+         width: calc(1.5 * var(--body-width));
+      }
+
+      @media (any-hover: hover),
+      (-moz-touch-enabled: 0) {
+         .no-hover {
+            display: none;
+         }
+      }
+
+      button.hover {
+         font-weight: bold;
+         font-size: inherit;
+         font-family: inherit;
+         border: 1px outset hsl(0, 24%, 95%);
+         border-radius: 0.25em;
+         background: hsl(0, 24%, 95%);
+         color: #000;
+         margin: 0.25em;
+         padding: 0.125em;
+         -webkit-appearance: none;
+         cursor: pointer;
+      }
+
+      button.hover:hover {
+         border-color: hsl(0, 48%, 46%);
+         background: hsl(0, 48%, 46%);
+         color: #fff;
+         box-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.5);
+      }
+
+      .slider button {
+         font-size: large;
+      }
+
+      input[type=range] {
+         width: 95%;
+      }
+
+      /* special case: don't want animation here */
+      #diagram-expansion .play_pause {
+         display: none;
+      }
+
+      /* used for hide/show layers */
+      #diagram-graphs2-waypoints {
+         visibility: hidden;
+      }
+
+      #diagram-graphs2-waypoints.show {
+         visibility: visible;
+      }
+
+      #diagram-graphs2-grid {
+         visibility: hidden;
+         background-color: white;
+      }
+
+      #diagram-graphs2-grid.show {
+         visibility: visible;
+      }
+
+      /* for inline legend */
+      .square {
+         box-sizing: content-box;
+         display: inline-block;
+         width: 1.2em;
+         height: 1.2em;
+         vertical-align: middle;
+         box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+      }
+
+      .frontier-bg {
+         border: 3px solid hsl(220, 50%, 50%);
+         background: hsl(30, 20%, 75%);
+         color: white;
+      }
+
+      .unexplored-bg {
+         background: hsl(0, 10%, 85%);
+         color: black;
+      }
+
+      .reached-bg {
+         background: hsl(30, 20%, 75%);
+         color: black;
+      }
+
+      .current-bg {
+         border: 3px solid hsl(220, 50%, 50%);
+         background: hsl(220, 60%, 60%);
+         color: white;
+      }
+
+      .neighbors-bg {
+         border: 3px dotted hsl(150, 40%, 40%);
+         background: radial-gradient(circle, hsla(150, 50%, 45%, 0.0) 0%, hsla(150, 50%, 45%, 0.5) 100%);
+         color: white;
+         box-shadow: unset;
+      }
+
+      .neighbors-bg.reached-bg {
+         background: radial-gradient(circle, hsla(30, 20%, 75%) 0%, hsla(150, 50%, 45%, 0.5) 100%);
+      }
+
+      .next-bg {
+         border: 3px dotted hsl(150, 40%, 40%);
+         background: hsl(150, 50%, 50%);
+         color: white;
+      }
+
+      /* the changes from one code sample to the next are marked with em */
+      pre em {
+         font-weight: inherit;
+         font-style: inherit;
+         background-color: #ffc;
+         padding: 0.125em 0;
+      }
+
+      /* for code samples and also mentions of these words in the text of the page */
+      .frontier {
+         color: hsl(220, 50%, 50%);
+      }
+
+      .current {
+         color: hsl(220, 60%, 60%);
+      }
+
+      .start {
+         color: hsl(0, 50%, 50%);
+      }
+
+      .reached,
+      .came_from {
+         color: hsl(30, 40%, 40%);
+      }
+
+      .neighbors {
+         color: hsl(150, 40%, 30%);
+      }
+
+      .next {
+         color: hsl(150, 50%, 40%);
+      }
+
+      .goal {
+         color: hsl(310, 50%, 50%);
+      }
+
+      .path {
+         color: hsl(280, 50%, 50%);
+      }
+
+      .cost_so_far,
+      .new_cost {
+         color: hsl(340, 30%, 40%);
+      }
+
+      .def,
+      .return,
+      .while,
+      .if,
+      .for,
+      .break,
+      .frontier,
+      .start,
+      .current,
+      .reached,
+      .came_from,
+      .neighbors,
+      .next,
+      .goal,
+      .path,
+      .cost_so_far,
+      .new_cost {
+         font-weight: bold;
+      }
