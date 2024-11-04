@@ -2446,6 +2446,9 @@ bol end`,
     }
     le("#show-graphs1-different-map", n, s),
       le("#show-graphs1-path-trace", a, h);
+
+    le("#show-graphs1-different-map2", n, s),
+      le("#show-graphs1-path-trace2", a, h);
   }
   T(Ve);
   function Ye() {
@@ -2461,6 +2464,10 @@ bol end`,
         re(),
         X(7),
       ]);
+
+    
+
+      
     let r = new L(40, 20),
       e = new D(r, 15),
       t = { id: r.to_id(38, 10) },
