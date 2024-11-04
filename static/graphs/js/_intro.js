@@ -2465,6 +2465,8 @@ bol end`,
         X(7),
       ]);
 
+
+
     
 
       
@@ -2549,19 +2551,27 @@ bol end`,
       );
     let n = document.querySelector("#diagram-graphs2-waypoints"),
       s = document.querySelector("#diagram-graphs2-grid");
+
+      let n2 = document.querySelector("#diagram-graphs2-waypoints2"),
+      s2 = document.querySelector("#diagram-graphs2-grid2");
     function a() {
       n.classList.add("show");
+      n2.classList.add("show");
     }
     function h() {
       n.classList.remove("show");
+      n2.classList.remove("show");
     }
     function c() {
       s.classList.add("show");
+      s2.classList.add("show");
     }
     function l() {
       s.classList.remove("show");
+      s2.classList.remove("show");
     }
     le("#show-graphs2-waypoints", a, h), le("#show-graphs2-grid", c, l);
+    le("#show-graphs2-waypoints2", a, h), le("#show-graphs2-grid2", c, l);
   }
   T(Ye);
   var xe = [
