@@ -203,7 +203,7 @@
         <div>
           <p class="text-center">
             <button class="hover" id="show-graphs1-different-map">
-              Terrain Representation
+              Terrain Map
             </button>
             |
             <button class="hover" id="show-graphs1-path-trace">
@@ -242,6 +242,9 @@
             a pathfinding grid</button
           >?
         </p>
+
+        <div id="graph3"></div>
+
         <figure style="position: relative">
           <div
             id="diagram-graphs2-navmesh"
@@ -305,6 +308,9 @@
             > </span
           >→<span class="square reached-bg"> </span>
         </p>
+
+        <div id="graph4"></div>
+
         <figure id="diagram-frontier">
           <canvas width="654" height="331"></canvas>
         </figure>
@@ -339,10 +345,16 @@
           Let’s see this up close. The tile are numbered in the order we visit
           them. <strong>Step through to see the expansion process:</strong>
         </p>
+
+         <div id="graph5"></div>
+
         <figure id="diagram-expansion">
           <canvas width="654" height="295"></canvas>
         </figure>
         <p>It’s only ten lines of (Python) code:</p>
+
+        <div id="code1"></div>
+
         <pre>frontier = Queue()
 frontier.put(start <svg class="icon" alt="(blob icon)" viewBox="-1050 -1200 2100 2100" xml:base="../_icon-blob.svg"><use xlink:href="#blob-icon"></use></svg>)
 reached = set()
@@ -365,6 +377,9 @@ while not frontier.empty():
           <code class="came_from">came_from</code> table (the keys of the table
           are the reached set):
         </p>
+
+        <div id="code2"></div>
+
         <pre>frontier = Queue()
 frontier.put(start <svg class="icon" alt="(blob icon)" viewBox="-1050 -1200 2100 2100" xml:base="../_icon-blob.svg"><use xlink:href="#blob-icon"></use></svg>)
 <em>came_from</em> = dict() # path A-&gt;B is stored as came_from[B] == A
@@ -396,6 +411,9 @@ while not frontier.empty():
           to see how following the arrows gives you a reverse path back to the
           start position.
         </p>
+
+         <div id="graph6"></div>
+
         <figure id="diagram-path-reconstruction">
           <canvas width="654" height="331"></canvas>
         </figure>
@@ -407,6 +425,9 @@ while not frontier.empty():
           >. A path is a <em>sequence of edges</em>, but often it’s easier to
           store the nodes:
         </p>
+
+         <div id="code3"></div>
+
         <pre>current = goal <svg class="icon" alt="(X icon)" viewBox="-10 -10 20 20" xml:base="../_icon-cross.svg"><path d="M -9,-9 L 9,9 M -9,9 L 9,-9" stroke="hsl(310, 50%, 50%)" stroke-width="6.75"></path></svg>
 path = []
 while current != start: <svg class="icon" alt="(blob icon)" viewBox="-1050 -1200 2100 2100" xml:base="../_icon-blob.svg"><use xlink:href="#blob-icon"></use></svg>
@@ -448,6 +469,9 @@ path.reverse() # optional</pre>
           around see how the frontier stops expanding as soon as it reaches the
           goal.
         </p>
+
+         <div id="graph7"></div>
+
         <div class="side-by-side">
           <figure id="diagram-early-exit-false">
             <canvas width="327" height="327"></canvas>
@@ -461,6 +485,9 @@ path.reverse() # optional</pre>
         <p>
           We add a test when removing a node (not when adding a node)<!-- add footnote: correctness requires we wait until the node is removed -->:
         </p>
+
+         <div id="code4"></div>
+
         <pre>frontier = Queue()
 frontier.put(start <svg class="icon" alt="(blob icon)" viewBox="-1050 -1200 2100 2100" xml:base="../_icon-blob.svg"><use xlink:href="#blob-icon"></use></svg>)
 came_from = dict()
@@ -498,6 +525,9 @@ while not frontier.empty():
           the <em>number of steps</em> from the start with the
           <em>distance</em> from the start:
         </p>
+
+         <div id="graph8"></div>
+
         <div class="side-by-side">
           <figure id="diagram-weights-false">
             <canvas width="327" height="327"></canvas>
@@ -522,6 +552,8 @@ while not frontier.empty():
           reached, we’ll add it if the new path to the location is better than
           the best previous path.
         </p>
+
+         <div id="code5"></div>
         <pre>frontier = <em>PriorityQueue()</em>
 frontier.put(start<em>, 0</em>)
 came_from = dict()
@@ -549,6 +581,8 @@ while not frontier.empty():
           frontier expands more slowly through the forests, finding the shortest
           path around the central forest instead of through it:
         </p>
+
+         <div id="graph9"></div>
         <div id="diagram-contour">
           <div class="side-by-side">
             <figure id="diagram-contour-unweighted">
@@ -595,6 +629,8 @@ while not frontier.empty():
           directions. First, we’ll define a <em>heuristic</em> function that
           tells us how close we are to the goal:
         </p>
+
+         <div id="code6"></div>
         <pre>
 def heuristic(a, b):
   # Manhattan distance on a square grid
@@ -609,6 +645,8 @@ def heuristic(a, b):
           priority queue from Dijkstra’s Algorithm but without
           <code class="cost_so_far">cost_so_far</code>:
         </p>
+           
+      <div id="code7"></div>
         <pre>frontier = PriorityQueue()
 frontier.put(start, 0)
 came_from = dict()
@@ -626,6 +664,9 @@ while not frontier.empty():
         frontier.put(next, priority)
         came_from[next] = current</pre>
         <p>Let’s see how well it works:</p>
+
+         <div id="graph10"></div>
+
         <div id="diagram-greedybestfirst" class="color-frontier">
           <div class="side-by-side">
             <figure class="left">
@@ -639,6 +680,8 @@ while not frontier.empty():
           </div>
         </div>
         <p>Wow!! Amazing, right? But what happens in a more complex map?</p>
+
+         <div id="graph11"></div>
         <div id="diagram-greedybestfirst-complex" class="color-frontier">
           <div class="side-by-side">
             <figure class="left">
@@ -670,6 +713,8 @@ while not frontier.empty():
           from the start and the estimated distance to the goal.
         </p>
         <p>The code is very similar to Dijkstra’s Algorithm:</p>
+           
+            <div id="code8"></div>
         <pre>frontier = PriorityQueue()
 frontier.put(start, 0)
 came_from = dict()
@@ -696,6 +741,8 @@ while not frontier.empty():
           estimates the distance to the goal point. A* is using the sum of those
           two distances.
         </p>
+           
+            <div id="graph12"></div>
         <div id="diagram-astar" class="side-by-side width-150percent">
           <figure id="diagram-astar-1">
             <canvas width="327" height="327"></canvas>
