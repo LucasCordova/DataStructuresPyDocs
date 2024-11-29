@@ -9,20 +9,20 @@
       
       
       
+        <link rel="prev" href="../queue/">
       
-        <link rel="next" href="array/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
-        <title>PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University</title>
+        <title>HashMap - PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
       
 
@@ -41,9 +41,9 @@
       
     
     
-      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-structures-algorithms-pydocs" class="md-skip">
+        <a href="#hashmap" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +78,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" class="md-header__button md-logo" aria-label="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" data-md-component="logo">
+    <a href=".." title="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" class="md-header__button md-logo" aria-label="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data Structures PyDocs
+              HashMap
             
           </span>
         </div>
@@ -136,7 +136,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" class="md-nav__button md-logo" aria-label="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" data-md-component="logo">
+    <a href=".." title="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" class="md-nav__button md-logo" aria-label="PyDocs Reference Implementation Documentation for CS 152 Data Structures and CS 351 Algorithms @ Willamette University" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -146,6 +146,126 @@
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structures PyDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../array/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Array
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../array2d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Array2D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linked_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LinkedList
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Queue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
     
       
       
@@ -167,18 +287,18 @@
           
   
   <span class="md-ellipsis">
-    Data Structures PyDocs
+    HashMap
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Data Structures PyDocs
+    HashMap
   </span>
   
 
@@ -200,9 +320,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-structures-table-of-contents" class="md-nav__link">
+  <a href="#related-lectures" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Structures Table of Contents
+      Related Lectures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-python-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download Python Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashmap-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      HashMap Interface
     </span>
   </a>
   
@@ -212,126 +350,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="array/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Array
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="array2d/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Array2D
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="linked_list/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    LinkedList
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="stack/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Stack
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="queue/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Queue
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="hashmap/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    HashMap
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -363,9 +381,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-structures-table-of-contents" class="md-nav__link">
+  <a href="#related-lectures" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Structures Table of Contents
+      Related Lectures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-python-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download Python Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashmap-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      HashMap Interface
     </span>
   </a>
   
@@ -386,25 +422,22 @@
                   
 
 
-<h1 id="data-structures-algorithms-pydocs">Data Structures &amp; Algorithms PyDocs</h1>
-<p>This site contains reference documentation for building the foundational data structures for the assignments in CS 152 Data Structures and CS 351 Algorithms at Willamette University. As a new data structure assignment is released, a new page will appear on this site containing the documentation that you will use to implement it.</p>
-<h2 id="data-structures-table-of-contents">Data Structures Table of Contents</h2>
-<ol>
-<li><a href="array/">Array</a></li>
-<li><a href="array2d/">Array2D</a></li>
-<li><a href="linked_list/">LinkedList</a></li>
-<li><a href="stack/">Stack</a></li>
-<li><a href="queue/">Queue</a></li>
-<li><a href="hashmap/">HashMap</a></li>
-</ol>
-<!-- 
-4. [Stacks and Queues](stacks_queues.md)
-5. [HashMap](hash_map.md)
-6. [Graph](graph.md) -->
+<h1 id="hashmap">HashMap</h1>
+<h2 id="related-lectures">Related Lectures</h2>
+<ul>
+<li>To be linked...</li>
+</ul>
+<h2 id="download-python-files">Download Python Files</h2>
+<ul>
+<li><a href="https://github.com/LucasCordova/DataStructuresPyDocs/raw/main/datastructures/ihashmap.py">HashMap Interface</a></li>
+<li><a href="https://github.com/LucasCordova/DataStructuresPyDocs/raw/main/datastructures/hashmap.py">HashMap Class Template</a></li>
+<li><a href="https://github.com/LucasCordova/DataStructuresPyDocs/raw/main/datastructures/test_hashmap.py">HashMap Test Class</a></li>
+</ul>
+<h2 id="hashmap-interface">HashMap Interface</h2>
+<pre><code class="language-python">
+::: ihashmap
 
-<!-- ## Algorithms Table of Contents
-
-1. [AVL Tree](iavltree.md) -->
+</code></pre>
 
 
 
@@ -451,10 +484,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
