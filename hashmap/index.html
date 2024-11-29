@@ -771,35 +771,42 @@
               Bases: <code><span title="abc.ABC">ABC</span></code>, <code><span title="typing.Generic">Generic</span>[<span title="ihashmap._K">_K</span>, <span title="ihashmap._V">_V</span>]</code></p>
 
 
-        <p>Class HashMap - A generic HashMap data structure class.
-Stipulations:
-    1. Adhere to the docstring requirements per method, including raising appropropiate exceptions where indicated. 
-    2. The underlying data structure of the HashMap is a combination of an Array and a LinkedList. An Array is used
-        to store the buckets and a LinkedList is used to handle collisions for each bucket. Key/Value pairs are stored
-        in the LinkedList using the provided KeyValuePair class definition.
-    3. The HashMap must use a prime number for the number of buckets (Array length) and must start at a size of 7 buckets.
-    4. Values are retrieved from the HashMap via the bracket operator using the Key. If the key is not present, the HashMap
-        raises a KeyError.
-    5. Key/Values are inserted into the HashMap via the bracket operator. If the key is already present, the value is replaced.
-        Otherwise, the key/value pair is appended to the end of the LinkedList in the bucket.
-    6. The bucket index used in the bracket operators is determined by hashing the key with a hash function. 
-        The following properties are true of a hash function:
-        a. The hash function may be supplied by the user during construction of the HashMap. If a hash function is not supplied,
-            the HashMap must have and use a default generic hash function.
-        b. Any hash function must take a key as an argument and return an integer.
-        c. A hash function does not need to take into account the number of buckets or that the bucket is not out of bounds, but
-            the HashMap must handle this.
-    7. The HashMap uses a LinkedList to handle collisions. If a key hashes to a bucket that already has a key-value pair,
-        the new key-value pair is appended to the end of the LinkedList.
-    8. If a hash function is not provided by the user, the HashMap must have a default hash function that hashes the key. 
-        If the key is an iterable, the hash function should hash the sum of the hashes of the elements. 
-        If the key is not an iterable, then hash the key itself.
-    9. If the percentage of buckets in use surpasses 60%, resize the hash map to the next highest prime. This
-        means that if the hash map has 7 buckets and 5 are in use, the load factor is 5/7 = 0.714, which is
-        greater than 0.6. The buckets size should be resized to the next highest prime, which in this example is 11. 
-        Note: a <code>bucket in use</code> is defined as a bucket that has one or more items in the bucket's chain.
-        When resizing, rehash all the keys in the hash map.</p>
+        <p>Class HashMap - A generic HashMap data structure class. The HashMap class is a data structure that stores key-value pairs.</p>
 
+
+<details class="hashmap-properties" open>
+  <summary>HashMap Properties</summary>
+  <ol>
+<li>The underlying data structure of the HashMap is a combination of an Array (buckets) and a LinkedList (chains). The 
+    LinkedList is used to handle collisions for each bucket. Key/Value pairs are stored in the LinkedList using the provided 
+    KeyValuePair class definition.</li>
+<li>The HashMap always uses a prime number for the number of buckets (Array length) to improve the hashing algorithm. The 
+    HashMap is initialized at construction time to 7 (buckets).</li>
+<li>Values are retrieved from the HashMap via the bracket operator using the Key (see <strong>set</strong> method). 
+    If the key is not present, the HashMap raises a KeyError.</li>
+<li>Key/Values are inserted into the HashMap via the bracket operator (see <strong>get</strong> method). If the key is already present, 
+    the value is replaced. Otherwise, the key/value pair is appended to the end of the LinkedList in the bucket.</li>
+<li>The index used in the bracket operators is determined by hashing the key using a hash function. 
+    The following properties are true of a hash function:
+    a. A hash function may be supplied by the user during construction of the HashMap. If a hash function is not supplied,
+        the HashMap will use a default generic hash function that supports any key type and whether the key is iterable or not.
+    b. The signature of a hash function: def hash_function(key: Any) -&gt; int:. Note, the hash function must return an integer. 
+    c. The hash function must be deterministic. This means that the hash function must return the same integer for the same key.
+    d. A hash function itself does not take into account the number of buckets or whether the integer returned by the hash
+        function would result in a bucket that is out of bounds. The HashMap will handle this.
+    e. If a key is an iterable (e.g., a string), the default hash function will hash the sum of the hashes of the elements. 
+        If the key is not an iterable, then it hashes the key itself: hash(key).</li>
+<li>Collisions will occur when two keys hash into the same bucket index. If a key hashes to a bucket that already contains a
+    key-value pair in the chain, the new key-value pair is appended to the end of the LinkedList.</li>
+<li>If a hash function is not provided by the user, the HashMap must have a default hash function that hashes the key.</li>
+<li>If the percentage of buckets in use surpasses 60%, resize the hash map to the next highest prime. This
+    means that if the hash map has 7 buckets and 5 are in use, the load factor is 5/7 = 0.714, which is
+    greater than 0.6. The buckets size should be resized to the next highest prime, which in this example is 11. 
+    Note: a <code>bucket in use</code> is defined as a bucket that has one or more items in the bucket's chain.
+    When resizing, rehash all the keys in the hash map.</li>
+<li>The items, keys, and values methods return a deep copy of the items, keys, and values (using copy.deepcopy).</li>
+</ol>
+</details>
 
 
 
@@ -1096,35 +1103,41 @@ Stipulations:
 <span class="normal">310</span>
 <span class="normal">311</span>
 <span class="normal">312</span>
-<span class="normal">313</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">IHashMap</span><span class="p">(</span><span class="n">ABC</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">_K</span><span class="p">,</span> <span class="n">_V</span><span class="p">]):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; Class HashMap - A generic HashMap data structure class.</span>
-<span class="sd">        Stipulations:</span>
-<span class="sd">            1. Adhere to the docstring requirements per method, including raising appropropiate exceptions where indicated. </span>
-<span class="sd">            2. The underlying data structure of the HashMap is a combination of an Array and a LinkedList. An Array is used</span>
-<span class="sd">                to store the buckets and a LinkedList is used to handle collisions for each bucket. Key/Value pairs are stored</span>
-<span class="sd">                in the LinkedList using the provided KeyValuePair class definition.</span>
-<span class="sd">            3. The HashMap must use a prime number for the number of buckets (Array length) and must start at a size of 7 buckets.</span>
-<span class="sd">            4. Values are retrieved from the HashMap via the bracket operator using the Key. If the key is not present, the HashMap</span>
-<span class="sd">                raises a KeyError.</span>
-<span class="sd">            5. Key/Values are inserted into the HashMap via the bracket operator. If the key is already present, the value is replaced.</span>
-<span class="sd">                Otherwise, the key/value pair is appended to the end of the LinkedList in the bucket.</span>
-<span class="sd">            6. The bucket index used in the bracket operators is determined by hashing the key with a hash function. </span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">IHashMap</span><span class="p">(</span><span class="n">ABC</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">_K</span><span class="p">,</span> <span class="n">_V</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Class HashMap - A generic HashMap data structure class. The HashMap class is a data structure that stores key-value pairs.</span>
+
+<span class="sd">        HashMap Properties:</span>
+<span class="sd">            1. The underlying data structure of the HashMap is a combination of an Array (buckets) and a LinkedList (chains). The </span>
+<span class="sd">                LinkedList is used to handle collisions for each bucket. Key/Value pairs are stored in the LinkedList using the provided </span>
+<span class="sd">                KeyValuePair class definition.</span>
+<span class="sd">            2. The HashMap always uses a prime number for the number of buckets (Array length) to improve the hashing algorithm. The </span>
+<span class="sd">                HashMap is initialized at construction time to 7 (buckets).</span>
+<span class="sd">            3. Values are retrieved from the HashMap via the bracket operator using the Key (see __set__ method). </span>
+<span class="sd">                If the key is not present, the HashMap raises a KeyError.</span>
+<span class="sd">            4. Key/Values are inserted into the HashMap via the bracket operator (see __get__ method). If the key is already present, </span>
+<span class="sd">                the value is replaced. Otherwise, the key/value pair is appended to the end of the LinkedList in the bucket.</span>
+<span class="sd">            5. The index used in the bracket operators is determined by hashing the key using a hash function. </span>
 <span class="sd">                The following properties are true of a hash function:</span>
-<span class="sd">                a. The hash function may be supplied by the user during construction of the HashMap. If a hash function is not supplied,</span>
-<span class="sd">                    the HashMap must have and use a default generic hash function.</span>
-<span class="sd">                b. Any hash function must take a key as an argument and return an integer.</span>
-<span class="sd">                c. A hash function does not need to take into account the number of buckets or that the bucket is not out of bounds, but</span>
-<span class="sd">                    the HashMap must handle this.</span>
-<span class="sd">            7. The HashMap uses a LinkedList to handle collisions. If a key hashes to a bucket that already has a key-value pair,</span>
-<span class="sd">                the new key-value pair is appended to the end of the LinkedList.</span>
-<span class="sd">            8. If a hash function is not provided by the user, the HashMap must have a default hash function that hashes the key. </span>
-<span class="sd">                If the key is an iterable, the hash function should hash the sum of the hashes of the elements. </span>
-<span class="sd">                If the key is not an iterable, then hash the key itself.</span>
-<span class="sd">            9. If the percentage of buckets in use surpasses 60%, resize the hash map to the next highest prime. This</span>
+<span class="sd">                a. A hash function may be supplied by the user during construction of the HashMap. If a hash function is not supplied,</span>
+<span class="sd">                    the HashMap will use a default generic hash function that supports any key type and whether the key is iterable or not.</span>
+<span class="sd">                b. The signature of a hash function: def hash_function(key: Any) -&gt; int:. Note, the hash function must return an integer. </span>
+<span class="sd">                c. The hash function must be deterministic. This means that the hash function must return the same integer for the same key.</span>
+<span class="sd">                d. A hash function itself does not take into account the number of buckets or whether the integer returned by the hash</span>
+<span class="sd">                    function would result in a bucket that is out of bounds. The HashMap will handle this.</span>
+<span class="sd">                e. If a key is an iterable (e.g., a string), the default hash function will hash the sum of the hashes of the elements. </span>
+<span class="sd">                    If the key is not an iterable, then it hashes the key itself: hash(key).</span>
+<span class="sd">            6. Collisions will occur when two keys hash into the same bucket index. If a key hashes to a bucket that already contains a</span>
+<span class="sd">                key-value pair in the chain, the new key-value pair is appended to the end of the LinkedList.</span>
+<span class="sd">            7. If a hash function is not provided by the user, the HashMap must have a default hash function that hashes the key.</span>
+<span class="sd">            8. If the percentage of buckets in use surpasses 60%, resize the hash map to the next highest prime. This</span>
 <span class="sd">                means that if the hash map has 7 buckets and 5 are in use, the load factor is 5/7 = 0.714, which is</span>
 <span class="sd">                greater than 0.6. The buckets size should be resized to the next highest prime, which in this example is 11. </span>
 <span class="sd">                Note: a `bucket in use` is defined as a bucket that has one or more items in the bucket&#39;s chain.</span>
 <span class="sd">                When resizing, rehash all the keys in the hash map.</span>
+<span class="sd">            9. The items, keys, and values methods return a deep copy of the items, keys, and values (using copy.deepcopy).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="nd">@abstractmethod</span>
@@ -1485,10 +1498,7 @@ Stipulations:
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ihashmap.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">208</span>
-<span class="normal">209</span>
-<span class="normal">210</span>
-<span class="normal">211</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">211</span>
 <span class="normal">212</span>
 <span class="normal">213</span>
 <span class="normal">214</span>
@@ -1504,7 +1514,10 @@ Stipulations:
 <span class="normal">224</span>
 <span class="normal">225</span>
 <span class="normal">226</span>
-<span class="normal">227</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Contains operator for the hash map. Returns true if the key is in the hash map. </span>
 
@@ -1563,10 +1576,7 @@ Stipulations:
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ihashmap.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">188</span>
-<span class="normal">189</span>
-<span class="normal">190</span>
-<span class="normal">191</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">191</span>
 <span class="normal">192</span>
 <span class="normal">193</span>
 <span class="normal">194</span>
@@ -1581,7 +1591,10 @@ Stipulations:
 <span class="normal">203</span>
 <span class="normal">204</span>
 <span class="normal">205</span>
-<span class="normal">206</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="n">_K</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Delete an item in the hash map. Does not resize the buckets, but does remove the associated chain link.</span>
 
@@ -1698,10 +1711,7 @@ Stipulations:
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ihashmap.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">146</span>
 <span class="normal">147</span>
 <span class="normal">148</span>
 <span class="normal">149</span>
@@ -1725,7 +1735,10 @@ Stipulations:
 <span class="normal">167</span>
 <span class="normal">168</span>
 <span class="normal">169</span>
-<span class="normal">170</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Equality operator for the hash map. Returns true if the hash maps are equal.</span>
 
@@ -1865,10 +1878,7 @@ Stipulations:
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ihashmap.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 85</span>
 <span class="normal"> 86</span>
 <span class="normal"> 87</span>
 <span class="normal"> 88</span>
@@ -1886,7 +1896,10 @@ Stipulations:
 <span class="normal">100</span>
 <span class="normal">101</span>
 <span class="normal">102</span>
-<span class="normal">103</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="n">_K</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_V</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Bracket operator for getting a Value from the hash map. If the key is not present, raise a KeyError.</span>
 
@@ -2004,10 +2017,7 @@ Stipulations:
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ihashmap.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">58</span>
 <span class="normal">59</span>
 <span class="normal">60</span>
 <span class="normal">61</span>
@@ -2029,7 +2039,10 @@ Stipulations:
 <span class="normal">77</span>
 <span class="normal">78</span>
 <span class="normal">79</span>
-<span class="normal">80</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">starting_map</span><span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="p">{})</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Constructor for the HashMap class.</span>
 
@@ -2112,10 +2125,7 @@ Stipulations:
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ihashmap.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">172</span>
-<span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">175</span>
 <span class="normal">176</span>
 <span class="normal">177</span>
 <span class="normal">178</span>
@@ -2126,7 +2136,10 @@ Stipulations:
 <span class="normal">183</span>
 <span class="normal">184</span>
 <span class="normal">185</span>
-<span class="normal">186</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">_K</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Iterator for the hash map. Returns an iterator of the keys.</span>
 
@@ -2199,10 +2212,7 @@ Stipulations:
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ihashmap.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">129</span>
 <span class="normal">130</span>
 <span class="normal">131</span>
 <span class="normal">132</span>
@@ -2214,7 +2224,10 @@ Stipulations:
 <span class="normal">138</span>
 <span class="normal">139</span>
 <span class="normal">140</span>
-<span class="normal">141</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Length operator for the hash map. Returns the count of items in the hash map.</span>
 
@@ -2262,16 +2275,16 @@ Stipulations:
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ihashmap.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">304</span>
-<span class="normal">305</span>
-<span class="normal">306</span>
-<span class="normal">307</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">307</span>
 <span class="normal">308</span>
 <span class="normal">309</span>
 <span class="normal">310</span>
 <span class="normal">311</span>
 <span class="normal">312</span>
-<span class="normal">313</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Representation of the hash map.</span>
 
@@ -2385,10 +2398,7 @@ If the load factor is greater than the threshold, resize the hash map.</p>
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ihashmap.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">109</span>
 <span class="normal">110</span>
 <span class="normal">111</span>
 <span class="normal">112</span>
@@ -2403,7 +2413,10 @@ If the load factor is greater than the threshold, resize the hash map.</p>
 <span class="normal">121</span>
 <span class="normal">122</span>
 <span class="normal">123</span>
-<span class="normal">124</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="n">_K</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">_V</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Bracket operator for setting a value in the hash map. If the key is already present, replace the value.</span>
 <span class="sd">        If the load factor is greater than the threshold, resize the hash map.</span>
@@ -2454,16 +2467,16 @@ If the load factor is greater than the threshold, resize the hash map.</p>
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ihashmap.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">293</span>
-<span class="normal">294</span>
-<span class="normal">295</span>
-<span class="normal">296</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">296</span>
 <span class="normal">297</span>
 <span class="normal">298</span>
 <span class="normal">299</span>
 <span class="normal">300</span>
 <span class="normal">301</span>
-<span class="normal">302</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; String representation of the hash map.</span>
 
@@ -2531,10 +2544,7 @@ If the load factor is greater than the threshold, resize the hash map.</p>
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ihashmap.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">229</span>
-<span class="normal">230</span>
-<span class="normal">231</span>
-<span class="normal">232</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">232</span>
 <span class="normal">233</span>
 <span class="normal">234</span>
 <span class="normal">235</span>
@@ -2546,7 +2556,10 @@ If the load factor is greater than the threshold, resize the hash map.</p>
 <span class="normal">241</span>
 <span class="normal">242</span>
 <span class="normal">243</span>
-<span class="normal">244</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Clear the hash map. Removes all items from the hash map.</span>
 
@@ -2618,10 +2631,7 @@ If the load factor is greater than the threshold, resize the hash map.</p>
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ihashmap.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">278</span>
-<span class="normal">279</span>
-<span class="normal">280</span>
-<span class="normal">281</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">281</span>
 <span class="normal">282</span>
 <span class="normal">283</span>
 <span class="normal">284</span>
@@ -2631,7 +2641,10 @@ If the load factor is greater than the threshold, resize the hash map.</p>
 <span class="normal">288</span>
 <span class="normal">289</span>
 <span class="normal">290</span>
-<span class="normal">291</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">_K</span><span class="p">,</span> <span class="n">_V</span><span class="p">]]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns a view object (deep copy). The view object contains the key-value pairs of the dictionary, as a list of tuples.</span>
 
@@ -2702,10 +2715,7 @@ dictionary, as a set.</p>
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ihashmap.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">246</span>
-<span class="normal">247</span>
-<span class="normal">248</span>
-<span class="normal">249</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">249</span>
 <span class="normal">250</span>
 <span class="normal">251</span>
 <span class="normal">252</span>
@@ -2716,7 +2726,10 @@ dictionary, as a set.</p>
 <span class="normal">257</span>
 <span class="normal">258</span>
 <span class="normal">259</span>
-<span class="normal">260</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="n">_K</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns a view object (deep copy of the keys). The view object contains the keys of the </span>
 <span class="sd">        dictionary, as a set.</span>
@@ -2788,10 +2801,7 @@ as a list.</p>
 
             <details class="quote">
               <summary>Source code in <code>datastructures/ihashmap.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">262</span>
-<span class="normal">263</span>
-<span class="normal">264</span>
-<span class="normal">265</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">265</span>
 <span class="normal">266</span>
 <span class="normal">267</span>
 <span class="normal">268</span>
@@ -2802,7 +2812,10 @@ as a list.</p>
 <span class="normal">273</span>
 <span class="normal">274</span>
 <span class="normal">275</span>
-<span class="normal">276</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">_V</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns a view object (deep copy of the values). The view object contains the values of the dictionary, </span>
 <span class="sd">        as a list.</span>
