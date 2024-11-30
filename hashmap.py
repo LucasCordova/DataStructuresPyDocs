@@ -25,13 +25,13 @@ class HashMap(IHashMap[_K, _V]):
     def clear(self) -> None:
         raise NotImplementedError("clear method not implemented")
 
-    def keys(self) -> Set[_K]: 
+    def keys(self) -> List[_K]: 
         raise NotImplementedError("keys method not implemented")
 
     def values(self) -> List[_V]: 
         raise NotImplementedError("values method not implemented")
 
-    def items(self) -> Set[Tuple[_K, _V]]: 
+    def items(self) -> List[Tuple[_K, _V]]: 
         raise NotImplementedError("items method not implemented")
     
     def __len__(self) -> int: 

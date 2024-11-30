@@ -1332,7 +1332,7 @@
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="n">_K</span><span class="p">]:</span>
+    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">_K</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns a view object (deep copy of the keys). The view object contains the keys of the </span>
 <span class="sd">            dictionary, as a set.</span>
 
@@ -1364,7 +1364,7 @@
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">_K</span><span class="p">,</span> <span class="n">_V</span><span class="p">]]:</span>
+    <span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">_K</span><span class="p">,</span> <span class="n">_V</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns a view object (deep copy). The view object contains the key-value pairs of the dictionary, as a list of tuples.</span>
 
 <span class="sd">            Examples:</span>
@@ -2618,7 +2618,7 @@ If the load factor is greater than the threshold, resize the hash map.</p>
       <tbody>
           <tr class="doc-section-item">
 <td><code>list</code></td>            <td>
-                  <code><span title="typing.Set">Set</span>[<span title="typing.Tuple">Tuple</span>[<span title="ihashmap._K">_K</span>, <span title="ihashmap._V">_V</span>]]</code>
+                  <code><span title="typing.List">List</span>[<span title="typing.Tuple">Tuple</span>[<span title="ihashmap._K">_K</span>, <span title="ihashmap._V">_V</span>]]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2645,7 +2645,7 @@ If the load factor is greater than the threshold, resize the hash map.</p>
 <span class="normal">292</span>
 <span class="normal">293</span>
 <span class="normal">294</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">_K</span><span class="p">,</span> <span class="n">_V</span><span class="p">]]:</span>
+<span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">_K</span><span class="p">,</span> <span class="n">_V</span><span class="p">]]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns a view object (deep copy). The view object contains the key-value pairs of the dictionary, as a list of tuples.</span>
 
 <span class="sd">        Examples:</span>
@@ -2702,7 +2702,7 @@ dictionary, as a set.</p>
       <tbody>
           <tr class="doc-section-item">
 <td><code>list</code></td>            <td>
-                  <code><span title="typing.Set">Set</span>[<span title="ihashmap._K">_K</span>]</code>
+                  <code><span title="typing.List">List</span>[<span title="ihashmap._K">_K</span>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2730,7 +2730,7 @@ dictionary, as a set.</p>
 <span class="normal">261</span>
 <span class="normal">262</span>
 <span class="normal">263</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="n">_K</span><span class="p">]:</span>
+<span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">_K</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns a view object (deep copy of the keys). The view object contains the keys of the </span>
 <span class="sd">        dictionary, as a set.</span>
 
