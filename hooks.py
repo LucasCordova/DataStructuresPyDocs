@@ -26,6 +26,10 @@ def copy_get(config, **kwargs):
     shutil.copy('datastructures/queue.py', os.path.join(site_dir, 'queue.py'))
     shutil.copy('datastructures/test_queue.py', os.path.join(site_dir, 'test_queue.py'))
 
+    shutil.copy('datastructures/ihashmap.py', os.path.join(site_dir, 'ihashmap.py'))
+    shutil.copy('datastructures/hashmap.py', os.path.join(site_dir, 'hashmap.py'))
+    shutil.copy('datastructures/test_hashmap.py', os.path.join(site_dir, 'test_hashmap.py'))
+
     shutil.copytree('static', os.path.join(site_dir, 'static'))
 
 
