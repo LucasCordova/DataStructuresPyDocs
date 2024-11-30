@@ -18,6 +18,18 @@ def copy_get(config, **kwargs):
     shutil.copy('datastructures/linkedlist.py', os.path.join(site_dir, 'linkedlist.py'))
     shutil.copy('datastructures/test_linkedlist.py', os.path.join(site_dir, 'test_linkedlist.py'))
 
+    shutil.copy('datastructures/istack.py', os.path.join(site_dir, 'istack.py'))
+    shutil.copy('datastructures/stack.py', os.path.join(site_dir, 'stack.py'))
+    shutil.copy('datastructures/test_stack.py', os.path.join(site_dir, 'test_stack.py'))
+
+    shutil.copy('datastructures/iqueue.py', os.path.join(site_dir, 'iqueue.py'))
+    shutil.copy('datastructures/queue.py', os.path.join(site_dir, 'queue.py'))
+    shutil.copy('datastructures/test_queue.py', os.path.join(site_dir, 'test_queue.py'))
+
+    shutil.copy('datastructures/ihashmap.py', os.path.join(site_dir, 'ihashmap.py'))
+    shutil.copy('datastructures/hashmap.py', os.path.join(site_dir, 'hashmap.py'))
+    shutil.copy('datastructures/test_hashmap.py', os.path.join(site_dir, 'test_hashmap.py'))
+
     shutil.copytree('static', os.path.join(site_dir, 'static'))
 
 

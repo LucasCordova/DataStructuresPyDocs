@@ -1,194 +1,46 @@
-from typing import Any
+import os
+from datastructures.iqueue import IQueue, T
+from datastructures.array import Array
 
-class ArrayQueue:
-    """ Class ArrayQueue - representing a circular array queue using a 1D Array
-            Stipulations:
-            1. Must use an Array object as the internal data structure.
-            2. Storage must wrap-around the array.
-            3. Must adhere to the docstring requirements per method, including raising
-               raising appropriate exceptions where indicated.
-    """
+FRONT = 0
 
-    def __init__(self, max_size: int = 0) -> None:
-        """ Constructor
-        
-        Examples:
-            >>> queue = ArrayQueue(10)
+class ArrayQueue(IQueue[T]):
+    def __init__(self) -> None: 
+        raise NotImplementedError('__init__ not implemented')
 
-            Args:
-                max_size (int): the desired size of the queue.
-
-        Returns:
-            None
-        """
-        raise NotImplementedError('ArrayQueue.__init__')
-
-    def enqueue(self, item: Any) -> None:
-        """ Enqueue an item onto the queue.
-        
-        Examples:
-            >>> queue = ArrayQueue(10)
-            >>> queue.enqueue('cat')
-            
-        Args:
-            item (Any): the item to enqueue.
-            
-        Returns:
-            None
-        """
-        raise NotImplementedError('ArrayQueue.enqueue')
-
-
-    def dequeue(self) -> Any:
-        """ Dequeue an item from the queue and return the item.
-        
-        Examples:
-            >>> queue = ArrayQueue(10)
-            >>> queue.enqueue('cat')
-            >>> item = queue.dequeue()
-            >>> print(item)
-            cat
-            
-        Returns:
-            Any: the item that is dequeued.
-            
-        Raises:
-            IndexError: if the queue is empty.
-        """
-        raise NotImplementedError('ArrayQueue.dequeue')
-
+    def enqueue(self, item: T) -> None:
+        raise NotImplementedError('enqueue not implemented')
+    
+    def dequeue(self) -> T:
+        raise NotImplementedError('dequeue not implemented')
+    
+    def front(self) -> T:
+        raise NotImplementedError('front not implemented')
+    
+    def size(self) -> int:
+        raise NotImplementedError('size not implemented')
+    
+    def is_empty(self) -> bool:
+        raise NotImplementedError('is_empty not implemented')
+    
     def clear(self) -> None:
-        """ Clear the queue.
-        
-        Examples:
-            >>> queue = ArrayQueue(10)
-            >>> queue.enqueue('cat')
-            >>> queue.clear()
-            
-        Returns:
-            None
-        """
-        raise NotImplementedError('ArrayQueue.clear')
-
-    @property
-    def front(self) -> Any:
-        """ Get the item at the front of the queue.
-        
-        Examples:
-            >>> queue = ArrayQueue(10)
-            >>> queue.enqueue('cat')
-            >>> print(queue.front)
-            cat
-            
-        Returns:
-            Any: the item that is at the front of the queue.
-        
-        Raises:
-            IndexError: if the queue is empty.
-        """
-        raise NotImplementedError('ArrayQueue.front')
-
-    @property
-    def full(self) -> bool:
-        """ Check whether the queue is full.
-        
-        Examples:
-            >>> queue = ArrayQueue(10)
-            >>> print(queue.full)
-            False
-            
-        Returns:
-            bool: True if the queue is full, False otherwise.
-        """
-        raise NotImplementedError('ArrayQueue.full')
-
-    @property
-    def empty(self) -> bool:
-        """ Check whether the queue is empty.
-        
-        Examples:
-            >>> queue = ArrayQueue(10)
-            >>> print(queue.empty)
-            True
-            
-        Returns:
-            bool: True if the queue is empty, False otherwise.
-        """
-        raise NotImplementedError('ArrayQueue.empty')
-
+        raise NotImplementedError('clear not implemented')
+    
+    def back(self) -> T:
+        raise NotImplementedError('back not implemented')
+    
+    def __contains__(self, item: T) -> bool:
+        raise NotImplementedError('__contains__ not implemented')
+    
     def __eq__(self, other: object) -> bool:
-        """ Equality operator ==
-        
-        Examples:
-            >>> queue1 = ArrayQueue(10)
-            >>> queue2 = ArrayQueue(10)
-            >>> print(queue1 == queue2)
-            True
-            
-        Args:
-            other (object): the instance to compare self to.
-            
-        Returns:
-            bool: True if the queues are equal (deep check).
-        """
-        raise NotImplementedError('ArrayQueue.__eq__')
-
-    def __ne__(self, other: object) -> bool:
-        """ Inequality operator !=
-        
-        Examples:
-            >>> queue1 = ArrayQueue(10)
-            >>> queue2 = ArrayQueue(10)
-            >>> print(queue1 != queue2)
-            False
-            
-        Args:
-            other (object): the instance to compare self to.
-        
-        Returns:
-            bool: True if the queues are not equal (deep check).
-        """
-        raise NotImplementedError('ArrayQueue.__ne__')
-
-    def __len__(self) -> int:
-        """ Get the number of items on the queue.
-        
-        Examples:
-            >>> queue = ArrayQueue(10)
-            >>> queue.enqueue('cat')
-            >>> print(len(queue))
-            1
-            
-        Returns:
-            int: the number of items on the queue.
-        """
-        raise NotImplementedError('ArrayQueue.__len__')
-
-    def __str__(self) -> str:
-        """ Get the string representation of the queue.
-        
-        Examples:
-            >>> queue = ArrayQueue(10)
-            >>> queue.enqueue('cat')
-            >>> print(queue)
-            'cat'
-            
-        Returns:
-            str: the string representation of the queue.
-        """
-        raise
-
-    def __repr__(self) -> str:
-        """ Get the string representation of the queue.
-        
-        Examples:
-            >>> queue = ArrayQueue(10)
-            >>> queue.enqueue('cat')
-            >>> print(queue)
-            'cat'
-            
-        Returns:
-            str: the string representation of the queue.
-        """
-        raise NotImplementedError('ArrayQueue.__repr__')
-                                  
+        raise NotImplementedError('__eq__ not implemented')
+    
+    def __str__(self) -> str: 
+        return str(self._queue)
+    
+    def __repr__(self) -> str: 
+        return f'ArrayQueue({self._queue})'
+    
+if __name__ == '__main__':
+    filename = os.path.basename(__file__)
+    print(f'This is the {filename} file.\nDid you mean to run your tests or program.py file?\nFor tests, run them from the Test Explorer on the left.')

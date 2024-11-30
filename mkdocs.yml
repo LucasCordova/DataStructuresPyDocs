@@ -21,7 +21,10 @@ nav:
  - Array: array.md
  - Array2D: array2d.md
  - LinkedList: linked_list.md
- - AVL Tree: iavltree.md
+ - Stack: stack.md
+ - Queue: queue.md
+ - HashMap: hashmap.md
+#  - AVL Tree: iavltree.md
 #  - Stacks and Queues: stacks_queues.md
 #  - HashMap: hash_map.md
 #  - Graph: graph.md

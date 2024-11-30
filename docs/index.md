@@ -7,11 +7,14 @@ This site contains reference documentation for building the foundational data st
 1. [Array](array.md)
 2. [Array2D](array2d.md)
 3. [LinkedList](linked_list.md)
+4. [Stack](stack.md)
+5. [Queue](queue.md)
+6. [HashMap](hashmap.md)
 <!-- 
 4. [Stacks and Queues](stacks_queues.md)
 5. [HashMap](hash_map.md)
 6. [Graph](graph.md) -->
 
-## Algorithms Table of Contents
+<!-- ## Algorithms Table of Contents
 
-1. [AVL Tree](iavltree.md)
+1. [AVL Tree](iavltree.md) -->
