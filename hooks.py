@@ -34,6 +34,10 @@ def copy_get(config, **kwargs):
     shutil.copy('datastructures/bag.py', os.path.join(site_dir, 'bag.py'))
     shutil.copy('datastructures/test_bag.py', os.path.join(site_dir, 'test_bag.py'))
 
+    shutil.copy('datastructures/iarray.py', os.path.join(site_dir, 'iarray.py'))
+    shutil.copy('datastructures/array.py', os.path.join(site_dir, 'array.py'))
+    shutil.copy('datastructures/test_array.py', os.path.join(site_dir, 'test_array.py'))
+
     shutil.copytree('static', os.path.join(site_dir, 'static'))
 
 
