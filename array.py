@@ -46,9 +46,6 @@ class Array(IArray[T]):
     def __len__(self) -> int: 
         raise NotImplementedError("__len__ method not implemented")
 
-    def _resize(self, new_size: int) -> None:
-        raise NotImplementedError("_resize method not implemented")
-
     def __eq__(self, other: object) -> bool:
         raise NotImplementedError("__eq__ method not implemented")
 
