@@ -8,7 +8,7 @@
 from __future__ import annotations
 from collections.abc import Sequence
 import os
-from typing import Any, Iterator, Optional, overload
+from typing import Any, Iterator, overload
 import numpy as np
 from numpy.typing import NDArray
 
@@ -18,58 +18,57 @@ from datastructures.iarray import IArray, T
 
 class Array(IArray[T]):  
 
-    def __init__(self, starting_sequence: Sequence[T]=[], data_type: Optional[type]=object) -> None: 
-        raise NotImplementedError("__init__ method not implemented")
+    def __init__(self, starting_sequence: Sequence[T]=[], data_type: type=object) -> None: 
+        raise NotImplementedError('Constructor not implemented.')
 
     @overload
     def __getitem__(self, index: int) -> T: ...
     @overload
-    def __getitem__(self, index: slice) -> IArray[T]: ...
-    def __getitem__(self, index: int | slice) -> T | IArray[T]:
-        raise NotImplementedError("__getitem__ method not implemented")
+    def __getitem__(self, index: slice) -> Sequence[T]: ...
+    def __getitem__(self, index: int | slice) -> T | Sequence[T]:
+            raise NotImplementedError('Indexing not implemented.')
     
     def __setitem__(self, index: int, item: T) -> None:
-        raise NotImplementedError("__setitem__ method not implemented")
+        raise NotImplementedError('Indexing not implemented.')
 
     def append(self, data: T) -> None:
-        raise NotImplementedError("append method not implemented")
+        raise NotImplementedError('Append not implemented.')
 
     def append_front(self, data: T) -> None:
-        raise NotImplementedError("append_front method not implemented")
+        raise NotImplementedError('Append front not implemented.')
 
     def pop(self) -> None:
-        raise NotImplementedError("pop method not implemented")
+        raise NotImplementedError('Pop not implemented.')
     
     def pop_front(self) -> None:
-        raise NotImplementedError("pop_front method not implemented")
+        raise NotImplementedError('Pop front not implemented.')
 
     def __len__(self) -> int: 
-        raise NotImplementedError("__len__ method not implemented")
+        raise NotImplementedError('Length not implemented.')
 
     def __eq__(self, other: object) -> bool:
-        raise NotImplementedError("__eq__ method not implemented")
-
+        raise NotImplementedError('Equality not implemented.')
+    
     def __iter__(self) -> Iterator[T]:
-        raise NotImplementedError("__iter__ method not implemented")
+        raise NotImplementedError('Iteration not implemented.')
 
     def __reversed__(self) -> Iterator[T]:
-        for i in range(self._item_count - 1, -1, -1):
-            raise NotImplementedError("__reversed__ method not implemented")
+        raise
 
     def __delitem__(self, index: int) -> None:
-        raise NotImplementedError("__delitem__ method not implemented")
+       raise NotImplementedError('Delete not implemented.')
 
     def __contains__(self, item: Any) -> bool:
-        raise NotImplementedError("__contains__ method not implemented")
+        raise NotImplementedError('Contains not implemented.')
 
     def clear(self) -> None:
-        raise NotImplementedError("clear method not implemented")
+        raise NotImplementedError('Clear not implemented.')
 
     def __str__(self) -> str:
         return '[' + ', '.join(str(item) for item in self) + ']'
     
     def __repr__(self) -> str:
-        return f'Array {self.__str__()}, Logical: {self._item_count}, Physical: {len(self._items)}, type: {self._data_type}'
+        return f'Array {self.__str__()}, Logical: {self.__item_count}, Physical: {len(self.__items)}, type: {self.__data_type}'
     
 
 if __name__ == '__main__':
