@@ -247,7 +247,7 @@ class IHashMap(ABC, Generic[_K, _V]):
         ...
 
     @abstractmethod
-    def keys(self) -> Set[_K]:
+    def keys(self) -> List[_K]:
         """ Returns a view object (deep copy of the keys). The view object contains the keys of the 
             dictionary, as a set.
         
@@ -279,7 +279,7 @@ class IHashMap(ABC, Generic[_K, _V]):
         ...
 
     @abstractmethod
-    def items(self) -> Set[Tuple[_K, _V]]:
+    def items(self) -> List[Tuple[_K, _V]]:
         """ Returns a view object (deep copy). The view object contains the key-value pairs of the dictionary, as a list of tuples.
         
             Examples:
