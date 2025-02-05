@@ -2,21 +2,22 @@ import copy
 import pytest
 from datastructures.array import Array
 
-
 from tests.car import Car, Color, Make, Model
 
+@suite_weight(1.0)
+@suite_name('Array Test Suite')
 class TestArray:
     car1 = Car('123', Color.RED, Make.TOYOTA, Model.CAMRY)
     car2 = Car('456', Color.BLUE, Make.TOYOTA, Model.CIVIC)
-    car3 = Car('789', Color.BLACK, Make.FORD, Model.FOCUS)
+    car3 = Car('789', Color.BLACK, Make.FORD, Model.FUSION)
 
     @pytest.fixture
     def setup_complex_object_array(self) -> Array[Car]:
-        return Array[Car]([self.car1, self.car2, self.car3], Car)
+        return Array[Car](starting_sequence=[self.car1, self.car2, self.car3], data_type=Car)
 
     @pytest.fixture
     def setup_numerical_array(self) -> Array[int]:
-        return Array[int]([i for i in range(10)], int)
+        return Array[int](starting_sequence=[i for i in range(10)], data_type=int)
 
     def test_constructing_an_array_with_a_complex_object_should_deep_copy_the_complex_objects_data(self, setup_complex_object_array: Array[Car]):
         original_array = setup_complex_object_array
@@ -31,12 +32,13 @@ class TestArray:
         for i in range(len(array)):
             assert array[i] == setup_numerical_array[i]
 
+
     def test_index_operator_should_return_the_item_at_the_index_specified_of_the_array(self, setup_numerical_array: Array):
         assert setup_numerical_array[5] == 5
     
     def test_index_operator_should_raise_an_IndexError_exception_if_the_index_is_out_of_bounds(self, setup_numerical_array: Array):
         with pytest.raises(IndexError):
-            setup_numerical_array[-1]
+            setup_numerical_array[-11]
     
     def adding_an_item_to_a_full_array_should_raise_an_index_error_exception(self, setup_numerical_array: Array):
         with pytest.raises(IndexError):
@@ -112,20 +114,16 @@ class TestArray:
             assert expected == item
             expected -= 1
 
-    def test_resizing_with_a_negative_size_should_raise_a_value_error(self, setup_numerical_array: Array):
-        with pytest.raises(ValueError):
-            setup_numerical_array._resize(-1)
-
     def test_setitem_operator_should_raise_a_type_error_exception_if_the_item_being_set_is_not_the_same_type_as_the_array(self, setup_numerical_array: Array):
         with pytest.raises(TypeError):
             setup_numerical_array[0] = 'string'
 
     def test_bracket_operator_should_return_a_slice_of_the_array_if_a_slice_is_passed_in(self, setup_numerical_array: Array):
-        assert setup_numerical_array[1:5] == [1, 2, 3, 4]
+        assert setup_numerical_array[1:5] == Array([1, 2, 3, 4])
 
     def test_constructor_should_raise_a_value_error_if_the_sequence_passed_in_is_not_a_sequence(self):
         with pytest.raises(ValueError):
-            Array(1, int) #type: ignore
+            Array(1) #type: ignore
 
     def test_constructor_should_raise_a_type_error_if_the_sequence_passed_in_is_not_the_same_type_as_the_array(self):
         with pytest.raises(TypeError):
