@@ -32,12 +32,12 @@ def copy_get(config, **kwargs):
 
     shutil.copy('src/datastructures/ibag.py', os.path.join(site_dir, 'ibag.py'))
     shutil.copy('src/datastructures/bag.py', os.path.join(site_dir, 'bag.py'))
-    shutil.copy('src/datastructures/test_bag.py', os.path.join(site_dir, 'test_bag.py'))
+    shutil.copy('src/tests/test_bag.py', os.path.join(site_dir, 'test_bag.py'))
 
     shutil.copy('src/datastructures/iarray.py', os.path.join(site_dir, 'iarray.py'))
     shutil.copy('src/datastructures/array.py', os.path.join(site_dir, 'array.py'))
-    shutil.copy('src/datastructures/test_array.py', os.path.join(site_dir, 'test_array.py'))
-    shutil.copy('src/datastructures/car.py', os.path.join(site_dir, 'car.py'))
+    shutil.copy('src/tests/test_array.py', os.path.join(site_dir, 'test_array.py'))
+    shutil.copy('src/tests/car.py', os.path.join(site_dir, 'car.py'))
 
     # shutil.copytree('static', os.path.join(site_dir, 'static'))
 
