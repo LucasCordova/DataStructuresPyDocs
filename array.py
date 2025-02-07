@@ -56,7 +56,7 @@ class Array(IArray[T]):
         raise
 
     def __delitem__(self, index: int) -> None:
-       raise NotImplementedError('Delete not implemented.')
+        raise NotImplementedError('Delete not implemented.')
 
     def __contains__(self, item: Any) -> bool:
         raise NotImplementedError('Contains not implemented.')
