@@ -7,7 +7,7 @@ plugins:
 - mkdocstrings:
     handlers:
       python:
-        paths: [datastructures]
+        paths: [src/datastructures]
         
 - mkdocs-simple-hooks:
     hooks:
@@ -20,6 +20,8 @@ nav:
  - Data Structures PyDocs: index.md
  - Bag: bag.md
  - Array: array.md
+
+ 
 #  - Array2D: array2d.md
 #  - LinkedList: linked_list.md
 #  - Stack: stack.md
