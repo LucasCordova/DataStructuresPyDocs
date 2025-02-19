@@ -6,6 +6,7 @@ This site contains reference documentation for building the foundational data st
 
 1. [Bag](bag.md)
 2. [Array](array.md)
+3. [Array2D](array2d.md)
 
 <!--
 2. [Array2D](array2d.md)
