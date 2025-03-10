@@ -7,6 +7,8 @@ This site contains reference documentation for building the foundational data st
 1. [Bag](bag.md)
 2. [Array](array.md)
 3. [Array2D](array2d.md)
+4. [ArrayStack](arraystack.md)
+5. [CircularQueue](circularqueue.md)
 
 <!--
 2. [Array2D](array2d.md)
