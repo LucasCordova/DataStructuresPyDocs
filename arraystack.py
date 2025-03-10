@@ -14,30 +14,19 @@ class ArrayStack(IStack[T]):
                 max_size: int -- The maximum size of the stack. 
                 data_type: type -- The data type of the stack.       
         '''
-        self._top = 0
-        self.data_type = data_type
-        if max_size < 0:
-            raise ValueError('The max size must be greater than 0')
-        self.stack = Array([data_type() for _ in range(max_size)], data_type=data_type)
+        raise NotImplementedError('ArrayStack is not implemented')
 
     def push(self, item: T) -> None:
-        if self.full: raise IndexError('The stack is full')
-        self.stack[self._top] = item
-        self._top += 1
+        raise NotImplementedError
 
     def pop(self) -> T:
-        if self.empty:
-            raise IndexError('The stack is empty')
-        self._top -= 1
-        return self.stack[self._top]
+       raise NotImplementedError
 
     def clear(self) -> None:
-        self._top = 0
-
+       raise NotImplementedError
     @property
     def peek(self) -> T:
-        if self.empty: raise IndexError('The stack is empty')
-        return self.stack[self._top - 1]
+       raise NotImplementedError
 
     @property
     def maxsize(self) -> int:
@@ -55,26 +44,20 @@ class ArrayStack(IStack[T]):
             Returns:
                 bool: True if the stack is full, False otherwise.
         '''
-        return self._top == self.maxsize
+        raise NotImplementedError
 
     @property
     def empty(self) -> bool:
         return self._top == 0
 
     def __eq__(self, other: object) -> bool:
-        if not isinstance(other, ArrayStack):
-            return False
-        
-        if len(self) != len(other):
-            return False
-
-        return self.stack[:self._top] == other.stack[:other._top]
+       raise NotImplementedError
 
     def __len__(self) -> int:
-        return self._top
+       raise NotImplementedError
     
     def __contains__(self, item: T) -> bool:
-        return item in self.stack[:self._top]
+       raise NotImplementedError
 
     def __str__(self) -> str:
         return str([self.stack[i] for i in range(self._top)])
