@@ -35,8 +35,7 @@ class ArrayStack(IStack[T]):
             Returns:
                 int: The maximum size of the stack.
         '''
-        return len(self.stack)
-    
+        raise NotImplementedError    
     @property
     def full(self) -> bool:
         ''' Returns True if the stack is full, False otherwise. 
@@ -48,8 +47,7 @@ class ArrayStack(IStack[T]):
 
     @property
     def empty(self) -> bool:
-        return self._top == 0
-
+        raise NotImplementedError
     def __eq__(self, other: object) -> bool:
        raise NotImplementedError
 
