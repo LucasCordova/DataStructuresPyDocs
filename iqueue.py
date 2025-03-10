@@ -15,7 +15,7 @@ class IQueue(Generic[T]):
         ...
 
     @abstractmethod
-    def _front(self) -> T:
+    def front(self) -> T:
         ...
 
     @abstractmethod
@@ -27,7 +27,7 @@ class IQueue(Generic[T]):
         ...
 
     @abstractmethod
-    def is_empty(self) -> bool:
+    def empty(self) -> bool:
         ...
 
     @abstractmethod
