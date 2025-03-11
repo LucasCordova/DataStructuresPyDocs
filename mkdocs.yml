@@ -21,6 +21,8 @@ nav:
  - Bag: bag.md
  - Array: array.md
  - Array2D: array2d.md
+ - ArrayStack: arraystack.md
+ - CircularQueue: circularqueue.md
 
  
 #  - Array2D: array2d.md
