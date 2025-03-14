@@ -1,4 +1,4 @@
-# Array
+# CircularQueue (Array-based)
 
 ## Download Source Files NEW
 
@@ -10,4 +10,5 @@
 
 ## Specification
 
-::: iarray
+::: iqueue
+::: circularqueue

@@ -4,6 +4,7 @@ from typing import Generic, TypeVar
 T = TypeVar('T')
 
 class IStack(Generic[T], ABC):
+    ''' Interface for a stack data structure '''
 
     @abstractmethod
     def push(self, item: T) -> None:

@@ -1,4 +1,4 @@
-# Array
+# ArrayStack (Array-based)
 
 ## Download Source Files NEW
 
@@ -10,4 +10,5 @@
 
 ## Specification
 
-::: iarray
+::: istack
+::: arraystack
