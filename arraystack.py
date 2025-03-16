@@ -17,16 +17,33 @@ class ArrayStack(IStack[T]):
         raise NotImplementedError('ArrayStack is not implemented')
 
     def push(self, item: T) -> None:
+        ''' Pushes an item onto the stack.
+        
+            Arguments:
+                item: T -- The item to push onto the stack.
+        '''
         raise NotImplementedError
 
     def pop(self) -> T:
-       raise NotImplementedError
+        ''' Pops an item from the stack.
+        
+            Returns:
+                T -- The item popped from the stack.
+        '''
+        raise NotImplementedError
 
     def clear(self) -> None:
+       ''' Clears the stack. '''
        raise NotImplementedError
+    
     @property
     def peek(self) -> T:
-       raise NotImplementedError
+        ''' Returns the top item on the stack without removing it.
+        
+            Returns:
+                T -- The top item on the stack.
+        '''
+        raise NotImplementedError
 
     @property
     def maxsize(self) -> int:
@@ -47,15 +64,42 @@ class ArrayStack(IStack[T]):
 
     @property
     def empty(self) -> bool:
+        ''' Returns True if the stack is empty, False otherwise. 
+        
+            Returns:
+                bool: True if the stack is empty, False otherwise.
+        '''
         raise NotImplementedError
+    
     def __eq__(self, other: object) -> bool:
-       raise NotImplementedError
+        ''' Compares two stacks for equality.
+        
+            Arguments:
+                other: object -- The other stack to compare.
+                
+            Returns:
+                bool -- True if the stacks are equal, False otherwise.
+        '''
+        raise NotImplementedError
 
     def __len__(self) -> int:
-       raise NotImplementedError
+        ''' Returns the number of items in the stack.
+        
+            Returns:
+                int -- The number of items in the stack.
+        '''
+        raise NotImplementedError
     
     def __contains__(self, item: T) -> bool:
-       raise NotImplementedError
+        ''' Returns True if the item is in the stack, False otherwise.
+        
+            Arguments:
+                item: T -- The item to search for.
+                
+            Returns:
+                bool -- True if the item is in the stack, False otherwise.
+        '''
+        raise NotImplementedError
 
     def __str__(self) -> str:
         return str([self.stack[i] for i in range(self._top)])
