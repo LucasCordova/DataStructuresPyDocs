@@ -53,7 +53,7 @@ class Array(IArray[T]):
         raise NotImplementedError('Iteration not implemented.')
 
     def __reversed__(self) -> Iterator[T]:
-        raise
+        raise NotImplementedError('Reversed not implemented.')
 
     def __delitem__(self, index: int) -> None:
         raise NotImplementedError('Delete not implemented.')
