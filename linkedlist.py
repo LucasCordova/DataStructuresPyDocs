@@ -6,7 +6,7 @@ from typing import Optional, Sequence
 from datastructures.ilinkedlist import ILinkedList, T
 
 
-class LinkedList(ILinkedList[T]):
+class LinkedList[T](ILinkedList[T]):
 
     @dataclass
     class Node:
@@ -66,7 +66,7 @@ class LinkedList(ILinkedList[T]):
     def __contains__(self, item: T) -> bool:
         raise NotImplementedError("LinkedList.__contains__ is not implemented")
 
-    def __iter__(self) -> LinkedList[T]:
+    def __iter__(self) -> ILinkedList[T]:
         raise NotImplementedError("LinkedList.__iter__ is not implemented")
 
     def __next__(self) -> T:
