@@ -50,7 +50,9 @@ def copy_get(config, **kwargs):
     shutil.copy('src/tests/test_arraystack.py', os.path.join(site_dir, 'test_arraystack.py'))
     shutil.copy('src/tests/test_circularqueue.py', os.path.join(site_dir, 'test_circularqueue.py'))
 
-
+    shutil.copy('src/datastructures/ilinkedlist.py', os.path.join(site_dir, 'ilinkedlist.py'))
+    shutil.copy('src/datastructures/linkedlist.py', os.path.join(site_dir, 'linkedlist.py'))
+    shutil.copy('src/tests/test_linkedlist.py', os.path.join(site_dir, 'test_linkedlist.py'))
 
     # shutil.copytree('static', os.path.join(site_dir, 'static'))
 
