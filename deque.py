@@ -15,7 +15,7 @@ class Deque[T](IQueue[T]):
         Initializes the deque with a specified data type.
 
         Args:
-            - `data_type` (`type`): The type of data the deque will hold.
+            - data_type (type): The type of data the deque will hold.
         """
         raise NotImplementedError("Deque initialization is not implemented.")
 
@@ -24,10 +24,10 @@ class Deque[T](IQueue[T]):
         Adds an item to the back of the deque.
 
         Args:
-            - `item` (`T`): The item to add to the back of the deque.
+            - item (T): The item to add to the back of the deque.
 
         Raises:
-            - `TypeError`: If the item is not of the correct type.
+            - TypeError: If the item is not of the correct type.
         """
         raise NotImplementedError("Method to add an item to the back of the deque is not implemented.")
 
@@ -36,10 +36,10 @@ class Deque[T](IQueue[T]):
         Removes and returns the item from the front of the deque.
 
         Returns:
-            - `T`: The item removed from the front of the deque.
+            - T: The item removed from the front of the deque.
 
         Raises:
-            - `IndexError`: If the deque is empty.
+            - IndexError: If the deque is empty.
         """
         raise NotImplementedError("Method to remove an item from the front of the deque is not implemented.")
 
@@ -48,10 +48,10 @@ class Deque[T](IQueue[T]):
         Adds an item to the front of the deque.
 
         Args:
-            - `item` (`T`): The item to add to the front of the deque.
+            - item (T): The item to add to the front of the deque.
 
         Raises:
-            - `TypeError`: If the item is not of the correct type.
+            - TypeError: If the item is not of the correct type.
         """
         raise NotImplementedError("Method to add an item to the front of the deque is not implemented.")
 
@@ -60,10 +60,10 @@ class Deque[T](IQueue[T]):
         Removes and returns the item from the back of the deque.
 
         Returns:
-            - `T`: The item removed from the back of the deque.
+            - T: The item removed from the back of the deque.
 
         Raises:
-            - `IndexError`: If the deque is empty.
+            - IndexError: If the deque is empty.
         """
         raise NotImplementedError("Method to remove an item from the back of the deque is not implemented.")
 
@@ -72,10 +72,10 @@ class Deque[T](IQueue[T]):
         Returns the front item of the deque without removing it.
 
         Returns:
-            - `T`: The front item of the deque.
+            - T: The front item of the deque.
 
         Raises:
-            - `IndexError`: If the deque is empty.
+            - IndexError: If the deque is empty.
         """
         raise NotImplementedError("Method to get the front item of the deque is not implemented.")
 
@@ -84,10 +84,10 @@ class Deque[T](IQueue[T]):
         Returns the back item of the deque without removing it.
 
         Returns:
-            - `T`: The back item of the deque.
+            - T: The back item of the deque.
 
         Raises:
-            - `IndexError`: If the deque is empty.
+            - IndexError: If the deque is empty.
         """
         raise NotImplementedError("Method to get the back item of the deque is not implemented.")
 
@@ -96,7 +96,7 @@ class Deque[T](IQueue[T]):
         Checks if the deque is empty.
 
         Returns:
-            - `bool`: `True` if the deque is empty, `False` otherwise.
+            - bool: True if the deque is empty, False otherwise.
         """
         raise NotImplementedError("Method to check if the deque is empty is not implemented.")
 
@@ -105,7 +105,7 @@ class Deque[T](IQueue[T]):
         Returns the number of items in the deque.
 
         Returns:
-            - `int`: The number of items in the deque.
+            - int: The number of items in the deque.
         """
         raise NotImplementedError("Method to get the length of the deque is not implemented.")
     
@@ -114,10 +114,10 @@ class Deque[T](IQueue[T]):
         Checks if an item exists in the deque.
 
         Args:
-            - `item` (`T`): The item to check for existence.
+            - item (T): The item to check for existence.
 
         Returns:
-            - `bool`: `True` if the item exists in the deque, `False` otherwise.
+            - bool: True if the item exists in the deque, False otherwise.
         """
         raise NotImplementedError("Method to check if an item exists in the deque is not implemented.")
     
@@ -126,10 +126,10 @@ class Deque[T](IQueue[T]):
         Compares two deques for equality.
 
         Args:
-            - `other` (`Deque`): The deque to compare with.
+            - other (Deque): The deque to compare with.
 
         Returns:
-            - `bool`: `True` if the deques are equal, `False` otherwise.
+            - bool: True if the deques are equal, False otherwise.
         """
         raise NotImplementedError("Method to compare two deques is not implemented.")
     
@@ -144,7 +144,7 @@ class Deque[T](IQueue[T]):
         Returns a string representation of the deque.
 
         Returns:
-            - `str`: A string representation of the deque.
+            - str: A string representation of the deque.
         """
         raise NotImplementedError("Method to get the string representation of the deque is not implemented.")
     
@@ -153,7 +153,7 @@ class Deque[T](IQueue[T]):
         Returns a detailed string representation of the deque.
 
         Returns:
-            - `str`: A detailed string representation of the deque.
+            - str: A detailed string representation of the deque.
         """
         raise NotImplementedError("Method to get the detailed string representation of the deque is not implemented.")
 

@@ -10,15 +10,13 @@ class ListStack[T](Generic[T], IStack[T]):
 
     """
 
-    def __init__(self, data_type) -> None:
+    def __init__(self, data_type:object) -> None:
         """
         Initializes the ListStack.
 
         Args:
             data_type (type): The type of data the stack will hold.
 
-        Raises:
-            NotImplementedError: If the method is not implemented.
         """
         raise NotImplementedError("ListStack.__init__ is not implemented.")
 
@@ -28,9 +26,10 @@ class ListStack[T](Generic[T], IStack[T]):
 
         Args:
             item (T): The item to push onto the stack.
-
+        
         Raises:
-            NotImplementedError: If the method is not implemented.
+            TypeError: If the item is not of the correct type.
+
         """
         raise NotImplementedError("ListStack.push is not implemented.")
 
@@ -40,9 +39,9 @@ class ListStack[T](Generic[T], IStack[T]):
 
         Returns:
             T: The top item from the stack.
-
+        
         Raises:
-            NotImplementedError: If the method is not implemented.
+            IndexError: If the stack is empty.
         """
         raise NotImplementedError("ListStack.pop is not implemented.")
 
@@ -52,9 +51,9 @@ class ListStack[T](Generic[T], IStack[T]):
 
         Returns:
             T: The top item from the stack.
-
+        
         Raises:
-            NotImplementedError: If the method is not implemented.
+            IndexError: If the stack is empty.
         """
         raise NotImplementedError("ListStack.peek is not implemented.")
 
@@ -65,18 +64,12 @@ class ListStack[T](Generic[T], IStack[T]):
 
         Returns:
             bool: True if the stack is empty, False otherwise.
-
-        Raises:
-            NotImplementedError: If the method is not implemented.
         """
         raise NotImplementedError("ListStack.empty is not implemented.")
 
     def clear(self):
         """
         Clears all items from the stack.
-
-        Raises:
-            NotImplementedError: If the method is not implemented.
         """
         raise NotImplementedError("ListStack.clear is not implemented.")
 
@@ -90,8 +83,6 @@ class ListStack[T](Generic[T], IStack[T]):
         Returns:
             bool: True if the item exists in the stack, False otherwise.
 
-        Raises:
-            NotImplementedError: If the method is not implemented.
         """
         raise NotImplementedError("ListStack.__contains__ is not implemented.")
 
@@ -105,8 +96,6 @@ class ListStack[T](Generic[T], IStack[T]):
         Returns:
             bool: True if the stacks are equal, False otherwise.
 
-        Raises:
-            NotImplementedError: If the method is not implemented.
         """
         raise NotImplementedError("ListStack.__eq__ is not implemented.")
 
@@ -116,9 +105,6 @@ class ListStack[T](Generic[T], IStack[T]):
 
         Returns:
             int: The number of items in the stack.
-
-        Raises:
-            NotImplementedError: If the method is not implemented.
         """
         raise NotImplementedError("ListStack.__len__ is not implemented.")
 
@@ -128,9 +114,6 @@ class ListStack[T](Generic[T], IStack[T]):
 
         Returns:
             str: A string representation of the stack.
-
-        Raises:
-            NotImplementedError: If the method is not implemented.
         """
         raise NotImplementedError("ListStack.__str__ is not implemented.")
 
@@ -141,8 +124,6 @@ class ListStack[T](Generic[T], IStack[T]):
         Returns:
             str: A detailed string representation of the stack.
 
-        Raises:
-            NotImplementedError: If the method is not implemented.
         """
         raise NotImplementedError("ListStack.__repr__ is not implemented.")
     
