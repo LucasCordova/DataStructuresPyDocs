@@ -10,6 +10,8 @@ This site contains reference documentation for building the foundational data st
 4. [ArrayStack](arraystack.md)
 5. [CircularQueue](circularqueue.md)
 6. [LinkedList](linkedlist.md)
+7. [ListStack](liststack.md)
+8. [Deque](deque.md)
 
 <!--
 2. [Array2D](array2d.md)

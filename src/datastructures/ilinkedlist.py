@@ -2,11 +2,11 @@ from __future__ import annotations
 from abc import abstractmethod
 import abc
 import os
-from typing import Generic, List, Sequence, TypeVar
+from typing import Sequence, TypeVar
 
 T = TypeVar('T')
 
-class ILinkedList(abc.ABC, Generic[T]):
+class ILinkedList[T](abc.ABC):
 
     '''The `ILinkedList` interface defines a set of methods that a linked list data structure 
         should implement. This interface is designed to be generic, allowing it to work with any data type. 
@@ -14,7 +14,7 @@ class ILinkedList(abc.ABC, Generic[T]):
     '''
 
     @abstractmethod
-    def __init__(self, data_type: type[T] = object) -> None:
+    def __init__(self, data_type: type = object) -> None:
 
         ''' Initializes the LinkedList object with a data_type.
 
@@ -29,23 +29,25 @@ class ILinkedList(abc.ABC, Generic[T]):
         ...
     
     @staticmethod
-    def from_sequence(sequence: Sequence[T]) -> ILinkedList[T]:
+    @abstractmethod
+    def from_sequence(sequence: Sequence[T], data_type: type=object) -> ILinkedList[T]:
 
         ''' Creates a LinkedList object from a Python list.
 
             Examples:
-                >>> linked_list = LinkedList.from_pylist([1, 2, 3, 4, 5])
+                >>> linked_list = LinkedList.from_sequence([1, 2, 3, 4, 5])
                 >>> print(linked_list)
                 (1 <-> 2 <-> 3 <-> 4 <-> 5)
         
             Arguments:
                 sequence: The sequence to create the LinkedList from
+                data_type: The data type of the items
 
             Returns:
                 A LinkedList object
 
             Raises:
-                TypeError: If the sequence is not a sequence
+                TypeError: If the sequence contains elements not of the specified data type
             
         '''
         ...
@@ -109,7 +111,7 @@ class ILinkedList(abc.ABC, Generic[T]):
                 item: The item to add to the list
 
             Raises:
-                TypeError: If the item is not of the correct type
+                TypeError: If the item or target is not of the correct type
                 ValueError: If the target item is not in the list
         '''
         ...
@@ -132,7 +134,7 @@ class ILinkedList(abc.ABC, Generic[T]):
                 item: The item to add to the list
 
             Raises:
-                TypeError: If the item is not of the correct type
+                TypeError: If the item or target is not of the correct type
                 ValueError: If the target item is not in the list
         '''
     ...
@@ -180,7 +182,6 @@ class ILinkedList(abc.ABC, Generic[T]):
 
             Raises:
                 TypeError: If the item is not of the correct type
-                ValueError: If the item is not in the list
         '''
         ...
 
@@ -449,7 +450,7 @@ class ILinkedList(abc.ABC, Generic[T]):
         ...
 
     @abstractmethod
-    def __eq__(self, other: ILinkedList[T]) -> bool:
+    def __eq__(self, other: object) -> bool:
 
         ''' Returns True if the list is equal to another list, False otherwise
         

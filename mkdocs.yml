@@ -24,6 +24,8 @@ nav:
  - ArrayStack: arraystack.md
  - CircularQueue: circularqueue.md
  - LinkedList: linkedlist.md
+ - ListStack: liststack.md
+ - Deque: deque.md 
 
  
 #  - Array2D: array2d.md
