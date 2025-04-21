@@ -49,15 +49,18 @@ def copy_get(config, **kwargs):
     shutil.copy('src/datastructures/circularqueue.py', os.path.join(site_dir, 'circularqueue.py'))
     shutil.copy('src/datastructures/liststack.py', os.path.join(site_dir, 'liststack.py'))
     shutil.copy('src/datastructures/deque.py', os.path.join(site_dir, 'deque.py'))
-
-
     shutil.copy('src/datastructures/ilinkedlist.py', os.path.join(site_dir, 'ilinkedlist.py'))
     shutil.copy('src/datastructures/linkedlist.py', os.path.join(site_dir, 'linkedlist.py'))
+    shutil.copy('src/datastructures/ihashmap.py', os.path.join(site_dir, 'ihashmap.py'))
+    shutil.copy('src/datastructures/hashmap.py', os.path.join(site_dir, 'hashmap.py'))
+    
+    
     shutil.copy('src/tests/test_linkedlist.py', os.path.join(site_dir, 'test_linkedlist.py'))
     shutil.copy('src/tests/test_arraystack.py', os.path.join(site_dir, 'test_arraystack.py'))
     shutil.copy('src/tests/test_circularqueue.py', os.path.join(site_dir, 'test_circularqueue.py'))
     shutil.copy('src/tests/test_liststack.py', os.path.join(site_dir, 'test_liststack.py'))
     shutil.copy('src/tests/test_deque.py', os.path.join(site_dir, 'test_deque.py'))
+    shutil.copy('src/tests/test_hashmap.py', os.path.join(site_dir, 'test_hashmap.py'))
 
 
     # shutil.copytree('static', os.path.join(site_dir, 'static'))
