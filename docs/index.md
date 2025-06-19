@@ -12,6 +12,7 @@ This site contains reference documentation for building the foundational data st
 6. [LinkedList](linkedlist.md)
 7. [ListStack](liststack.md)
 8. [Deque](deque.md)
+9. [HashMap](hashmap.md)
 
 <!--
 2. [Array2D](array2d.md)
