@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
       
       
 
@@ -159,8 +159,10 @@
       <a href=".." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Data Structures PyDocs
+    
   </span>
   
 
@@ -179,8 +181,10 @@
       <a href="../bag/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Bag
+    
   </span>
   
 
@@ -199,8 +203,10 @@
       <a href="../array/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Array
+    
   </span>
   
 
@@ -228,8 +234,10 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     Array2D
+    
   </span>
   
 
@@ -239,8 +247,10 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
     Array2D
+    
   </span>
   
 
@@ -462,8 +472,10 @@
       <a href="../arraystack/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ArrayStack
+    
   </span>
   
 
@@ -482,8 +494,10 @@
       <a href="../circularqueue/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     CircularQueue
+    
   </span>
   
 
@@ -502,8 +516,10 @@
       <a href="../linkedlist/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LinkedList
+    
   </span>
   
 
@@ -522,8 +538,10 @@
       <a href="../liststack/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ListStack
+    
   </span>
   
 
@@ -542,8 +560,10 @@
       <a href="../deque/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Deque
+    
   </span>
   
 
@@ -562,8 +582,32 @@
       <a href="../hashmap/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     HashMap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graph
+    
   </span>
   
 
@@ -796,6 +840,7 @@
                   
 
 
+
 <h1 id="array">Array</h1>
 <h2 id="download-source-files">Download Source Files</h2>
 <ul>
@@ -831,7 +876,10 @@ Implement the Array2D class in the array2d.py file.</p>
 
 
 
+
+
   <div class="doc doc-children">
+
 
 
 
@@ -859,6 +907,8 @@ Implement the Array2D class in the array2d.py file.</p>
         <p>An interface that represents the minimal functions needed to make an Array object
 into a two-dimensional array. Other typical functions like str, len, repr, etc. are not
 included in this interface because they are provided by the IArray</p>
+
+
 
 
 
@@ -1024,18 +1074,18 @@ included in this interface because they are provided by the IArray</p>
 <span class="normal">172</span>
 <span class="normal">173</span>
 <span class="normal">174</span>
-<span class="normal">175</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">IArray2D</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">ABC</span><span class="p">):</span>
+<span class="normal">175</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">IArray2D</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">ABC</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; An interface that represents the minimal functions needed to make an Array object</span>
 <span class="sd">        into a two-dimensional array. Other typical functions like str, len, repr, etc. are not</span>
 <span class="sd">        included in this interface because they are provided by the IArray</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">class</span> <span class="nc">IRow</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">ABC</span><span class="p">):</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">IRow</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">ABC</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; An interface that represents a row in a two-dimensional array in order to support</span>
 <span class="sd">            iteration and indexing. This class is not intended to be used directly by a user, </span>
 <span class="sd">            but rather as a helper class for the Array2D to provide the second bracket operator.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="nd">@abstractmethod</span>
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">array</span><span class="p">:</span> <span class="n">IArray</span><span class="p">,</span> <span class="n">num_columns</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">array</span><span class="p">:</span> <span class="n">IArray</span><span class="p">,</span> <span class="n">num_columns</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Initializes the Row object. </span>
 
 <span class="sd">            Args:</span>
@@ -1046,19 +1096,19 @@ included in this interface because they are provided by the IArray</p>
             <span class="o">...</span> 
 
         <span class="nd">@abstractmethod</span>
-        <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">column_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">column_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Gets the item at the specified column index in the row. This method is intended to be used</span>
 <span class="sd">                by the Array2D class to provide the second bracket operator. &quot;&quot;&quot;</span>
             <span class="o">...</span>
 
         <span class="nd">@abstractmethod</span>
-        <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">column_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">column_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Sets the item at the specified column index in the row. This method is intended to be used</span>
 <span class="sd">                by the Array2D class to provide the second bracket operator. &quot;&quot;&quot;</span>
             <span class="o">...</span>
 
         <span class="nd">@abstractmethod</span>
-        <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Returns an iterator of the row. </span>
 
 <span class="sd">            Returns:</span>
@@ -1067,7 +1117,7 @@ included in this interface because they are provided by the IArray</p>
             <span class="o">...</span>
 
         <span class="nd">@abstractmethod</span>
-        <span class="k">def</span> <span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Returns a reverse iterator of the row. </span>
 
 <span class="sd">            Returns:</span>
@@ -1076,7 +1126,7 @@ included in this interface because they are provided by the IArray</p>
             <span class="o">...</span>
 
         <span class="nd">@abstractmethod</span>
-        <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">            </span><span class="sd">&quot;&quot;&quot; Returns the number of columns in the row.</span>
 
 <span class="sd">            Returns:</span>
@@ -1085,7 +1135,7 @@ included in this interface because they are provided by the IArray</p>
             <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">starting_sequence</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">]]</span><span class="o">=</span><span class="p">[[]],</span> <span class="n">data_type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> 
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">starting_sequence</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">]]</span><span class="o">=</span><span class="p">[[]],</span> <span class="n">data_type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> 
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Initializes the Array2D object with a starting sequence of sequences.</span>
 
 <span class="sd">        Examples:</span>
@@ -1110,7 +1160,7 @@ included in this interface because they are provided by the IArray</p>
 
     <span class="nd">@staticmethod</span>
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">empty</span><span class="p">(</span><span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IArray2D</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span> 
+    <span class="k">def</span><span class="w"> </span><span class="nf">empty</span><span class="p">(</span><span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IArray2D</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span> 
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Creates an empty two-dimensional array with the specified number of rows and columns.</span>
 
 <span class="sd">        Args:</span>
@@ -1124,7 +1174,7 @@ included in this interface because they are provided by the IArray</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IRow</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span> 
+    <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IRow</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span> 
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Gets the item at the specified index or a slice of the two-dimensional array. If the index is a slice,</span>
 <span class="sd">            the method should return an IArray2D with the specified slice of the two-dimensional array. </span>
 <span class="sd">            Otherwise, it should return an array at the specified index since the elements of the two-dimensional array</span>
@@ -1142,7 +1192,7 @@ included in this interface because they are provided by the IArray</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">]]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns an iterator of the two-dimensional array. Because the two dimensional array is an IArray,</span>
 <span class="sd">            this method should return an iterator to the IArray.</span>
 
@@ -1152,11 +1202,11 @@ included in this interface because they are provided by the IArray</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">]]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns an iterator of the two&quot;&quot;&quot;</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns the number of rows in the two-dimensional array.</span>
 
 <span class="sd">        Returns:</span>
@@ -1164,7 +1214,7 @@ included in this interface because they are provided by the IArray</p>
 <span class="sd">        &quot;&quot;&quot;</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns a string representation of the two-dimensional array. The string representation</span>
 <span class="sd">            should include the string representation of each array in the two-dimensional array.</span>
 
@@ -1174,7 +1224,7 @@ included in this interface because they are provided by the IArray</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns a string representation of the two-dimensional array. The string representation</span>
 <span class="sd">            should include the string representation of each array in the two-dimensional array.</span>
 
@@ -1188,6 +1238,7 @@ included in this interface because they are provided by the IArray</p>
 
 
   <div class="doc doc-children">
+
 
 
 
@@ -1215,6 +1266,8 @@ included in this interface because they are provided by the IArray</p>
         <p>An interface that represents a row in a two-dimensional array in order to support
 iteration and indexing. This class is not intended to be used directly by a user, 
 but rather as a helper class for the Array2D to provide the second bracket operator.</p>
+
+
 
 
 
@@ -1276,13 +1329,13 @@ but rather as a helper class for the Array2D to provide the second bracket opera
 <span class="normal">73</span>
 <span class="normal">74</span>
 <span class="normal">75</span>
-<span class="normal">76</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">IRow</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">ABC</span><span class="p">):</span>
+<span class="normal">76</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">IRow</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">ABC</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; An interface that represents a row in a two-dimensional array in order to support</span>
 <span class="sd">        iteration and indexing. This class is not intended to be used directly by a user, </span>
 <span class="sd">        but rather as a helper class for the Array2D to provide the second bracket operator.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">array</span><span class="p">:</span> <span class="n">IArray</span><span class="p">,</span> <span class="n">num_columns</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">array</span><span class="p">:</span> <span class="n">IArray</span><span class="p">,</span> <span class="n">num_columns</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Initializes the Row object. </span>
 
 <span class="sd">        Args:</span>
@@ -1293,19 +1346,19 @@ but rather as a helper class for the Array2D to provide the second bracket opera
         <span class="o">...</span> 
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">column_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">column_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Gets the item at the specified column index in the row. This method is intended to be used</span>
 <span class="sd">            by the Array2D class to provide the second bracket operator. &quot;&quot;&quot;</span>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">column_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">column_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Sets the item at the specified column index in the row. This method is intended to be used</span>
 <span class="sd">            by the Array2D class to provide the second bracket operator. &quot;&quot;&quot;</span>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns an iterator of the row. </span>
 
 <span class="sd">        Returns:</span>
@@ -1314,7 +1367,7 @@ but rather as a helper class for the Array2D to provide the second bracket opera
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns a reverse iterator of the row. </span>
 
 <span class="sd">        Returns:</span>
@@ -1323,7 +1376,7 @@ but rather as a helper class for the Array2D to provide the second bracket opera
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns the number of columns in the row.</span>
 
 <span class="sd">        Returns:</span>
@@ -1336,6 +1389,7 @@ but rather as a helper class for the Array2D to provide the second bracket opera
 
 
   <div class="doc doc-children">
+
 
 
 
@@ -1363,6 +1417,7 @@ but rather as a helper class for the Array2D to provide the second bracket opera
         <p>Gets the item at the specified column index in the row. This method is intended to be used
 by the Array2D class to provide the second bracket operator.</p>
 
+
             <details class="quote">
               <summary>Source code in <code>src/datastructures/iarray2d.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">39</span>
@@ -1370,7 +1425,7 @@ by the Array2D class to provide the second bracket operator.</p>
 <span class="normal">41</span>
 <span class="normal">42</span>
 <span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">column_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">column_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Gets the item at the specified column index in the row. This method is intended to be used</span>
 <span class="sd">        by the Array2D class to provide the second bracket operator. &quot;&quot;&quot;</span>
     <span class="o">...</span>
@@ -1414,7 +1469,7 @@ by the Array2D class to provide the second bracket operator.</p>
                 <code>row_index</code>
             </td>
             <td>
-                  <code>int</code>
+                  <code><span title="int">int</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1446,7 +1501,7 @@ by the Array2D class to provide the second bracket operator.</p>
                 <code>num_columns</code>
             </td>
             <td>
-                  <code>int</code>
+                  <code><span title="int">int</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1460,6 +1515,7 @@ by the Array2D class to provide the second bracket operator.</p>
       </tbody>
     </table>
 
+
             <details class="quote">
               <summary>Source code in <code>src/datastructures/iarray2d.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">28</span>
@@ -1472,7 +1528,7 @@ by the Array2D class to provide the second bracket operator.</p>
 <span class="normal">35</span>
 <span class="normal">36</span>
 <span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">array</span><span class="p">:</span> <span class="n">IArray</span><span class="p">,</span> <span class="n">num_columns</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">array</span><span class="p">:</span> <span class="n">IArray</span><span class="p">,</span> <span class="n">num_columns</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Initializes the Row object. </span>
 
 <span class="sd">    Args:</span>
@@ -1527,6 +1583,7 @@ by the Array2D class to provide the second bracket operator.</p>
       </tbody>
     </table>
 
+
             <details class="quote">
               <summary>Source code in <code>src/datastructures/iarray2d.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">51</span>
@@ -1537,7 +1594,7 @@ by the Array2D class to provide the second bracket operator.</p>
 <span class="normal">56</span>
 <span class="normal">57</span>
 <span class="normal">58</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns an iterator of the row. </span>
 
 <span class="sd">    Returns:</span>
@@ -1579,7 +1636,7 @@ by the Array2D class to provide the second bracket operator.</p>
       <tbody>
           <tr class="doc-section-item">
 <td><code>int</code></td>            <td>
-                  <code>int</code>
+                  <code><span title="int">int</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1589,6 +1646,7 @@ by the Array2D class to provide the second bracket operator.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/iarray2d.py</code></summary>
@@ -1600,7 +1658,7 @@ by the Array2D class to provide the second bracket operator.</p>
 <span class="normal">74</span>
 <span class="normal">75</span>
 <span class="normal">76</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns the number of columns in the row.</span>
 
 <span class="sd">    Returns:</span>
@@ -1653,6 +1711,7 @@ by the Array2D class to provide the second bracket operator.</p>
       </tbody>
     </table>
 
+
             <details class="quote">
               <summary>Source code in <code>src/datastructures/iarray2d.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">60</span>
@@ -1663,7 +1722,7 @@ by the Array2D class to provide the second bracket operator.</p>
 <span class="normal">65</span>
 <span class="normal">66</span>
 <span class="normal">67</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns a reverse iterator of the row. </span>
 
 <span class="sd">    Returns:</span>
@@ -1694,6 +1753,7 @@ by the Array2D class to provide the second bracket operator.</p>
         <p>Sets the item at the specified column index in the row. This method is intended to be used
 by the Array2D class to provide the second bracket operator.</p>
 
+
             <details class="quote">
               <summary>Source code in <code>src/datastructures/iarray2d.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">45</span>
@@ -1701,7 +1761,7 @@ by the Array2D class to provide the second bracket operator.</p>
 <span class="normal">47</span>
 <span class="normal">48</span>
 <span class="normal">49</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">column_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">column_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Sets the item at the specified column index in the row. This method is intended to be used</span>
 <span class="sd">        by the Array2D class to provide the second bracket operator. &quot;&quot;&quot;</span>
     <span class="o">...</span>
@@ -1754,7 +1814,7 @@ Args:
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><a class="autorefs autorefs-internal" title="iarray2d.IArray2D.IRow" href="#iarray2d.IArray2D.IRow">IRow</a>[<span title="iarray2d.T">T</span>]</code>
+                  <code><a class="autorefs autorefs-internal" title="IRow (iarray2d.IArray2D.IRow)" href="#iarray2d.IArray2D.IRow">IRow</a>[<span title="iarray2d.T">T</span>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1777,7 +1837,7 @@ Args:
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>IndexError</code>
+                  <code><span title="IndexError">IndexError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1787,6 +1847,7 @@ Args:
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/iarray2d.py</code></summary>
@@ -1807,7 +1868,7 @@ Args:
 <span class="normal">131</span>
 <span class="normal">132</span>
 <span class="normal">133</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IRow</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span> 
+<span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IRow</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span> 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Gets the item at the specified index or a slice of the two-dimensional array. If the index is a slice,</span>
 <span class="sd">        the method should return an IArray2D with the specified slice of the two-dimensional array. </span>
 <span class="sd">        Otherwise, it should return an array at the specified index since the elements of the two-dimensional array</span>
@@ -1887,7 +1948,7 @@ Args:
                 <code>data_type</code>
             </td>
             <td>
-                  <code>type</code>
+                  <code><span title="type">type</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1895,7 +1956,7 @@ Args:
               </div>
             </td>
             <td>
-                  <code>object</code>
+                  <code><span title="object">object</span></code>
             </td>
           </tr>
       </tbody>
@@ -1913,7 +1974,7 @@ Args:
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>ValueError</code>
+                  <code><span title="ValueError">ValueError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1923,7 +1984,7 @@ Args:
           </tr>
           <tr class="doc-section-item">
             <td>
-                  <code>ValueError</code>
+                  <code><span title="ValueError">ValueError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1933,7 +1994,7 @@ Args:
           </tr>
           <tr class="doc-section-item">
             <td>
-                  <code>TypeError</code>
+                  <code><span title="TypeError">TypeError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1967,6 +2028,7 @@ Args:
       </tbody>
     </table>
 
+
             <details class="quote">
               <summary>Source code in <code>src/datastructures/iarray2d.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 78</span>
@@ -1992,7 +2054,7 @@ Args:
 <span class="normal"> 98</span>
 <span class="normal"> 99</span>
 <span class="normal">100</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">starting_sequence</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">]]</span><span class="o">=</span><span class="p">[[]],</span> <span class="n">data_type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> 
+<span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">starting_sequence</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">]]</span><span class="o">=</span><span class="p">[[]],</span> <span class="n">data_type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Initializes the Array2D object with a starting sequence of sequences.</span>
 
 <span class="sd">    Examples:</span>
@@ -2061,6 +2123,7 @@ Args:
       </tbody>
     </table>
 
+
             <details class="quote">
               <summary>Source code in <code>src/datastructures/iarray2d.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">135</span>
@@ -2072,7 +2135,7 @@ Args:
 <span class="normal">141</span>
 <span class="normal">142</span>
 <span class="normal">143</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">]]:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">]]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns an iterator of the two-dimensional array. Because the two dimensional array is an IArray,</span>
 <span class="sd">        this method should return an iterator to the IArray.</span>
 
@@ -2115,7 +2178,7 @@ Args:
       <tbody>
           <tr class="doc-section-item">
 <td><code>int</code></td>            <td>
-                  <code>int</code>
+                  <code><span title="int">int</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2126,6 +2189,7 @@ Args:
       </tbody>
     </table>
 
+
             <details class="quote">
               <summary>Source code in <code>src/datastructures/iarray2d.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">149</span>
@@ -2135,7 +2199,7 @@ Args:
 <span class="normal">153</span>
 <span class="normal">154</span>
 <span class="normal">155</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns the number of rows in the two-dimensional array.</span>
 
 <span class="sd">    Returns:</span>
@@ -2177,7 +2241,7 @@ Args:
       <tbody>
           <tr class="doc-section-item">
 <td><code>str</code></td>            <td>
-                  <code>str</code>
+                  <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2187,6 +2251,7 @@ Args:
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/iarray2d.py</code></summary>
@@ -2199,7 +2264,7 @@ Args:
 <span class="normal">173</span>
 <span class="normal">174</span>
 <span class="normal">175</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns a string representation of the two-dimensional array. The string representation</span>
 <span class="sd">        should include the string representation of each array in the two-dimensional array.</span>
 
@@ -2230,12 +2295,13 @@ Args:
 
         <p>Returns an iterator of the two</p>
 
+
             <details class="quote">
               <summary>Source code in <code>src/datastructures/iarray2d.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">145</span>
 <span class="normal">146</span>
 <span class="normal">147</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">]]:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">]]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns an iterator of the two&quot;&quot;&quot;</span>
 </code></pre></div></td></tr></table></div>
             </details>
@@ -2273,7 +2339,7 @@ Args:
       <tbody>
           <tr class="doc-section-item">
 <td><code>str</code></td>            <td>
-                  <code>str</code>
+                  <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2283,6 +2349,7 @@ Args:
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/iarray2d.py</code></summary>
@@ -2295,7 +2362,7 @@ Args:
 <span class="normal">163</span>
 <span class="normal">164</span>
 <span class="normal">165</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Returns a string representation of the two-dimensional array. The string representation</span>
 <span class="sd">        should include the string representation of each array in the two-dimensional array.</span>
 
@@ -2344,7 +2411,7 @@ Args:
                 <code>rows</code>
             </td>
             <td>
-                  <code>int</code>
+                  <code><span title="int">int</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2360,7 +2427,7 @@ Args:
                 <code>cols</code>
             </td>
             <td>
-                  <code>int</code>
+                  <code><span title="int">int</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2376,7 +2443,7 @@ Args:
                 <code>data_type</code>
             </td>
             <td>
-                  <code>type</code>
+                  <code><span title="type">type</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2384,7 +2451,7 @@ Args:
               </div>
             </td>
             <td>
-                  <code>object</code>
+                  <code><span title="object">object</span></code>
             </td>
           </tr>
       </tbody>
@@ -2402,7 +2469,7 @@ Args:
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><a class="autorefs autorefs-internal" title="iarray2d.IArray2D" href="#iarray2d.IArray2D">IArray2D</a>[<span title="iarray2d.T">T</span>]</code>
+                  <code><a class="autorefs autorefs-internal" title="IArray2D (iarray2d.IArray2D)" href="#iarray2d.IArray2D">IArray2D</a>[<span title="iarray2d.T">T</span>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2412,6 +2479,7 @@ Args:
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/iarray2d.py</code></summary>
@@ -2430,7 +2498,7 @@ Args:
 <span class="normal">114</span>
 <span class="normal">115</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
 <span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">empty</span><span class="p">(</span><span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IArray2D</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span> 
+<span class="k">def</span><span class="w"> </span><span class="nf">empty</span><span class="p">(</span><span class="n">rows</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IArray2D</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span> 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Creates an empty two-dimensional array with the specified number of rows and columns.</span>
 
 <span class="sd">    Args:</span>
@@ -2510,10 +2578,12 @@ Args:
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>

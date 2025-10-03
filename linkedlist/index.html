@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
       
       
 
@@ -159,8 +159,10 @@
       <a href=".." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Data Structures PyDocs
+    
   </span>
   
 
@@ -179,8 +181,10 @@
       <a href="../bag/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Bag
+    
   </span>
   
 
@@ -199,8 +203,10 @@
       <a href="../array/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Array
+    
   </span>
   
 
@@ -219,8 +225,10 @@
       <a href="../array2d/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Array2D
+    
   </span>
   
 
@@ -239,8 +247,10 @@
       <a href="../arraystack/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ArrayStack
+    
   </span>
   
 
@@ -259,8 +269,10 @@
       <a href="../circularqueue/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     CircularQueue
+    
   </span>
   
 
@@ -288,8 +300,10 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     LinkedList
+    
   </span>
   
 
@@ -299,8 +313,10 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
     LinkedList
+    
   </span>
   
 
@@ -579,8 +595,10 @@
       <a href="../liststack/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ListStack
+    
   </span>
   
 
@@ -599,8 +617,10 @@
       <a href="../deque/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Deque
+    
   </span>
   
 
@@ -619,8 +639,32 @@
       <a href="../hashmap/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     HashMap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graph
+    
   </span>
   
 
@@ -910,6 +954,7 @@
                   
 
 
+
 <h1 id="linked-list">Linked List</h1>
 <h2 id="download-source-files">Download Source Files</h2>
 <ul>
@@ -940,7 +985,10 @@
 
 
 
+
+
   <div class="doc doc-children">
+
 
 
 
@@ -968,6 +1016,8 @@
         <p>The <code>ILinkedList</code> interface defines a set of methods that a linked list data structure 
 should implement. This interface is designed to be generic, allowing it to work with any data type. 
 Below is a detailed explanation of each method in the interface.</p>
+
+
 
 
 
@@ -1466,7 +1516,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">496</span>
 <span class="normal">497</span>
 <span class="normal">498</span>
-<span class="normal">499</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">ILinkedList</span><span class="p">[</span><span class="n">T</span><span class="p">](</span><span class="n">abc</span><span class="o">.</span><span class="n">ABC</span><span class="p">):</span>
+<span class="normal">499</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ILinkedList</span><span class="p">[</span><span class="n">T</span><span class="p">](</span><span class="n">abc</span><span class="o">.</span><span class="n">ABC</span><span class="p">):</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;The `ILinkedList` interface defines a set of methods that a linked list data structure </span>
 <span class="sd">        should implement. This interface is designed to be generic, allowing it to work with any data type. </span>
@@ -1474,7 +1524,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="sd">    &#39;&#39;&#39;</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Initializes the LinkedList object with a data_type.</span>
 
@@ -1490,7 +1540,7 @@ Below is a detailed explanation of each method in the interface.</p>
 
     <span class="nd">@staticmethod</span>
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">from_sequence</span><span class="p">(</span><span class="n">sequence</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ILinkedList</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_sequence</span><span class="p">(</span><span class="n">sequence</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ILinkedList</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Creates a LinkedList object from a Python list.</span>
 
@@ -1513,7 +1563,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Adds an item to the end of the list </span>
 
@@ -1534,7 +1584,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">prepend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">prepend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Adds an item to the beginning of the list</span>
 
@@ -1554,7 +1604,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">insert_before</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">insert_before</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Adds an item before the first occurrence of a target item</span>
 
@@ -1577,7 +1627,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">insert_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">insert_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Adds an item after the first occurrence of a target item</span>
 
@@ -1600,7 +1650,7 @@ Below is a detailed explanation of each method in the interface.</p>
     <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Removes the first occurrence of an item from the list</span>
 
@@ -1623,7 +1673,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">remove_all</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">remove_all</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Removes all occurrences of an item from the list</span>
 
@@ -1646,7 +1696,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Removes and returns the last item in the list</span>
 
@@ -1669,7 +1719,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">pop_front</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pop_front</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Removes and returns the first item in the list</span>
 
@@ -1693,7 +1743,7 @@ Below is a detailed explanation of each method in the interface.</p>
 
     <span class="nd">@property</span>
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">front</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">front</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Returns the first item in the list</span>
 
@@ -1715,7 +1765,7 @@ Below is a detailed explanation of each method in the interface.</p>
 
     <span class="nd">@property</span>
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">back</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">back</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Returns the last item in the list</span>
 
@@ -1737,7 +1787,7 @@ Below is a detailed explanation of each method in the interface.</p>
 
     <span class="nd">@property</span>
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">empty</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">empty</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Returns True if the list is empty, False otherwise</span>
 
@@ -1755,7 +1805,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Returns the number of items in the list</span>
 
@@ -1773,7 +1823,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Returns a string representation of the list</span>
 
@@ -1794,7 +1844,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Returns a string representation of the list</span>
 
@@ -1816,7 +1866,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Removes all items from the list</span>
 
@@ -1833,7 +1883,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Returns True if the item is in the list, False otherwise</span>
 
@@ -1857,7 +1907,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ILinkedList</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ILinkedList</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Returns an iterator for the list</span>
 
@@ -1879,7 +1929,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Returns the next item in the list</span>
 
@@ -1910,7 +1960,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Returns True if the list is equal to another list, False otherwise</span>
 
@@ -1939,7 +1989,7 @@ Below is a detailed explanation of each method in the interface.</p>
         <span class="o">...</span>
 
     <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ILinkedList</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ILinkedList</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 
 <span class="w">        </span><span class="sd">&#39;&#39;&#39; Returns a reversed version of the list</span>
 
@@ -1975,7 +2025,7 @@ Below is a detailed explanation of each method in the interface.</p>
 
 
 <h3 id="ilinkedlist.ILinkedList.back" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">back</span><span class="p">:</span> <span class="n">T</span></code>
+            <code class="highlight language-python"><span class="n">back</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
@@ -2011,7 +2061,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><span title="ilinkedlist.T">T</span></code>
+                  <code><span title="ilinkedlist.ILinkedList[T]">T</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2034,7 +2084,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>IndexError</code>
+                  <code><span title="IndexError">IndexError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2044,6 +2094,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
     </div>
 
 </div>
@@ -2053,7 +2104,7 @@ Below is a detailed explanation of each method in the interface.</p>
 
 
 <h3 id="ilinkedlist.ILinkedList.empty" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">empty</span><span class="p">:</span> <span class="nb">bool</span></code>
+            <code class="highlight language-python"><span class="n">empty</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
@@ -2089,7 +2140,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>bool</code>
+                  <code><span title="bool">bool</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2099,6 +2150,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
     </div>
 
 </div>
@@ -2108,7 +2160,7 @@ Below is a detailed explanation of each method in the interface.</p>
 
 
 <h3 id="ilinkedlist.ILinkedList.front" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">front</span><span class="p">:</span> <span class="n">T</span></code>
+            <code class="highlight language-python"><span class="n">front</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
@@ -2144,7 +2196,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><span title="ilinkedlist.T">T</span></code>
+                  <code><span title="ilinkedlist.ILinkedList[T]">T</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2167,7 +2219,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>IndexError</code>
+                  <code><span title="IndexError">IndexError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2177,9 +2229,11 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
     </div>
 
 </div>
+
 
 
 
@@ -2229,7 +2283,7 @@ Below is a detailed explanation of each method in the interface.</p>
                 <code>item</code>
             </td>
             <td>
-                  <code><span title="ilinkedlist.T">T</span></code>
+                  <code><span title="ilinkedlist.ILinkedList[T]">T</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2255,7 +2309,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>bool</code>
+                  <code><span title="bool">bool</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2265,6 +2319,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -2291,7 +2346,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">395</span>
 <span class="normal">396</span>
 <span class="normal">397</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Returns True if the item is in the list, False otherwise</span>
 
@@ -2370,7 +2425,7 @@ Below is a detailed explanation of each method in the interface.</p>
                 <code>other</code>
             </td>
             <td>
-                  <code>object</code>
+                  <code><span title="object">object</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2396,7 +2451,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>bool</code>
+                  <code><span title="bool">bool</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2406,6 +2461,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -2437,7 +2493,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">477</span>
 <span class="normal">478</span>
 <span class="normal">479</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Returns True if the list is equal to another list, False otherwise</span>
 
@@ -2511,7 +2567,7 @@ Below is a detailed explanation of each method in the interface.</p>
                 <code>data_type</code>
             </td>
             <td>
-                  <code>type</code>
+                  <code><span title="type">type</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2519,11 +2575,12 @@ Below is a detailed explanation of each method in the interface.</p>
               </div>
             </td>
             <td>
-                  <code>object</code>
+                  <code><span title="object">object</span></code>
             </td>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -2541,7 +2598,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Initializes the LinkedList object with a data_type.</span>
 
@@ -2602,7 +2659,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><a class="autorefs autorefs-internal" title="ilinkedlist.ILinkedList" href="#ilinkedlist.ILinkedList">ILinkedList</a>[<span title="ilinkedlist.T">T</span>]</code>
+                  <code><a class="autorefs autorefs-internal" title="ILinkedList (ilinkedlist.ILinkedList)" href="#ilinkedlist.ILinkedList">ILinkedList</a>[<span title="ilinkedlist.ILinkedList[T]">T</span>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2612,6 +2669,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -2636,7 +2694,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">417</span>
 <span class="normal">418</span>
 <span class="normal">419</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ILinkedList</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ILinkedList</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Returns an iterator for the list</span>
 
@@ -2701,7 +2759,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>int</code>
+                  <code><span title="int">int</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2711,6 +2769,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -2731,7 +2790,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">311</span>
 <span class="normal">312</span>
 <span class="normal">313</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Returns the number of items in the list</span>
 
@@ -2801,7 +2860,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><span title="ilinkedlist.T">T</span></code>
+                  <code><span title="ilinkedlist.ILinkedList[T]">T</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2824,7 +2883,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>StopIteration</code>
+                  <code><span title="StopIteration">StopIteration</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2834,6 +2893,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -2867,7 +2927,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">448</span>
 <span class="normal">449</span>
 <span class="normal">450</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Returns the next item in the list</span>
 
@@ -2944,7 +3004,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>str</code>
+                  <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -2954,6 +3014,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -2978,7 +3039,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">354</span>
 <span class="normal">355</span>
 <span class="normal">356</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Returns a string representation of the list</span>
 
@@ -3044,7 +3105,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><a class="autorefs autorefs-internal" title="ilinkedlist.ILinkedList" href="#ilinkedlist.ILinkedList">ILinkedList</a>[<span title="ilinkedlist.T">T</span>]</code>
+                  <code><a class="autorefs autorefs-internal" title="ILinkedList (ilinkedlist.ILinkedList)" href="#ilinkedlist.ILinkedList">ILinkedList</a>[<span title="ilinkedlist.ILinkedList[T]">T</span>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3054,6 +3115,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -3076,7 +3138,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">497</span>
 <span class="normal">498</span>
 <span class="normal">499</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ILinkedList</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__reversed__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ILinkedList</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Returns a reversed version of the list</span>
 
@@ -3142,7 +3204,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>str</code>
+                  <code><span title="str">str</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3152,6 +3214,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -3175,7 +3238,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">332</span>
 <span class="normal">333</span>
 <span class="normal">334</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Returns a string representation of the list</span>
 
@@ -3243,7 +3306,7 @@ Below is a detailed explanation of each method in the interface.</p>
                 <code>item</code>
             </td>
             <td>
-                  <code><span title="ilinkedlist.T">T</span></code>
+                  <code><span title="ilinkedlist.ILinkedList[T]">T</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3269,7 +3332,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>TypeError</code>
+                  <code><span title="TypeError">TypeError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3279,6 +3342,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -3302,7 +3366,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">72</span>
 <span class="normal">73</span>
 <span class="normal">74</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Adds an item to the end of the list </span>
 
@@ -3355,6 +3419,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="go">()</span>
 </code></pre></div>
 
+
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">358</span>
@@ -3373,7 +3438,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">371</span>
 <span class="normal">372</span>
 <span class="normal">373</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Removes all items from the list</span>
 
@@ -3436,7 +3501,7 @@ Below is a detailed explanation of each method in the interface.</p>
                 <code>sequence</code>
             </td>
             <td>
-                  <code><span title="typing.Sequence">Sequence</span>[<span title="ilinkedlist.T">T</span>]</code>
+                  <code><span title="typing.Sequence">Sequence</span>[<span title="ilinkedlist.ILinkedList[T]">T</span>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3452,7 +3517,7 @@ Below is a detailed explanation of each method in the interface.</p>
                 <code>data_type</code>
             </td>
             <td>
-                  <code>type</code>
+                  <code><span title="type">type</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3460,7 +3525,7 @@ Below is a detailed explanation of each method in the interface.</p>
               </div>
             </td>
             <td>
-                  <code>object</code>
+                  <code><span title="object">object</span></code>
             </td>
           </tr>
       </tbody>
@@ -3478,7 +3543,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><a class="autorefs autorefs-internal" title="ilinkedlist.ILinkedList" href="#ilinkedlist.ILinkedList">ILinkedList</a>[<span title="ilinkedlist.T">T</span>]</code>
+                  <code><a class="autorefs autorefs-internal" title="ILinkedList (ilinkedlist.ILinkedList)" href="#ilinkedlist.ILinkedList">ILinkedList</a>[<span title="ilinkedlist.ILinkedList[T]">T</span>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3501,7 +3566,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>TypeError</code>
+                  <code><span title="TypeError">TypeError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3511,6 +3576,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -3538,7 +3604,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">52</span>
 <span class="normal">53</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@staticmethod</span>
 <span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">from_sequence</span><span class="p">(</span><span class="n">sequence</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ILinkedList</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">from_sequence</span><span class="p">(</span><span class="n">sequence</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">data_type</span><span class="p">:</span> <span class="nb">type</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ILinkedList</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Creates a LinkedList object from a Python list.</span>
 
@@ -3609,7 +3675,7 @@ Below is a detailed explanation of each method in the interface.</p>
                 <code>target</code>
             </td>
             <td>
-                  <code><span title="ilinkedlist.T">T</span></code>
+                  <code><span title="ilinkedlist.ILinkedList[T]">T</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3625,7 +3691,7 @@ Below is a detailed explanation of each method in the interface.</p>
                 <code>item</code>
             </td>
             <td>
-                  <code><span title="ilinkedlist.T">T</span></code>
+                  <code><span title="ilinkedlist.ILinkedList[T]">T</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3651,7 +3717,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>TypeError</code>
+                  <code><span title="TypeError">TypeError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3661,7 +3727,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                  <code>ValueError</code>
+                  <code><span title="ValueError">ValueError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3671,6 +3737,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -3695,7 +3762,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">137</span>
 <span class="normal">138</span>
 <span class="normal">139</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">insert_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">insert_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Adds an item after the first occurrence of a target item</span>
 
@@ -3765,7 +3832,7 @@ Below is a detailed explanation of each method in the interface.</p>
                 <code>target</code>
             </td>
             <td>
-                  <code><span title="ilinkedlist.T">T</span></code>
+                  <code><span title="ilinkedlist.ILinkedList[T]">T</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3781,7 +3848,7 @@ Below is a detailed explanation of each method in the interface.</p>
                 <code>item</code>
             </td>
             <td>
-                  <code><span title="ilinkedlist.T">T</span></code>
+                  <code><span title="ilinkedlist.ILinkedList[T]">T</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3807,7 +3874,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>TypeError</code>
+                  <code><span title="TypeError">TypeError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3817,7 +3884,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                  <code>ValueError</code>
+                  <code><span title="ValueError">ValueError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3827,6 +3894,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -3852,7 +3920,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">115</span>
 <span class="normal">116</span>
 <span class="normal">117</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">insert_before</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">insert_before</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Adds an item before the first occurrence of a target item</span>
 
@@ -3920,7 +3988,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><span title="ilinkedlist.T">T</span></code>
+                  <code><span title="ilinkedlist.ILinkedList[T]">T</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3943,7 +4011,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>IndexError</code>
+                  <code><span title="IndexError">IndexError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3953,6 +4021,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -3978,7 +4047,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">207</span>
 <span class="normal">208</span>
 <span class="normal">209</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Removes and returns the last item in the list</span>
 
@@ -4046,7 +4115,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><span title="ilinkedlist.T">T</span></code>
+                  <code><span title="ilinkedlist.ILinkedList[T]">T</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4069,7 +4138,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>IndexError</code>
+                  <code><span title="IndexError">IndexError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4079,6 +4148,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -4104,7 +4174,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">230</span>
 <span class="normal">231</span>
 <span class="normal">232</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">pop_front</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">pop_front</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Removes and returns the first item in the list</span>
 
@@ -4174,7 +4244,7 @@ Below is a detailed explanation of each method in the interface.</p>
                 <code>item</code>
             </td>
             <td>
-                  <code><span title="ilinkedlist.T">T</span></code>
+                  <code><span title="ilinkedlist.ILinkedList[T]">T</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4200,7 +4270,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>TypeError</code>
+                  <code><span title="TypeError">TypeError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4210,6 +4280,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -4232,7 +4303,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">92</span>
 <span class="normal">93</span>
 <span class="normal">94</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">prepend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">prepend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Adds an item to the beginning of the list</span>
 
@@ -4301,7 +4372,7 @@ Below is a detailed explanation of each method in the interface.</p>
                 <code>item</code>
             </td>
             <td>
-                  <code><span title="ilinkedlist.T">T</span></code>
+                  <code><span title="ilinkedlist.ILinkedList[T]">T</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4327,7 +4398,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>TypeError</code>
+                  <code><span title="TypeError">TypeError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4337,7 +4408,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                  <code>ValueError</code>
+                  <code><span title="ValueError">ValueError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4347,6 +4418,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -4372,7 +4444,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">161</span>
 <span class="normal">162</span>
 <span class="normal">163</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Removes the first occurrence of an item from the list</span>
 
@@ -4445,7 +4517,7 @@ Below is a detailed explanation of each method in the interface.</p>
                 <code>item</code>
             </td>
             <td>
-                  <code><span title="ilinkedlist.T">T</span></code>
+                  <code><span title="ilinkedlist.ILinkedList[T]">T</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4471,7 +4543,7 @@ Below is a detailed explanation of each method in the interface.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code>TypeError</code>
+                  <code><span title="TypeError">TypeError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -4481,6 +4553,7 @@ Below is a detailed explanation of each method in the interface.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>src/datastructures/ilinkedlist.py</code></summary>
@@ -4506,7 +4579,7 @@ Below is a detailed explanation of each method in the interface.</p>
 <span class="normal">184</span>
 <span class="normal">185</span>
 <span class="normal">186</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
-<span class="k">def</span> <span class="nf">remove_all</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">remove_all</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">&#39;&#39;&#39; Removes all occurrences of an item from the list</span>
 
@@ -4595,10 +4668,12 @@ Below is a detailed explanation of each method in the interface.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>
