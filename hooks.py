@@ -63,6 +63,6 @@ def copy_get(config, **kwargs):
     shutil.copy('src/tests/test_hashmap.py', os.path.join(site_dir, 'test_hashmap.py'))
 
 
-    # shutil.copytree('static', os.path.join(site_dir, 'static'))
+    shutil.copytree('static', os.path.join(site_dir, 'static'))
 
 
