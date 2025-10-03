@@ -37,4 +37,4 @@ nav:
 #  - AVL Tree: iavltree.md
 #  - Stacks and Queues: stacks_queues.md
 #  - HashMap: hash_map.md
-#  - Graph: graph.md
+ - Graph: graph.md
